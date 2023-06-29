@@ -1,0 +1,90 @@
+body {
+  background-image: url("/src/asset/img/couleurs-vibrantes-courbes-lisses-coups-pinceau-explosifs-generes-par-ia.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rosart";
+  font-weight: lighter;
+}
+
+#home-btn {
+  position: absolute;
+  top: -30px;
+  left: 40px;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:  0.5s ease;
+  z-index: 2000;
+}
+
+#home-btn:hover {
+  top: -30px;
+  left: 40px;
+  font-size: 40px;
+  border: none;
+  animation: textshadow 5s ease-in-out infinite;
+  
+}
+
+h1 {
+  font-family: "Rosart";
+  font-weight: lighter;
+  font-size: 7rem;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  top:-10%;
+}
+
+.header {
+  text-align: center;
+  color: #ffffff;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  margin-bottom: 5px;
+  padding: 10px 0; 
+ 
+}
+
+.section > h3 {
+  margin: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30px;
+  font-family: "Rosart";
+  font-weight: lighter;
+}
+.section > h2 {
+  font-family: "Rosart";
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px;
+}
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  gap: 30px; 
+}
+
+.image-container img {
+  width: 267px;
+  height: 267px;
+  border: 4px solid white;
+  Border-radius: 5px;
+}

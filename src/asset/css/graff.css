@@ -1,0 +1,378 @@
+body {
+  overflow: hidden;
+  background: #000;
+}
+html {
+  cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='3' cy='3' fill='%23eee' r='4'/%3E%3C/svg%3E")
+      3 3,
+    auto;
+}
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+}
+.main-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: "Computer Regular";
+  font-size: 5.5rem;
+  color: #fff;
+  animation: textshadow 5s ease-in-out infinite;
+}
+
+.main-div > p {
+  font-family: "Street Block";
+  font-size: 2.5rem;
+  color: #fff;
+  width: 100vw;
+  text-align: inherit;
+  animation: textshadow 5s ease-in-out infinite;
+}
+p {
+  font-family: "Blouse";
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+  width: 100vw;
+  text-align: inherit;
+}
+button {
+  font-family: "Futurama";
+  width: 10em;
+  position: relative;
+  height: 2em;
+  border: 3px ridge #149cea;
+  outline: none;
+  background-color: black;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 20px;
+  animation: glow 5s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 2000;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  cursor: pointer;
+  transition: background-color 0.5s ease;  
+
+  transition: 0.5s;
+  transform-origin: center;
+}
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 90%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  cursor:pointer;
+
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(0);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #1479ea;
+  cursor:pointer;
+}
+
+#graff-result {
+  font-size: 1.5em;
+}
+
+.graff-img-hidden {
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: textshadow 5s ease-in-out infinite;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #3b6299;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+#graff-img {
+  border-radius: 15px;
+  border: 3px solid #5bbdfe;
+  border-style: solid;
+  animation: glow 5s ease-in-out infinite;
+}
+
+.star {
+  font-size: 2em;
+  color: grey;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight {
+  color: gold;
+  justify-content: center;
+  align-items: center;
+}
+
+#feedback {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #149cea;
+  font-family: "Street Block";
+  animation: textshadow 5s ease-in-out infinite;
+}
+
+.next {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#next {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  color: #149cea;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+@keyframes textshadow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #86bef6, 0 0 20px #6db5fe, 0 0 30px #49a4ff,
+      0 0 40px #1a8cff;
+  }
+  25% {
+    text-shadow: 0 0 10px #6d85cc, 0 0 20px #536fc2, 0 0 30px #1b44bd,
+      0 0 40px #0735c1;
+  }
+  50% {
+    text-shadow: 0 0 10px #595a9a, 0 0 20px #2e3083, 0 0 30px #a3a5fd,
+      0 0 40px #040680;
+  }
+  75% {
+    text-shadow: 0 0 10px #327bc8, 0 0 20px #1d44b8, 0 0 30px #6f7894,
+      0 0 40px #b3c6ff;
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px #86bef6, 0 0 20px #6db5fe, 0 0 30px #49a4ff,
+      0 0 40px #1a8cff;
+  }
+  25% {
+    box-shadow: 0 0 10px #6d85cc, 0 0 20px #536fc2, 0 0 30px #1b44bd,
+      0 0 40px #0735c1;
+  }
+  50% {
+    box-shadow: 0 0 10px #595a9a, 0 0 20px #2e3083, 0 0 30px #191b81,
+      0 0 40px #040680;
+  }
+  75% {
+    box-shadow: 0 0 10px #327bc8, 0 0 20px #1d44b8, 0 0 30px #173387,
+      0 0 40px #0032ca;
+  }
+}
+#home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Futurama";
+  width: 10em;
+  position: absolute; 
+  top: 10px;
+  left: 10px;
+  height: 2em;
+  outline: none;
+  color: white;
+  transition: 1s;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer ;
+  z-index: 2000;
+}
+
+#home-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  cursor: pointer;
+  transform-origin: center;
+  
+}
+#home-btn:hover,
+#gallery-btn:hover{
+  animation: textshadow 5s ease-in-out infinite;
+}
+#home-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+}
+
+#gallery-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Futurama";
+  width: 10em;
+  position: absolute; 
+  top: 2px;
+  right: 2px;
+  height: 2em;
+  outline: none;
+  color: white;
+  transition: 1s;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer ;
+  z-index: 2000;
+}
+
+#gallery-btn::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+#gallery-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+#gallery-btn:hover {
+  cursor: pointer;
+}
+#home-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#gallery-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}

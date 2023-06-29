@@ -1,0 +1,227 @@
+body {
+  background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjE4LWV5ZS0wOC5qcGc.jpg");
+  background-position: fill;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.main-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  z-index: -200000;
+}
+
+h1 {
+  font-family: "Coolvetica";
+  font-weight: bolder;
+  font-size: 5rem;
+  color: #5d625c;
+}
+
+.main-div > p {
+  font-family: "Brand";
+  font-size: 1.5rem;
+  color: #5d625c;
+  width: 100vw;
+  text-align: inherit;
+}
+
+p {
+  font-family: "Brand";
+  font-weight: bold;
+  font-size: 2rem;
+  color: #626262;
+  width: 100vw;
+  text-align: inherit;
+}
+
+.loader {
+  background: #515151;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  border:1px solid #000000;
+  align-items: center;
+  animation: 3s rotate linear infinite;
+  left: 48.5%;
+  top: 65%;
+}
+
+.loader:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #ffffff;
+  border:1px solid #000000;
+  animation: 1.5s rotate reverse linear infinite ;
+}
+
+button {
+  font-family: "Coolvetica";
+  font-weight: thin;
+  width: 8em;
+  position: relative;
+  height: 2em;
+  border: 3px ridge #5d625c;
+  outline: none;
+  background-color: #f5e56c00;
+  color: #5d625c;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 20px;
+  z-index: 2000;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(0);
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #5d625c;
+}
+
+#home-btn {
+  top: 50px;
+  left: 90px;
+  width: 0%;
+  border: none;
+  font-size: 30px;
+}
+
+#home-btn:hover {
+  top: 50px;
+  left: 110px;
+  border: none;
+  font-size: 40px;
+  animation: textshadow 5s ease-in-out infinite;
+  font-family: "Coolvetica";
+}
+
+#gallery-btn {
+  top: 50px;
+  right: 90px;
+  border: none;
+  width: 0%;
+  font-size: 30px;
+}
+
+#gallery-btn:hover {
+  top: 50px;
+  right: 110px;
+  font-size: 40px;
+  border: none;
+  animation: textshadow 5s ease-in-out infinite;
+  font-family: "Coolvetica";
+}
+
+button:hover {
+  text-shadow:  inset 0px 0px 25px #5d625c;
+}
+
+#int-result {
+  font-size: 1.5em;
+}
+
+.int-img-hidden {
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+
+#int-img {
+  position: relative;
+  border-radius: 15px;
+  border: 6px solid #5d625c;
+  border-style: ridge;
+  animation: glow 5s ease-in-out infinite;
+}
+
+.star {
+  font-size: 2em;
+  color: grey;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight {
+  color: #d3d0d0;
+  justify-content: center;
+  align-items: center;
+}
+
+#feedback {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #5d625c;
+  font-family: "Brand"";
+}
+
+@keyframes rotate {
+  0%{    transform: rotate(0deg)}
+  100%{    transform: rotate(360deg)}
+}
+
+.button-link {
+  font-family: "Coolvetica";
+  font-weight: thin;
+  background-color: #f5e56c00;
+  color: #5d625c;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 20px;
+  position: absolute;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button-link::after, .button-link::before {
+  content: "";
+  position: absolute;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.button-link:hover::before, .button-link:hover::after {
+  transform: scale(0);
+}
+
+.button-link:hover {
+  box-shadow: inset 0px 0px 25px #5d625c;
+}
+
