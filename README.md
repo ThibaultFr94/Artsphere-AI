@@ -3,11 +3,11 @@
 
 ## Description du projet
 
-Le projet Artsphere-IA est un site web qui utilise les API de OpenAI, en particulier GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspiré des grands peintres de notre siècle, ou des idées deco/design d'interieur. Les utilisateurs clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes.
-
+Le projet Artsphere-IA est un site web qui utilise les API de OpenAI qui sont GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspirés des grands peintres de notre siècle, ou des idées deco/design d'interieur. L'utilisateur clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes et la décoration
+l'objectif est de stimuler l'imagination des artistes
 ## Comment ça fonctionne
 
-1. **Génération du nom** : À l'aide de l'API de GPT-3, 5 turbo, nous générons un nom pour une eouvre d'art unique basé  un prompt sépecifique.Il existe 3 thèmes interne au site , Graffitis, Tableaux, et idées deco/design d'intérieur.
+1. **Génération du nom** : À l'aide de l'API de GPT-3, 5 turbo, nous générons un nom pour une eouvre d'art unique basé sur un prompt sépecifique.Il existe 3 thèmes interne au site , Graffitis, Tableaux, et idées deco/design d'intérieur.
 
 2. **Génération de l'image** : En utilisant l'API de DALL·E, nous créons une image basée sur le nom généré. DALL·E est un modèle qui peut produire des images uniques à partir de descriptions textuelles.
 
@@ -27,6 +27,7 @@ Nous sommes toujours à la recherche de contributions pour améliorer notre proj
 ## Secrets
 
 Vous devez créer un fichier module.js dans le dossier asset/js afin d'y importer vos clées API pour Chat GPT et Dall-E.
+Ensuite rendez-vous sur le site de OpenAI section API Documentation et suivez le guide dédié.
 ## Licence
 
 Pour plus d'informations, veuillez consulter le fichier LICENCE
