@@ -166,12 +166,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   function generateGraff() {
-    var img = document.getElementById("graff-img");
+    let img = document.getElementById("graff-img");
     if (!img.classList.contains("graff-img-hidden"))
       img.classList.add("graff-img-hidden");
     document.getElementById("graff-result").textContent = "";
 
-    var divImg = document.getElementById("div-img");
+    let divImg = document.getElementById("div-img");
     divImg.classList.add("loader");
     document.getElementById("feedback").style.display = "none";
 
@@ -188,8 +188,13 @@ document.addEventListener("DOMContentLoaded", function () {
       model: "gpt-3.5-turbo",
     };
 
+    //TODO a deplacer
+    function generatePrompt(graph) {
+      return `The subject is a graffiti. It's bold, intricate, colorfull. The medium is spray paint, with techniques like stenciling and dripping adding texture and depth. Some artists who inspire this style are Banksy and Shepard Fairey, switch each time, based on ${graph}`
+    }
+
     const imagerequestBody = {
-      prompt: `The subject is a graffiti. It's bold, intricate, colorfull. The medium is spray paint, with techniques like stenciling and dripping adding texture and depth. Some artists who inspire this style are Banksy and Shepard Fairey, switch each time, based on ${`graff`} name`,
+      prompt: "",
       n: 1,
       size: "256x256",
       response_format: "b64_json"
@@ -215,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
+        imagerequestBody.prompt = generatePrompt(graff);
         return graff;
       })
       .then((graff) => {

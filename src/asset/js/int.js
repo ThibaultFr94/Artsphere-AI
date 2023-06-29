@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const imagerequestBody = {
-      prompt: `A beautiful and stylishly designed interior. The subject is a modern living space, with clean lines and a minimalist aesthetic. The environment is a spacious, open-concept apartment, with large windows and natural light. The mood is sophisticated and elegant, with a sense of simplicity and understated luxury. The medium is interior design, with techniques like color blocking and strategic furniture placement creating a sense of flow and harmony. Some interior designers who inspire this style are Kelly Wearstler and Nate Berkus, and the camera settings will be a high-quality DSLR with a wide-angle lens to capture the spaciousness and details of the design, based on ${`int`} name`,
+      prompt: `A beautiful and stylishly designed interior. The subject is a modern living space, with clean lines and a minimalist aesthetic. The environment is a spacious, open-concept apartment, with large windows and natural light. The mood is sophisticated and elegant, with a sense of simplicity and understated luxury. The medium is interior design, with techniques like color blocking and strategic furniture placement creating a sense of flow and harmony. Some interior designers who inspire this style are Kelly Wearstler and Nate Berkus, and the camera settings will be a high-quality DSLR with a wide-angle lens to capture the spaciousness and details of the design, based on ${int} name`,
       n: 1,
       size: "256x256",
     };
@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
+        imagerequestBody.prompt = generatePrompt(int);
         return int;
       })
       .then((int) => {

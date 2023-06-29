@@ -15,14 +15,18 @@ Le projet Artsphere-IA est un site web qui utilise les API de OpenAI, en particu
 
 Les utilisateurs peuvent visiter le site web, choisir quelle type d'inspiration ils veulent (Art, Graff ou Design) et cliquer sur "Générer". Le site web produira alors un nom unique et l'oeuvre correspondante.
 
-## Gellerie
+## Galerie
 
- y compris une galerie communautaire où les utilisateurs peuvent partager leurs créations, voter pour leurs préférées et commenter les œuvres d'art des autres. Nous prévoyons également d'améliorer la personnalisation de la génération de graffitis pour offrir une plus grande variété d'options aux utilisateurs.
+ Une galerie communautaire est également disponible où les utilisateurs peuvent consulter des selections alèatoires des trois types d'oeuvre d'art Nous prévoyons également d'améliorer la notation des oeuvres.
 
 ## Contributions
 
 Nous sommes toujours à la recherche de contributions pour améliorer notre projet. Si vous avez des idées ou des suggestions, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
 
+
+## Secrets
+
+Vous devez créer un fichier module.js dans le dossier asset/js afin d'y importer vos clées API pour Chat GPT et Dall-E.
 ## Licence
 
-Pour plus d'informations, veuillez consulter le fichier LICENCE.
+Pour plus d'informations, veuillez consulter le fichier LICENCE

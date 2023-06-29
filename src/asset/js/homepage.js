@@ -102,7 +102,7 @@ toggleCapture = function () {
   isCapturing(!capturing);
 };
 
-window.addEventListener('keyup', function (e) {if (e.keyCode == 68) toggleCapture();});
+window.addEventListener('keyup', function (e) {if (e.key == "d") toggleCapture();});
 
 let then = 0;
 function renderTexture(delta) {
