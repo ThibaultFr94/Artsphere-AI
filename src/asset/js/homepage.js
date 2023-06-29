@@ -26,7 +26,7 @@ function init() {
 
   scene = new THREE.Scene();
 
-  var geometry = new THREE.PlaneBufferGeometry(2, 2);
+  let geometry = new THREE.PlaneBufferGeometry(2, 2);
 
   rtTexture = new THREE.WebGLRenderTarget(window.innerWidth * .1, window.innerHeight * .1);
   rtTexture2 = new THREE.WebGLRenderTarget(window.innerWidth * .1, window.innerHeight * .1);
@@ -40,14 +40,14 @@ function init() {
     u_renderpass: { type: 'b', value: false } };
 
 
-  var material = new THREE.ShaderMaterial({
+  let material = new THREE.ShaderMaterial({
     uniforms: uniforms,
     vertexShader: document.getElementById('vertexShader').textContent,
     fragmentShader: document.getElementById('fragmentShader').textContent });
 
   material.extensions.derivatives = true;
 
-  var mesh = new THREE.Mesh(geometry, material);
+  let mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
 
   renderer = new THREE.WebGLRenderer();

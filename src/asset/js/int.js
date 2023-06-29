@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function generateInt() {
-    var img = document.getElementById("int-img");
+    let img = document.getElementById("int-img");
     if (!img.classList.contains("int-img-hidden"))
       img.classList.add("int-img-hidden");
     document.getElementById("int-result").textContent = "";
 
-    var divImg = document.getElementById("div-img");
+    let divImg = document.getElementById("div-img");
     divImg.classList.add("loader");
     document.getElementById("feedback").style.display = "none";
 
