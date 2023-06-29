@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI-nteriors</title>
+    <script
+      src="https://kit.fontawesome.com/e8a304bd19.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="asset/css/int.css" />
+  </head>
+  <body>
+    
+    <main class="main-div">
+      
+      <div class="cursor"></div>
+      <div class="main-div">
+        <a href="homepage.html" id="home-btn" class="button-link">Home</a>
+        <a href="gallerie.html" id="gallery-btn" class="button-link">Gallerie</a>
+        <h1>AI-nteriors</h1>
+        <p>Free design inspiration</p>
+        <button id="int-btn">Generate</button>
+       
+        <div id="div-txt" class="">
+          <p id="int-result"></p>
+        </div>
+        <div id="div-img" class="loader">
+          <img
+            id="int-img"
+            class="int-img-hidden"
+            src=""
+            alt="Generated int Image"
+          />
+        </div>
+      </div>
+      <div id="feedback">
+        <h2>Note ton interieur</h2>
+        <div id="stars">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="asset/js/module_env.js"></script>
+    <script src="asset/js/service.js"></script>
+    <script type="module" src="asset/js/int.js"></script>
+  </body>
+</html>
