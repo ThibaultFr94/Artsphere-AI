@@ -11,7 +11,8 @@ body {
   display: flex;
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   position: absolute; 
-  left:200px;
+  top: 30px;
+  left: 30px;
   outline: none;
   color: #9c0303;
   transition: 1s;
@@ -43,7 +44,9 @@ body {
 #gallery-btn {
   display: flex;
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
-  position: absolute; 
+  position: absolute;
+  top: 30px;
+  right: 30px;
   outline: none;
   color:  #9c0303;
   transition: 1s;
@@ -69,17 +72,6 @@ body {
 
 #gallery-btn:hover {
   cursor: pointer;
-}
-#home-btn {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-#gallery-btn {
-  position: absolute;
-  top: 30px;
-  right: 30px;
 }
 
 h1 {
