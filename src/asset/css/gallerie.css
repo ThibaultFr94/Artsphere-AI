@@ -7,14 +7,14 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rosart";
   font-weight: lighter;
+
 }
 
 #home-btn {
   position: absolute;
   top: -30px;
-  left: 40px;
+  left: 50px;
   background: transparent;
   color: white;
   font-size: 30px;
@@ -26,16 +26,13 @@ body {
 }
 
 #home-btn:hover {
-  top: -30px;
-  left: 40px;
-  font-size: 40px;
+  font-size: 35px;
   border: none;
   animation: textshadow 5s ease-in-out infinite;
-  
 }
 
 h1 {
-  font-family: "Rosart";
+  font-family: "Rosart", Arial, Helvetica, sans-serif;;
   font-weight: lighter;
   font-size: 7rem;
   color: #ffffff;
@@ -66,11 +63,11 @@ h1 {
   text-align: center;
   color: #ffffff;
   font-size: 30px;
-  font-family: "Rosart";
+  font-family: "Rosart", Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
 .section > h2 {
-  font-family: "Rosart";
+  font-family: "Rosart", Arial, Helvetica, sans-serif;;
   text-align: center;
   color: #ffffff;
   font-size: 40px;

@@ -4,7 +4,7 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { saveImageToLocalStorage } from "./service.js";
+import { generatePromptPaint, saveImageToLocalStorage } from "./service.js";
 import { types } from "./type.js";
 
 
@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
       model: "gpt-3.5-turbo"
     };
 
+
     const imagerequestBody = {
-      prompt: `The subject is a peaceful landscape, with soft brushstrokes and a dreamy quality. The environment is a serene countryside, with rolling hills and a gentle stream. The mood is tranquil and calming, with a sense of the beauty and simplicity of nature. The medium is oil paint, with techniques like broken color and thick impasto creating a sense of depth and texture. Some artists who inspire this style are Claude Monet or Vincent Van Gogh or Pierre-Auguste Renoir, and the camera settings will be a high-resolution DSLR with a macro lens to capture the intricate details and vibrant colors`,
+      prompt: "",
       n: 1,
       size: "256x256",
     };
@@ -76,6 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const paint = data.choices[0].message.content
         document.getElementById("paint-result").textContent = paint.replace(/"/g, "");
        
+        imagerequestBody.prompt = generatePromptPaint(paint);
         return paint;
       })
       .then((paint) => {

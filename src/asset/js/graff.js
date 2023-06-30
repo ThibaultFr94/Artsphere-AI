@@ -4,7 +4,7 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { saveImageToLocalStorage } from "./service.js";
+import { generatePromptGraff, saveImageToLocalStorage } from "./service.js";
 import { types } from "./type.js";
 
 const canvas = document.createElement("canvas");
@@ -33,7 +33,7 @@ let mouse = {
 window.addEventListener("resize", function () {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
-  (mouse.radius = 0.5), init();
+  mouse.radius = 0.5;
 });
 
 window.addEventListener("mousemove", function (event) {
@@ -135,9 +135,9 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, innerWidth, innerHeight);
-  for (let i = 0; i < particlesArray.length; i++) {
-    particlesArray[i].update();
-  }
+  particlesArray.map(item =>{
+    item.update();
+  })
 }
 
 init();
@@ -188,11 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
       model: "gpt-3.5-turbo",
     };
 
-    //TODO a deplacer
-    function generatePrompt(graph) {
-      return `The subject is a graffiti. It's bold, intricate, colorfull. The medium is spray paint, with techniques like stenciling and dripping adding texture and depth. Some artists who inspire this style are Banksy and Shepard Fairey, switch each time, based on ${graph}`
-    }
-
     const imagerequestBody = {
       prompt: "",
       n: 1,
@@ -220,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
-        imagerequestBody.prompt = generatePrompt(graff);
+        imagerequestBody.prompt = generatePromptGraff(graff);
         return graff;
       })
       .then((graff) => {

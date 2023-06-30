@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   background: #ffd903
 }
 
@@ -8,44 +7,83 @@ body {
   justify-content: center;
   align-items: center;
 }
-#gallery-btn, #home-btn {
-  font-family: "LettreClassique";
-  font-weight: bold;
-  width: 10em;
-  height: 2em;
-  outline: none;
-  background-color: #ffd903;
-  color: #723838;
-  transition: 1s;
-  border-radius: 0.3em;
-  font-size: 20px;
-  position: absolute;
-  z-index: 2000;
+#home-btn {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  position: absolute; 
+  left:200px;
+  outline: none;
+  color: #9c0303;
+  transition: 1s;
+  font-size: 30px;
   text-decoration: none;
+  cursor: pointer ;
+  z-index: 2000;
 }
 
-#home-btn {
-  top: 20px;
-  left: 20px;
+#home-btn::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  transform-origin: center;
+  
 }
-#home-btn:hover {
-  font-size: 30px;
-  top: 30px;
-}
+#home-btn:hover,
 #gallery-btn:hover{
-  font-size: 30px;
-  top: 30px;
+  animation: textshadow 5s ease-in-out infinite;
 }
+#home-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  left: 20px;
+  
+}
+
 #gallery-btn {
-  top: 20px;
-  right: 20px;
+  display: flex;
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  position: absolute; 
+  outline: none;
+  color:  #9c0303;
+  transition: 1s;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer ;
+  z-index: 2000;
+}
+
+#gallery-btn::after {
+  content: "";
+  position: absolute;
+  
+}
+
+#gallery-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+#gallery-btn:hover {
+  cursor: pointer;
+}
+#home-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+#gallery-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 h1 {
-  font-family: "Classic Mosaic";
+  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
   font-weight: lighter;
   font-size: 5rem;
   color: #9c0303;
@@ -63,14 +101,15 @@ h1 {
 }
 
 .main-div > p {
-  font-family: "GOLDEN";
+  top: 200px;
+  font-family: "GOLDEN", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #723838;
   width: 100vw;
   text-align: inherit;
 }
 p {
-  font-family: "LettreClassique";
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   color: #723838;
@@ -78,7 +117,7 @@ p {
   text-align: inherit;
 }
 button {
-  font-family: "LettreClassique";
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   font-weight: bold;
   width: 10em;
   position: relative;
@@ -91,6 +130,7 @@ button {
   border-radius: 0.3em;
   font-size: 20px;
   z-index: 2000;
+  
 }
 button::after {
   content: "";
@@ -119,7 +159,9 @@ button:hover::after {
 }
 
 button:hover {
-  box-shadow: inset 0px 0px 25px #8b3620;
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 15px #8b3620;
+  font-size: 22px;
 }
 
 #paint-result {
@@ -201,7 +243,7 @@ button:hover {
   align-items: center;
   flex-direction: column;
   color: #723838;
-  font-family: "GOLDEN";
+  font-family: "GOLDEN", Arial, Helvetica, sans-serif;
   
 }
 

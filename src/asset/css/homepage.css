@@ -86,16 +86,8 @@ h2 {
   background: inherit;
   border-radius: 50%;
   z-index: -1;
-  transition: box-shadow 1s ease-in-out;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
-  
-}
-
-.circle-link1:hover::after,
-.circle-link2:hover::after,
-.circle-link3:hover::after {
-  box-shadow: 0 0 0 15px rgb(255, 255, 255);
-  
+  transition: box-shadow 2s ease-in-out;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
 }
 
 .circle-link1 {
@@ -122,32 +114,30 @@ h2 {
   transform: translate(-50%, -50%);
   font-size: 45px;
   text-align: center;
-  
-  
 }
 
 .circle-text1 {
   color: white;
-  font-family: "Computer Regular";
+  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
 }
 
 .circle-text2 {
   color: white;
-  font-family: "Classic Mosaic";
+  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
 }
 
 .circle-text3 {
   color: white;
-  font-family: "Coolvetica";
-  font-weight: thin;
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+ 
 }
 
 .circle-link1:hover {
   background-color: #4e58e0;
   transform: scale(1.3);
   border: none;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-  width 1s ease-in-out, height 1s ease-in-out;
+  transition: background-color 2s ease-in-out, border 2s ease-in-out,
+  width 2s ease-in-out, height 2s ease-in-out;
   
 }
 
@@ -155,44 +145,40 @@ h2 {
   transform: scale(1.3);
   background-color: #ffd903;
   border: none;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out;
+  transition: background-color 2s ease-in-out, border 2s ease-in-out,
+    width 2s ease-in-out, height 2s ease-in-out;
 }
 
 .circle-link3:hover {
   background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjE4LWV5ZS0wOC5qcGc.jpg");
   border: none;
   transform: scale(1.3) ;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-  width 1s ease-in-out, height 1s ease-in-out;
+  transition: background-color 2s ease-in-out, border 2s ease-in-out,
+  width 2s ease-in-out, height 2s ease-in-out;
 }
 
 .circle-link1:hover .circle-text1 {
   color: rgb(0, 0, 0);
   font-size: 55px;
-  transition: color 1s ease-in-out,text-shadow 1s ease-in-out, font-size 1s ease-in-out;
+  transition: color 2s ease-in-out,text-shadow 2s ease-in-out, font-size 2s ease-in-out;
   text-shadow: -1px -1px 0 rgb(56, 216, 237),  
   1px -1px 0 rgb(56, 216, 237),
-  -1px 1px 0 rgb(56, 216, 237),
+text2  -1px 1px 0 rgb(56, 216, 237),
   1px 1px 0 rgb(56, 216, 237);
-  animation: glow 5s ease-in-out infinite;
+  animation: text-shadow 3s ease-in-out;
 }
 
 .circle-link2:hover .circle-text2 {
   color: #723838;
   font-size: 55px;
-  transition: color 1s ease-in-out, font-size 1s ease-in-out;
-  text-shadow: -0.1px  0.1px 0 #723838,  
-  0.1px  -0.1px 0 #723838,
-  -0.1px  0.1px 0 #723838,
-  0.1px  -0.1px 0 #723838;
-  animation: glow 5s ease-in-out infinite;
+  transition: color 2s ease-in-out, font-size 2s ease-in-out;
+  
 }
 
 .circle-link3:hover .circle-text3 {
   color: rgb(55, 55, 55);
   font-size: 55px;
-  transition: color 1s ease-in-out, font-size 1s ease-in-out;
+  transition: color 2s ease-in-out, font-size 2s ease-in-out;
   text-shadow: -1px -1px 0 rgb(55, 55, 55),  
   1px -1px 0 rgb(55, 55, 55),
   -1px 1px 0 rgb(55, 55, 55),
@@ -211,7 +197,7 @@ h2 {
   border-radius: 60px;
   color: #ffffff;
   cursor: pointer;
-  font-family: "Modeco Trial";
+  font-family: "Modeco Trial", Arial, Helvetica, sans-serif;
   line-height: 75px;
   font-size: 1.5em;
   font-weight: bold;
@@ -286,9 +272,9 @@ h2 {
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   z-index: -1;
   font-weight: bolder;
-  font-family: "Modeco Trial";
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out;
+  font-family: "Modeco Trial", Arial, Helvetica, sans-serif;
+  transition: background-color 2s ease-in-out, border 2s ease-in-out,
+    width 2s ease-in-out, height 2s ease-in-out;
 }
 
 .styled-button:hover {
@@ -318,10 +304,10 @@ h2 {
 }
 @keyframes glow {
   0%, 100% {
-    text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 8px #ffffff;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff;
   }
   50% {
-    text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 8px #ffffff, 0 0 10px #ffffff;
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 8px #ffffff;
   }
 }
 @keyframes textshadow {

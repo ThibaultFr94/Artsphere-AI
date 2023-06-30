@@ -21,14 +21,14 @@ canvas {
 
 h1 {
   font-weight: bold;
-  font-family: "Computer Regular";
+  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
   font-size: 5.5rem;
   color: #fff;
   animation: textshadow 5s ease-in-out infinite;
 }
 
 .main-div > p {
-  font-family: "Street Block";
+  font-family: "Street Block", Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   color: #fff;
   width: 100vw;
@@ -36,7 +36,7 @@ h1 {
   animation: textshadow 5s ease-in-out infinite;
 }
 p {
-  font-family: "Blouse";
+  font-family: "Blouse", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   color: #fff;
@@ -44,7 +44,7 @@ p {
   text-align: inherit;
 }
 button {
-  font-family: "Futurama";
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
   width: 10em;
   position: relative;
   height: 2em;
@@ -166,21 +166,10 @@ button:hover {
   align-items: center;
   flex-direction: column;
   color: #149cea;
-  font-family: "Street Block";
+  font-family: "Street Block", Arial, Helvetica, sans-serif;
   animation: textshadow 5s ease-in-out infinite;
 }
 
-.next {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#next {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
 
 button img {
   width: 100%;
@@ -274,30 +263,22 @@ button img {
 }
 #home-btn {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Futurama";
-  width: 10em;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
   position: absolute; 
-  top: 10px;
-  left: 10px;
-  height: 2em;
   outline: none;
   color: white;
   transition: 1s;
   font-size: 30px;
   text-decoration: none;
-  cursor: pointer ;
+  cursor: pointer;
   z-index: 2000;
+  top: 30px;
+  left: 30px;
 }
 
 #home-btn::after {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
   cursor: pointer;
   transform-origin: center;
   
@@ -310,65 +291,39 @@ button img {
   content: "";
   transform-origin: center;
   position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
+  left: 20px;
+  
 }
 
 #gallery-btn {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Futurama";
-  width: 10em;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
   position: absolute; 
-  top: 2px;
-  right: 2px;
-  height: 2em;
   outline: none;
   color: white;
   transition: 1s;
   font-size: 30px;
   text-decoration: none;
-  cursor: pointer ;
+  cursor: pointer;
   z-index: 2000;
+  top: 30px;
+  right: 30px;
 }
 
 #gallery-btn::after {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
-  cursor: pointer;
-  transform-origin: center;
+  
 }
 
 #gallery-btn::before {
   content: "";
   transform-origin: center;
   position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
   cursor:pointer;
   transition: 0.5s;
 }
 
 #gallery-btn:hover {
   cursor: pointer;
-}
-#home-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-#gallery-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }

@@ -89,7 +89,7 @@ let capturer = new CCapture({
 
 let capturing = false;
 
-isCapturing = function (val) {
+function isCapturing(val) {
   if (val === false && window.capturing === true) {
     capturer.stop();
     capturer.save();
@@ -98,7 +98,7 @@ isCapturing = function (val) {
   }
   capturing = val;
 };
-toggleCapture = function () {
+function toggleCapture() {
   isCapturing(!capturing);
 };
 
