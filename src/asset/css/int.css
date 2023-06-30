@@ -16,14 +16,14 @@ img {
 }
 
 h1 {
-  font-family: "Coolvetica";
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: 5rem;
   color: #5d625c;
 }
 
 .main-div > p {
-  font-family: "Brand";
+  font-family: "Brand", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #5d625c;
   width: 100vw;
@@ -31,7 +31,7 @@ h1 {
 }
 
 p {
-  font-family: "Brand";
+  font-family: "Brand", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2rem;
   color: #626262;
@@ -65,7 +65,7 @@ p {
 }
 
 button {
-  font-family: "Coolvetica";
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-weight: thin;
   width: 8em;
   position: relative;
@@ -125,7 +125,7 @@ button:hover {
   border: none;
   font-size: 40px;
   animation: textshadow 5s ease-in-out infinite;
-  font-family: "Coolvetica";
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
 }
 
 #gallery-btn {
@@ -142,11 +142,7 @@ button:hover {
   font-size: 40px;
   border: none;
   animation: textshadow 5s ease-in-out infinite;
-  font-family: "Coolvetica";
-}
-
-button:hover {
-  text-shadow:  inset 0px 0px 25px #5d625c;
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
 }
 
 #int-result {
@@ -168,7 +164,7 @@ button:hover {
 }
 
 .button-link {
-  font-family: "Coolvetica";
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-weight: thin;
   background-color: #f5e56c00;
   color: #5d625c;
