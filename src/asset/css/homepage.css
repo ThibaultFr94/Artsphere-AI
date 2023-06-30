@@ -279,10 +279,12 @@ text2  -1px 1px 0 rgb(56, 216, 237),
 
 .styled-button:hover {
   color: #000;
+  border: 2px solid #000000;
 }
 
 .styled-button:hover::after {
   background: #ffffff;
+
 }
 
 .styled-button:active {

@@ -146,36 +146,78 @@ button:hover {
   animation: glow 5s ease-in-out infinite;
 }
 
-.star {
-  font-size: 2em;
-  color: grey;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-
-.highlight {
-  color: gold;
-  justify-content: center;
-  align-items: center;
-}
-
-#feedback {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #149cea;
-  font-family: "Street Block", Arial, Helvetica, sans-serif;
-  animation: textshadow 5s ease-in-out infinite;
-}
-
-
 button img {
   width: 100%;
   height: 100%;
   object-fit: fill;
   color: #149cea;
+}
+
+#home-btn {
+  display: flex;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  position: absolute; 
+  outline: none;
+  color: white;
+  transition: 1s;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+  top: 30px;
+  left: 30px;
+}
+
+#home-btn::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  transform-origin: center;
+  
+}
+#home-btn:hover,
+#gallery-btn:hover{
+  animation: textshadow 5s ease-in-out infinite;
+}
+#home-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  left: 20px;
+  
+}
+
+#gallery-btn {
+  display: flex;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  position: absolute; 
+  outline: none;
+  color: white;
+  transition: 1s;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+  top: 30px;
+  right: 30px;
+}
+
+#gallery-btn::after {
+  content: "";
+  position: absolute;
+  
+}
+
+#gallery-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+#gallery-btn:hover {
+  cursor: pointer;
 }
 
 @keyframes rotate {
@@ -260,70 +302,4 @@ button img {
     box-shadow: 0 0 10px #327bc8, 0 0 20px #1d44b8, 0 0 30px #173387,
       0 0 40px #0032ca;
   }
-}
-#home-btn {
-  display: flex;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
-  outline: none;
-  color: white;
-  transition: 1s;
-  font-size: 30px;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 2000;
-  top: 30px;
-  left: 30px;
-}
-
-#home-btn::after {
-  content: "";
-  position: absolute;
-  cursor: pointer;
-  transform-origin: center;
-  
-}
-#home-btn:hover,
-#gallery-btn:hover{
-  animation: textshadow 5s ease-in-out infinite;
-}
-#home-btn::before {
-  content: "";
-  transform-origin: center;
-  position: absolute;
-  left: 20px;
-  
-}
-
-#gallery-btn {
-  display: flex;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
-  outline: none;
-  color: white;
-  transition: 1s;
-  font-size: 30px;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 2000;
-  top: 30px;
-  right: 30px;
-}
-
-#gallery-btn::after {
-  content: "";
-  position: absolute;
-  
-}
-
-#gallery-btn::before {
-  content: "";
-  transform-origin: center;
-  position: absolute;
-  cursor:pointer;
-  transition: 0.5s;
-}
-
-#gallery-btn:hover {
-  cursor: pointer;
 }

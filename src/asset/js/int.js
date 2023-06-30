@@ -10,26 +10,6 @@ import { types } from "./type.js";
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("int-btn").addEventListener("click", generateInt);
 
-  let stars = document.querySelectorAll(".star");
-  let rating = 0;
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].addEventListener("click", function () {
-      console.log("Star " + (i + 1) + " clicked!");
-      rating = i + 1;
-
-      for (let j = 0; j < stars.length; j++) {
-        if (j < rating) {
-          stars[j].classList.add("highlight");
-        } else {
-          stars[j].classList.remove("highlight");
-        }
-      }
-      document
-        .getElementById("submit-feedback")
-        .addEventListener("click", submitFeedback);
-      submitFeedback();
-    });
-  }
 
   function generateInt() {
     let img = document.getElementById("int-img");
@@ -39,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let divImg = document.getElementById("div-img");
     divImg.classList.add("loader");
-    document.getElementById("feedback").style.display = "none";
 
     const prompt =
       "Tu es un designer pour décoration d'intérieur , tu dois trouver un nom pour une décoration d'interieure, PAS PLUS DE 2 MOTS.";
@@ -103,19 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
             img.classList.remove("int-img-hidden");
             img.classList.add("int-img-visible");
             document.getElementById("int-img").src = data.data[0].url;
-            document.getElementById("feedback").style.display = "flex";
             saveImageToLocalStorage(document.getElementById("int-result").textContent, data.data[0].url, types[3])
           });
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }
-  function submitFeedback() {
-    let feedback = document.getElementById("comment").value;
-    document.getElementById("feedback").style.display = "none";
-    if (rating > 0) {
-      console.log("Note : " + rating + ", Feedback : " + feedback);
-    }
   }
 });

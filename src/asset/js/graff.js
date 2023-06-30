@@ -146,25 +146,6 @@ animate();
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("graff-btn").addEventListener("click", generateGraff);
 
-  let stars = document.querySelectorAll(".star");
-  let rating = 0;
-  for (let i = 0; i < stars.length; i++) {
-    stars[i].addEventListener("click", function () {
-      console.log("Star " + (i + 1) + " clicked!");
-      rating = i + 1;
-      for (let j = 0; j < stars.length; j++) {
-        if (j < rating) {
-          stars[j].classList.add("highlight");
-        } else {
-          stars[j].classList.remove("highlight");
-        }
-      }
-      document
-        .getElementById("submit-feedback")
-        .addEventListener("click", submitFeedback);
-      submitFeedback();
-    });
-  }
   function generateGraff() {
     let img = document.getElementById("graff-img");
     if (!img.classList.contains("graff-img-hidden"))
@@ -173,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let divImg = document.getElementById("div-img");
     divImg.classList.add("loader");
-    document.getElementById("feedback").style.display = "none";
 
     const prompt =
       "You're an artist expert, your mission is to invent a quick name for a graffiti, 2 words maximum";
@@ -238,20 +218,12 @@ document.addEventListener("DOMContentLoaded", function () {
             img.classList.remove("graff-img-hidden");
             img.classList.add("graff-img-visible");
             document.getElementById("graff-img").src = `data:image/png;base64,${data.data[0].b64_json}`;
-            document.getElementById("feedback").style.display = "flex";
             saveImageToLocalStorage(document.getElementById("graff-result").textContent, `data:image/png;base64,${data.data[0].b64_json}`, types[1])
           });
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }
-  function submitFeedback() {
-    let feedback = document.getElementById("comment").value;
-    document.getElementById("feedback").style.display = "none";
-    if (rating > 0) {
-      console.log("Note : " + rating + ", Feedback : " + feedback);
-    }
   }
 });
 

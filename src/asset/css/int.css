@@ -167,34 +167,6 @@ button:hover {
   animation: glow 5s ease-in-out infinite;
 }
 
-.star {
-  font-size: 2em;
-  color: grey;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-
-.highlight {
-  color: #d3d0d0;
-  justify-content: center;
-  align-items: center;
-}
-
-#feedback {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #5d625c;
-  font-family: "Brand"";
-}
-
-@keyframes rotate {
-  0%{    transform: rotate(0deg)}
-  100%{    transform: rotate(360deg)}
-}
-
 .button-link {
   font-family: "Coolvetica";
   font-weight: thin;
@@ -225,3 +197,7 @@ button:hover {
   box-shadow: inset 0px 0px 25px #5d625c;
 }
 
+@keyframes rotate {
+  0%{    transform: rotate(0deg)}
+  100%{    transform: rotate(360deg)}
+}
