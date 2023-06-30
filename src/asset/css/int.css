@@ -3,6 +3,7 @@ body {
   background-position: fill;
   background-repeat: repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .main-div {
@@ -26,7 +27,6 @@ h1 {
   font-family: "Brand", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
   color: #5d625c;
-  width: 100vw;
   text-align: inherit;
 }
 
@@ -35,7 +35,6 @@ p {
   font-weight: bold;
   font-size: 2rem;
   color: #626262;
-  width: 100vw;
   text-align: inherit;
 }
 

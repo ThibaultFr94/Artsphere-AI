@@ -29,9 +29,11 @@ export function generatePromptGraff(graff) {
 }
 
 export function generatePromptPaint(paint) {
-  return `The subject is a peaceful landscape, with soft brushstrokes and a dreamy quality. The environment is a serene countryside, with rolling hills and a gentle stream. The mood is tranquil and calming, with a sense of the beauty and simplicity of nature. The medium is oil paint, with techniques like broken color and thick impasto creating a sense of depth and texture. Some artists who inspire this style are Claude Monet or Vincent Van Gogh or Pierre-Auguste Renoir, and the camera settings will be a high-resolution DSLR with a macro lens to capture the intricate details and vibrant colors, based on this name : ${paint}`
+  return `The subject will be an impressionist art. The mood is tranquil ,with a sense of calmness . The medium is acrylic paint, applied with a loose brush technique. We will use a Van Gogh-inspired color palette, with bright blues and greens ,using the style of Edouard Manet, known for his loose brushstrokes and emphasis on light and shadow. We will focus on capturing the essence of the scene rather than the details, giving the painting a dream-like quality. This style will complement the impressionist technique and the overall mood of the painting. : ${paint}`
 }
 
 export function generatePromptInt(int) {
-  return `A beautiful and stylishly designed interior. The subject is a modern living space, with clean lines and a minimalist aesthetic. The environment is a spacious, open-concept apartment, with large windows and natural light. The mood is sophisticated and elegant, with a sense of simplicity and understated luxury. The medium is interior design, with techniques like color blocking and strategic furniture placement creating a sense of flow and harmony. Some interior designers who inspire this style are Kelly Wearstler and Nate Berkus, and the camera settings will be a high-quality DSLR with a wide-angle lens to capture the spaciousness and details of the design, based on this name : ${int}`
+  return `A beautiful and stylishly designed interior.For the interior design wide angle, we can use the name "Designscape" to capture the broad scope of the project. We'll use a combination of Claymotion and Unreal Engine to create a stunning 3D rendering that brings the space to life.
+
+  In terms of design style, we can incorporate elements of modernism, inspired by the work of Frank Lloyd Wright, I. M. Pei, and John Lautner, as well as the iconic Palm Springs aesthetic of Arthur Elrod. By blending these styles, we can create a unique and timeless design that is both functional and beautiful, based on this name : ${int}`
 }

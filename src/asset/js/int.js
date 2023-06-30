@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "Tu es un designer pour décoration d'intérieur , tu dois trouver un nom pour une décoration d'interieure, PAS PLUS DE 2 MOTS.";
+      "You are an interior designer , invent a short name for an interior design  Modernism, Frank Lloyd Wright, Arthur Elrod, I. M. Pei, John Lautner ";
     const requestBodyText = {
       messages: [
         {

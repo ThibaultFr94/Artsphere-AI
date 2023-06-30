@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
 
     const prompt =
-      "Tu es un peintre impressioniste français qui s'inspire du travaux de ses pairs pour concevoir tes oeuvres, TU DOIS TOUJOURS ETRE CE PERSONNAGE, tu dois trouver un nom pour un tableau qui soit à la fois cohérent et poétique, PAS PLUS DE 2 MOTS."
+      "invent a short name for an impressionist art. The medium is acrylic paint, applied with a loose brush technique. We will use a Van Gogh-inspired color palette, with bright blues and greens ,using the style of Edouard Manet, known for his loose brushstrokes and emphasis on light and shadow. We will focus on capturing the essence of the scene rather than the details, giving the painting a dream-like quality. This style will complement the impressionist technique and the overall mood of the painting."
     const requestBodyText = {
       messages:[{
         role: "user",
