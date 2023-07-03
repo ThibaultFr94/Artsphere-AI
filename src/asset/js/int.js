@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "You are an interior designer , invent a short name for an interior design  Modernism, Frank Lloyd Wright, Arthur Elrod, I. M. Pei, John Lautner ";
+      "invent one short name for an interior design with Frank Lloyd W. or Arthur Elrod or I. M. Pei or John Lautner inspiration ";
     const requestBodyText = {
       messages: [
         {

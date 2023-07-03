@@ -23,6 +23,13 @@ body {
   cursor: pointer;
   z-index: 2000;
 }
+#home-btn:hover{
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  transition: 0.5s ease;
+}
 
 #home-btn::after {
   content: "";
@@ -31,10 +38,6 @@ body {
   transform-origin: center;
 }
 
-#home-btn:hover,
-#gallery-btn:hover {
-  animation: textshadow 5s ease-in-out infinite;
-}
 
 #home-btn::before {
   content: "";
@@ -57,9 +60,18 @@ body {
   cursor: pointer;
   z-index: 2000;
 }
-
+#gallery-btn:hover{
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  transition: 0.5s ease;
+}
 #gallery-btn::after {
   content: "";
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
   position: absolute;
 }
 

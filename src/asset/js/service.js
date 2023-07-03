@@ -29,7 +29,7 @@ export function generatePromptGraff(graff) {
 }
 
 export function generatePromptPaint(paint) {
-  return `The subject will be an impressionist art. The mood is tranquil ,with a sense of calmness . The medium is acrylic paint, applied with a loose brush technique. We will use a Van Gogh-inspired color palette, with bright blues and greens ,using the style of Edouard Manet, known for his loose brushstrokes and emphasis on light and shadow. We will focus on capturing the essence of the scene rather than the details, giving the painting a dream-like quality. This style will complement the impressionist technique and the overall mood of the painting. : ${paint}`
+  return `The subject will be an impressionist art. The medium is acrylic paint,  We will use a Van Gogh-inspired color palette, with colorfull pattern ,using the style of Edouard Manet, Gustav Klimt and Rembrandt. We will focus on capturing the essence of the name : ${paint}`
 }
 
 export function generatePromptInt(int) {

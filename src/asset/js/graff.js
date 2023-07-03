@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "You're an artist expert, your mission is to invent a quick name for a graffiti, 2 words maximum";
+      "invent a name for a graffiti inspired by street art around the world";
     const requestBodyText = {
       messages: [
         {

@@ -161,11 +161,11 @@ button img {
   color: white;
   transition: 1s;
   font-size: 30px;
+  top:30px;
+  left: 30px;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  top: 30px;
-  left: 30px;
 }
 
 #home-btn::after {
@@ -175,10 +175,7 @@ button img {
   transform-origin: center;
   
 }
-#home-btn:hover,
-#gallery-btn:hover{
-  animation: textshadow 5s ease-in-out infinite;
-}
+
 #home-btn::before {
   content: "";
   transform-origin: center;
@@ -186,7 +183,14 @@ button img {
   left: 20px;
   
 }
-
+#home-btn:hover{
+  top: 40px;
+  left: 40px;
+  font-size: 40px;
+  transition: 0.5s ease;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  position: absolute; 
+}
 #gallery-btn {
   display: flex;
   font-family: "Futurama", Arial, Helvetica, sans-serif;
@@ -201,7 +205,14 @@ button img {
   top: 30px;
   right: 30px;
 }
-
+#gallery-btn:hover{
+  top: 40px;
+ right: 40px;
+  font-size: 40px;
+  transition: 0.5s ease;
+  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  position: absolute; 
+}
 #gallery-btn::after {
   content: "";
   position: absolute;
@@ -216,9 +227,7 @@ button img {
   transition: 0.5s;
 }
 
-#gallery-btn:hover {
-  cursor: pointer;
-}
+
 
 @keyframes rotate {
   0% {

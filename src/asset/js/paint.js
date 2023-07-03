@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
    
 
     const prompt =
-      "invent a short name for an impressionist art. The medium is acrylic paint, applied with a loose brush technique. We will use a Van Gogh-inspired color palette, with bright blues and greens ,using the style of Edouard Manet, known for his loose brushstrokes and emphasis on light and shadow. We will focus on capturing the essence of the scene rather than the details, giving the painting a dream-like quality. This style will complement the impressionist technique and the overall mood of the painting."
+      "Invent a name inspired by great paintings of this century "
     const requestBodyText = {
       messages:[{
         role: "user",

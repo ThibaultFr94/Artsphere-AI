@@ -82,10 +82,6 @@ button {
 button::after {
   content: "";
   position: absolute;
-  top: -10px;
-  left: 3%;
-  width: 95%;
-  height: 40%;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -94,16 +90,12 @@ button::before {
   content: "";
   transform-origin: center;
   position: absolute;
-  top: 80%;
-  left: 3%;
-  width: 95%;
-  height: 40%;
   transition: 0.5s;
 }
 
 button:hover::before,
 button:hover::after {
-  transform: scale(0);
+  transform: scale(1.1);
 }
 
 button:hover {
@@ -111,37 +103,49 @@ button:hover {
 }
 
 #home-btn {
-  top: 50px;
-  left: 90px;
-  width: 0%;
+  position: absolute;  
+  text-decoration: none; 
+  top: 30px;  
+  left: 30px; 
   border: none;
   font-size: 30px;
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-weight: thin;
+  color:#5d625c;
+  transition: 0.5s ease;
 }
 
 #home-btn:hover {
-  top: 50px;
-  left: 110px;
+  position: absolute; 
+  top: 40px;  
+  left: 40px; 
   border: none;
   font-size: 40px;
-  animation: textshadow 5s ease-in-out infinite;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  transition: 0.5s ease;
 }
 
 #gallery-btn {
-  top: 50px;
-  right: 90px;
+  position: absolute;  
+  text-decoration: none; 
+  top: 30px;  
+  right: 30px; 
   border: none;
-  width: 0%;
   font-size: 30px;
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-weight: thin;
+  color:#5d625c;
+  transition: 0.5s ease;
 }
 
 #gallery-btn:hover {
-  top: 50px;
-  right: 110px;
-  font-size: 40px;
+  position: absolute; 
+  top: 40px;  
+  right: 40px; 
   border: none;
-  animation: textshadow 5s ease-in-out infinite;
+  font-size: 40px;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  transition: 0.5s ease;
 }
 
 #int-result {
