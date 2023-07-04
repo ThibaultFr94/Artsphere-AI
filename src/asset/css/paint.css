@@ -1,5 +1,5 @@
 body {
-  background: #ffd903;
+  background: #f1db5b;
   overflow: hidden;
 }
 
@@ -120,7 +120,7 @@ button {
   height: 2em;
   border: 3px dotted #8b3620;
   outline: none;
-  background-color: #ffd903;
+  background-color: #f1db5b;
   color: #9c0303;
   transition: 1s;
   border-radius: 0.3em;
@@ -154,7 +154,7 @@ button::before {
 button:hover {
   transition: 0.5s;
   box-shadow: inset 0px 0px 15px #9c0303;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 #paint-result {

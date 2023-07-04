@@ -28,7 +28,7 @@ export function generatePromptPaint(paint) {
 }
 
 export function generatePromptInt(int) {
-  return `A beautiful and stylishly designed interior.For the interior design wide angle, we can use the name "Designscape" to capture the broad scope of the project. We'll use a combination of Claymotion and Unreal Engine to create a stunning 3D rendering that brings the space to life.
+  return `A beautiful and stylishly designed interior.For the interior design wide angle . We'll use a combination of Claymotion and Unreal Engine to create a stunning 3D rendering that brings the space to life.
   In terms of design style, we can incorporate elements of modernism, inspired by the work of Frank Lloyd Wright, I. M. Pei, and John Lautner, as well as the iconic Palm Springs aesthetic of Arthur Elrod. By blending these styles, we can create a unique and timeless design that is both functional and beautiful, based on this name : ${int}`
 }
 

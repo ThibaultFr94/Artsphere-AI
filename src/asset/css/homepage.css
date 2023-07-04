@@ -25,6 +25,7 @@ h1 {
   font-family: "Bemock", Helvetica, sans-serif;
   font-weight: lighter;
   animation: glow 5s ease-in-out infinite;
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
 }
 
 h2 {
@@ -34,6 +35,8 @@ h2 {
   margin: 0;
   margin-top: 40px;
   font-family: "Modeco Trial", Helvetica, sans-serif;
+  text-shadow: 1px 1px 0px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.842);
 }
 
 .center-container {
@@ -59,7 +62,7 @@ h2 {
 .circle-link1,
 .circle-link2,
 .circle-link3 {
-  background-color: black;
+  background-color: rgb(11, 11, 11);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,18 +135,16 @@ h2 {
   border: none;
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     width 0.5s ease-in-out, height 0.5s ease-in-out;
-    transition:0.5s ease-out;
     box-shadow: none;
 }
 
 .circle-link2:hover {
   transform: scale(1.3);
-  background-color: #ffd903;
+  background-color: #f1db5b;
   border: none;
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     olor 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   text-transform: #9c0303;
-  transition: 0.5s ease-out;
   box-shadow: none;
 }
 
@@ -153,7 +154,6 @@ h2 {
   transform: scale(1.3);
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     color 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
-    transition:0.5s ease-out;
     box-shadow: none;
     -webkit-text-stroke: 2px rgb(55, 55, 55)d;
 }
@@ -165,14 +165,14 @@ h2 {
     text-shadow 0.5s ease-in-out, font-size 0.5s ease-in-out;
   text-shadow: -1px -1px 0 rgb(56, 216, 237), 1px -1px 0 rgb(56, 216, 237),
     text2 -1px 1px 0 rgb(56, 216, 237), 1px 1px 0 rgb(56, 216, 237);
-    transition:0.5s ease-out;
+  
 }
 
 .circle-link2:hover .circle-text2 {
   color: #9c0303;
   font-size: 55px;
   transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
-  transition:0.5s ease-out;
+
 }
 
 .circle-link3:hover .circle-text3 {
@@ -182,10 +182,9 @@ h2 {
   text-shadow: -1px -1px 0 rgb(55, 55, 55), 1px -1px 0 rgb(55, 55, 55),
     -1px 1px 0 rgb(55, 55, 55), 1px 1px 0 rgb(55, 55, 55);
   animation: glow 5s ease-in-out infinite;
-  transition:0.5s ease-out;
+
   -webkit-text-stroke: 2px rgb(55, 55, 55)d;
   font-weight: bolder;
-  text-transform: uppercase;
 }
 
 .styled-button {
@@ -223,8 +222,8 @@ h2 {
     #9c0303 11.36%,
     #000000 11.36%,
     #000000 12.5%,
-    #ffd903 12.5%,
-    #ffd903 23.86%,
+    #f1db5b 12.5%,
+    #f1db5b 23.86%,
     #000000 23.86%,
     #000000 25%,
     #d3d3d3 25%,
@@ -239,8 +238,8 @@ h2 {
     #9c0303 61.36%,
     #000000 61.36%,
     #000000 62.5%,
-    #ffd903 62.5%,
-    #ffd903 73.86%,
+    #f1db5b 62.5%,
+    #f1db5b 73.86%,
     #000000 73.86%,
     #000000 75%,
     #d3d3d3 75%,

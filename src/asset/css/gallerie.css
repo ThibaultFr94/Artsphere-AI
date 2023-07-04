@@ -1,33 +1,32 @@
 body {
-  background-image: url("/src/asset/img/couleurs-vibrantes-courbes-lisses-coups-pinceau-explosifs-generes-par-ia.jpg");
+  background-image: url("/src/asset/img/10.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
-  position: relative; 
+  position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-bottom: 50px;
 }
 
-main{
+main {
   width: 100%vw;
 }
 #home-btn {
   display: flex;
-  font-family: "Glitten",Arial, Helvetica, sans-serif;  
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  position: absolute; 
+  position: absolute;
   outline: none;
   color: rgb(0, 0, 0);
   transition: 1s;
   font-size: 30px;
-  top:30px;
+  top: 30px;
   left: 30px;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  animation: textshadow 5s ease-in-out infinite;
-  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
 }
 
 #home-btn::after {
@@ -35,7 +34,6 @@ main{
   position: absolute;
   cursor: pointer;
   transform-origin: center;
-  
 }
 
 #home-btn::before {
@@ -43,16 +41,15 @@ main{
   transform-origin: center;
   position: absolute;
   left: 20px;
-  
 }
-#home-btn:hover{
+#home-btn:hover {
   top: 40px;
   left: 40px;
   font-size: 40px;
-  font-family: "Glitten",Arial, Helvetica, sans-serif;  
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
-  position: absolute; 
-  animation: textshadow 5s ease-in-out infinite;
+  position: absolute;
+  text-shadow: 8px 8px 12px rgb(126, 125, 125);
 }
 
 h1 {
@@ -61,125 +58,97 @@ h1 {
   font-size: 7rem;
   color: #000000;
   position: relative;
+  text-shadow: 8px 8px 12px rgb(0, 0, 0);
   overflow: hidden;
   text-align: center;
   z-index: 2;
-  top:-10%;
-  height:100px;
-  animation: textshadow 5s ease-in-out infinite;
+  top: -10%;
+  height: 100px;
+
+  margin-top: 20px;
 }
 
 .header {
   text-align: center;
 }
 
-h2{
-font-family: "Glitten",Arial, Helvetica, sans-serif;  
-font-size: 3rem;
-color: #000000;
-text-align: center;
-animation: textshadow 5s ease-in-out infinite;
--webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+h2 {
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  color: #000000;
+  text-align: center;
 }
 
 .section-graff > h3 {
-  display:flex;
   margin: 20px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
-  font-family: "Glitten",Arial, Helvetica, sans-serif; 
-  animation: textshadow 5s ease-in-out infinite;
-  font-weight: bolder;
-  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; 
+  gap: 10px;
 }
 .section-art > h3 {
-  display:flex;
   margin: 20px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
-  font-family: "Glitten",Arial, Helvetica, sans-serif; 
-  animation: textshadow 5s ease-in-out infinite;
-  font-weight: bolder;
-  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px; 
+  gap: 10px;
 }
 .section-design > h3 {
-  display:flex;
+  display: flex;
   margin: 20px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
-  font-family: "Glitten",Arial, Helvetica, sans-serif; 
-  animation: textshadow 5s ease-in-out infinite;
-  font-weight: bolder;
+  font-family: "Glitten", Arial, Helvetica, sans-serif;
   -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
   align-items: center;
   justify-content: center;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .section-graff > h3 > a > img {
-  width: 25px;  
-  height: 25px; 
-  animation: spin 4s linear infinite;
- 
+  width: 25px;
+  height: 20px;
 }
 .section-art > h3 > a > img {
-  width: 25px;  
-  height: 25px; 
-  animation: spin 4s linear infinite;
- 
+  width: 25px;
+  height: 20px;
 }
 .section-design > h3 > a > img {
-  display: inline-flex; 
-  width: 25px;  
-  height: 25px; 
-  animation: spin 4s linear infinite;
- 
+  display: inline-flex;
+  width: 25px;
+  height: 20px;
 }
 .section > h3 > a {
-  display: inline-flex; 
-} 
+  display: inline-flex;
+}
 
 .image-container {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
-  gap: 30px; 
- 
+  justify-content: center;
+  gap: 30px;
 }
 
 .image-container img {
   width: 267px;
   height: 267px;
   box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
-  Border-radius: 5px;
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
-@keyframes textshadow {
-  0%,
-  100% {
-    text-shadow: 0 0 4px #ffffff63, 0 0 6px #ffffffa0, 0 0 8px #ddddddba,
-      0 0 10px  #fcfcfcd6;
-  }
-  25% {
-    text-shadow: 0 0 3px #ffffff56, 0 0 5px  #fcfcfc76, 0 0 7px  #fcfcfcd6,
-      0 0 9px  #fcfcfcc8;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.image-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
 }
