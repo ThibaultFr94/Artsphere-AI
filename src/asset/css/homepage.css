@@ -60,7 +60,6 @@ h2 {
 .circle-link2,
 .circle-link3 {
   background-color: black;
-  border: 3px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +69,7 @@ h2 {
   height: 200px;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
   transition:0.5s ease-out,box-shadow 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     width 0.5s ease-in-out, height 0.5s ease-in-out;
@@ -81,7 +80,6 @@ h2 {
   -o-animation: bubble-anim 1s ease-in-out;
   -ms-animation: bubble-anim 1s ease-out;
   animation: bubble-anim 1s ease-in-out;
-  perspective: 500 px unset;
 }
 
 .circle-link1::after,
@@ -96,9 +94,8 @@ h2 {
   background: inherit;
   border-radius: 50%;
   z-index: -1;
-  transition:0.5s ease-out;
-  perspective: 500 px unset;
-  
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
+  transition:0.5s ease;
 }
 
 .circle-text1,
@@ -126,7 +123,7 @@ h2 {
 
 .circle-text3 {
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
-  transition:0.5s ease-out
+  transition:0.5s ease-out;
 }
 
 .circle-link1:hover {
@@ -135,7 +132,8 @@ h2 {
   border: none;
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     width 0.5s ease-in-out, height 0.5s ease-in-out;
-    transition:0.5s ease-out
+    transition:0.5s ease-out;
+    box-shadow: none;
 }
 
 .circle-link2:hover {
@@ -145,7 +143,8 @@ h2 {
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     olor 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   text-transform: #9c0303;
-  transition:0.5s ease-out
+  transition: 0.5s ease-out;
+  box-shadow: none;
 }
 
 .circle-link3:hover {
@@ -154,7 +153,9 @@ h2 {
   transform: scale(1.3);
   transition: background-color 0.5s ease-in-out, border 0.5s ease-in-out,
     color 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
-    transition:0.5s ease-out
+    transition:0.5s ease-out;
+    box-shadow: none;
+    -webkit-text-stroke: 2px rgb(55, 55, 55)d;
 }
 
 .circle-link1:hover .circle-text1 {
@@ -164,14 +165,14 @@ h2 {
     text-shadow 0.5s ease-in-out, font-size 0.5s ease-in-out;
   text-shadow: -1px -1px 0 rgb(56, 216, 237), 1px -1px 0 rgb(56, 216, 237),
     text2 -1px 1px 0 rgb(56, 216, 237), 1px 1px 0 rgb(56, 216, 237);
-    transition:0.5s ease-out
+    transition:0.5s ease-out;
 }
 
 .circle-link2:hover .circle-text2 {
   color: #9c0303;
   font-size: 55px;
   transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
-  transition:0.5s ease-out
+  transition:0.5s ease-out;
 }
 
 .circle-link3:hover .circle-text3 {
@@ -181,7 +182,10 @@ h2 {
   text-shadow: -1px -1px 0 rgb(55, 55, 55), 1px -1px 0 rgb(55, 55, 55),
     -1px 1px 0 rgb(55, 55, 55), 1px 1px 0 rgb(55, 55, 55);
   animation: glow 5s ease-in-out infinite;
-  transition:0.5s ease-out
+  transition:0.5s ease-out;
+  -webkit-text-stroke: 2px rgb(55, 55, 55)d;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .styled-button {
@@ -203,7 +207,6 @@ h2 {
   text-align: center;
   text-decoration: none;
   justify-content: center;
-  transition:0.5s ease-out
 }
 
 .styled-button::before {
@@ -267,7 +270,6 @@ h2 {
   background: #000000;
   border: 2px solid #000000;
   border-radius: 100px;
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   z-index: -1;
   font-weight: bolder;
   font-family: "Modeco Trial", Arial, Helvetica, sans-serif;

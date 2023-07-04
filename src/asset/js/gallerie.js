@@ -2,7 +2,6 @@ import { types } from "./type.js";
 import { shuffle } from "./service.js";
 
 function init() {
-  // récup des images
   const existingImages = JSON.parse(localStorage.getItem("images") || "[]");
 
   let graff = existingImages.filter((img) => img.type === types[1]);
@@ -30,3 +29,5 @@ function init() {
 }
 
 init();
+
+document.getElementById('shuffle').addEventListener('click', init);

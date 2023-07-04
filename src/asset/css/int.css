@@ -77,6 +77,7 @@ button {
   border-radius: 0.3em;
   font-size: 20px;
   z-index: 2000;
+  cursor: pointer;
 }
 
 button::after {
@@ -180,6 +181,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  
 }
 
 .button-link::after, .button-link::before {

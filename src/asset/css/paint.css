@@ -126,6 +126,7 @@ button {
   border-radius: 0.3em;
   font-size: 20px;
   z-index: 2000;
+  cursor: pointer;
 }
 
 button::after {
@@ -148,11 +149,6 @@ button::before {
   width: 95%;
   height: 40%;
   transition: 0.5s;
-}
-
-button:hover::before,
-button:hover::after {
-  transform: scale(0);
 }
 
 button:hover {

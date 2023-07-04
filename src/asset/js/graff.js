@@ -4,7 +4,7 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { generatePromptGraff, saveImageToLocalStorage } from "./service.js";
+import { generatePromptGraff, saveImageToLocalStorage, imagerequestBody } from "./service.js";
 import { types } from "./type.js";
 
 const canvas = document.createElement("canvas");
@@ -166,13 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       temperature: 0.7,
       model: "gpt-3.5-turbo",
-    };
-
-    const imagerequestBody = {
-      prompt: "",
-      n: 1,
-      size: "256x256",
-      response_format: "b64_json"
     };
 
     fetch(OPENAI_TEXT_URL, {

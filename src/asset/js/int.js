@@ -4,7 +4,7 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { generatePromptInt, saveImageToLocalStorage } from "./service.js";
+import { generatePromptInt, saveImageToLocalStorage, imagerequestBody } from "./service.js";
 import { types } from "./type.js";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "invent one short name for an interior design with Frank Lloyd W. or Arthur Elrod or I. M. Pei or John Lautner inspiration ";
+      "find a name for interior decoration based on the work of the great designers of the 21st century  ";
     const requestBodyText = {
       messages: [
         {
@@ -31,12 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ],
       temperature: 0.7,
       model: "gpt-3.5-turbo",
-    };
-
-    const imagerequestBody = {
-      prompt: "",
-      n: 1,
-      size: "256x256",
     };
 
     fetch(OPENAI_TEXT_URL, {
@@ -81,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
             divImg.classList.remove("loader");
             img.classList.remove("int-img-hidden");
             img.classList.add("int-img-visible");
-            document.getElementById("int-img").src = data.data[0].url;
-            saveImageToLocalStorage(document.getElementById("int-result").textContent, data.data[0].url, types[3])
+            document.getElementById("int-img").src = `data:image/png;base64,${data.data[0].b64_json}`;
+            saveImageToLocalStorage(document.getElementById("int-result").textContent, `data:image/png;base64,${data.data[0].b64_json}`, types[3])
           });
       })
       .catch((error) => {

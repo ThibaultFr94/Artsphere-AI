@@ -9,12 +9,13 @@ body {
   box-sizing: border-box;
 }
 
-html{
+main{
   width: 100%vw;
 }
 #home-btn {
   display: flex;
-  font-family: "Glitten"; 
+  font-family: "Glitten",Arial, Helvetica, sans-serif;  
+  font-weight: bolder;
   position: absolute; 
   outline: none;
   color: rgb(0, 0, 0);
@@ -25,7 +26,8 @@ html{
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  -webkit-text-stroke: 0.2px rgba(255, 255, 255, 0.556);
+  animation: textshadow 5s ease-in-out infinite;
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
 }
 
 #home-btn::after {
@@ -47,7 +49,7 @@ html{
   top: 40px;
   left: 40px;
   font-size: 40px;
-  font-family: "Glitten"; 
+  font-family: "Glitten",Arial, Helvetica, sans-serif;  
   transition: 0.5s ease;
   position: absolute; 
   animation: textshadow 5s ease-in-out infinite;
@@ -65,45 +67,88 @@ h1 {
   top:-10%;
   height:100px;
   animation: textshadow 5s ease-in-out infinite;
-  -webkit-text-stroke: 0.4px rgb(0, 0, 0);
 }
 
 .header {
   text-align: center;
-  color: ebc714;
 }
+
 h2{
-font-family: "Glitten"; 
+font-family: "Glitten",Arial, Helvetica, sans-serif;  
 font-size: 3rem;
 color: #000000;
 text-align: center;
 animation: textshadow 5s ease-in-out infinite;
--webkit-text-stroke: 0.01px rgba(255, 255, 255, 0.247);
+-webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-bottom: 5px;
-  padding: 20px 0; 
-  animation: textshadow 5s ease-in-out infinite;
-
-}
-
-.section > h3 {
+.section-graff > h3 {
+  display:flex;
   margin: 20px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
-  font-family: "Glitten"; 
+  font-family: "Glitten",Arial, Helvetica, sans-serif; 
   animation: textshadow 5s ease-in-out infinite;
   font-weight: bolder;
-  -webkit-text-stroke: 0.01px rgba(255, 255, 255, 0.247);
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
 }
+.section-art > h3 {
+  display:flex;
+  margin: 20px 0;
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+  font-family: "Glitten",Arial, Helvetica, sans-serif; 
+  animation: textshadow 5s ease-in-out infinite;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+.section-design > h3 {
+  display:flex;
+  margin: 20px 0;
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+  font-family: "Glitten",Arial, Helvetica, sans-serif; 
+  animation: textshadow 5s ease-in-out infinite;
+  font-weight: bolder;
+  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.section-graff > h3 > a > img {
+  width: 25px;  
+  height: 25px; 
+  animation: spin 4s linear infinite;
+ 
+}
+.section-art > h3 > a > img {
+  width: 25px;  
+  height: 25px; 
+  animation: spin 4s linear infinite;
+ 
+}
+.section-design > h3 > a > img {
+  display: inline-flex; 
+  width: 25px;  
+  height: 25px; 
+  animation: spin 4s linear infinite;
+ 
+}
+.section > h3 > a {
+  display: inline-flex; 
+} 
 
 .image-container {
   display: flex;
@@ -116,7 +161,7 @@ animation: textshadow 5s ease-in-out infinite;
 .image-container img {
   width: 267px;
   height: 267px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.633);
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
   Border-radius: 5px;
 }
 @keyframes textshadow {
@@ -129,12 +174,12 @@ animation: textshadow 5s ease-in-out infinite;
     text-shadow: 0 0 3px #ffffff56, 0 0 5px  #fcfcfc76, 0 0 7px  #fcfcfcd6,
       0 0 9px  #fcfcfcc8;
   }
-  50% {
-    text-shadow: 0 0 6px  #fcfcfc31, 0 0 8px  #fcfcfc7c, 0 0 10px #ffffffce,
-      0 0 12px  #fcfcfcba;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  75% {
-    text-shadow: 0 0 3px #ffffff43, 0 0 5px  #fcfcfc7a, 0 0 8px #ffffffdc,
-      0 0 12px #fcfcfcd2;
+  100% {
+    transform: rotate(360deg);
   }
 }
