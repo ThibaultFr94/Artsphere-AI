@@ -116,15 +116,31 @@ h2 {
 .section-graff > h3 > a > img {
   width: 25px;
   height: 20px;
+  transition: 0.5s ease;
 }
 .section-art > h3 > a > img {
   width: 25px;
   height: 20px;
+  transition: 0.5s ease;
 }
 .section-design > h3 > a > img {
   display: inline-flex;
   width: 25px;
   height: 20px;
+  transition: 0.5s ease;
+}
+.section-graff > h3 > a > img:hover {
+  transition: 0.5s ease;
+  transform: scale(1.3);
+}
+.section-art > h3 > a > img:hover {
+  transition: 0.5s ease;
+  transform: scale(1.3);
+}
+.section-design > h3 > a > img:hover {
+  display: inline-flex;
+  transition: 0.5s ease;
+  transform: scale(1.3);
 }
 .section > h3 > a {
   display: inline-flex;

@@ -11,7 +11,7 @@ loader.load(
     texture = tex;
     texture.wrapS = THREE.RepeatWrapping;
     texture.wrapT = THREE.RepeatWrapping;
-    texture.repeat.set(0.5, 0.5); // <--- Vous pouvez modifier ces valeurs
+    texture.repeat.set(0.5, 0.5);
     texture.minFilter = THREE.LinearFilter;
     init();
     animate();
