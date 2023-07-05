@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "Invent a name for a painting inspired by great paintings of this century ";
+      "Invent a name for a painting inspired by great paintings of this century, 1 or 2 words max. ";
     const requestBodyText = {
       messages: [
         {

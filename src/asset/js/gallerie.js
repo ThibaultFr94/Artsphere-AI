@@ -29,9 +29,7 @@ function init() {
 }
 
 function onClickShuffle(type, letter){
-  // récup des images
   const existingImages = JSON.parse(localStorage.getItem("images") || "[]");
-
   const filterType = shuffle(existingImages.filter((img) => img.type === types[type]));
 
   filterType.slice(-4).forEach((element, id) => {
@@ -42,8 +40,17 @@ function onClickShuffle(type, letter){
 
 init();
 
-document.getElementById("shuffle-graff").addEventListener("click-graff",onClickShuffle(1,"g"));
+document.getElementById("shuffle-graff").addEventListener("click", function()
+{
+  onClickShuffle(1,"g")
+});
 
-document.getElementById("shuffle-art").addEventListener("click-art",onClickShuffle(2,"a"));
+document.getElementById("shuffle-art").addEventListener("click", function()
+{
+  onClickShuffle(2,"a")
+});
 
-document.getElementById("shuffle-design").addEventListener("click-design",onClickShuffle(3,"d"));
+document.getElementById("shuffle-design").addEventListener("click", function()
+{
+  onClickShuffle(3,"d")
+});

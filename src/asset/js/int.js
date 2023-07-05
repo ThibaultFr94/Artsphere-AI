@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "find a name for interior decoration based on the work of the great designers of the 21st century  ";
+      "Find a short name for interior decoration based on the work of the great designers of the 21st century,1 or 2 words max.";
     const requestBodyText = {
       messages: [
         {
