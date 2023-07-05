@@ -4,9 +4,12 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { generatePromptPaint, saveImageToLocalStorage, imagerequestBody } from "./service.js";
+import {
+  generatePromptPaint,
+  saveImageToLocalStorage,
+  imagerequestBody,
+} from "./service.js";
 import { types } from "./type.js";
-
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("paint-btn").addEventListener("click", generatePaint);
@@ -19,17 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let divImg = document.getElementById("div-img");
     divImg.classList.add("loader");
-   
 
     const prompt =
-      "Invent a name for a painting inspired by great paintings of this century "
+      "Invent a name for a painting inspired by great paintings of this century ";
     const requestBodyText = {
-      messages:[{
-        role: "user",
-        content: prompt
-      }],
+      messages: [
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
       temperature: 0.7,
-      model: "gpt-3.5-turbo"
+      model: "gpt-3.5-turbo",
     };
 
     fetch(OPENAI_TEXT_URL, {
@@ -47,9 +51,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((data) => {
-        const paint = data.choices[0].message.content
-        document.getElementById("paint-result").textContent = paint.replace(/"/g, "");
-       
+        const paint = data.choices[0].message.content;
+        document.getElementById("paint-result").textContent = paint.replace(
+          /"/g,
+          ""
+        );
+
         imagerequestBody.prompt = generatePromptPaint(paint);
         return paint;
       })
@@ -72,8 +79,14 @@ document.addEventListener("DOMContentLoaded", function () {
             divImg.classList.remove("loader");
             img.classList.remove("paint-img-hidden");
             img.classList.add("paint-img-visible");
-            document.getElementById("paint-img").src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(document.getElementById("paint-result").textContent, `data:image/png;base64,${data.data[0].b64_json}`, types[2])
+            document.getElementById(
+              "paint-img"
+            ).src = `data:image/png;base64,${data.data[0].b64_json}`;
+            saveImageToLocalStorage(
+              document.getElementById("paint-result").textContent,
+              `data:image/png;base64,${data.data[0].b64_json}`,
+              types[2]
+            );
           });
       })
       .catch((error) => {

@@ -45,7 +45,7 @@ p {
   position: absolute;
   display: inline-block;
   justify-content: center;
-  border:1px solid #000000;
+  border: 1px solid #000000;
   align-items: center;
   animation: 3s rotate linear infinite;
   left: 48.5%;
@@ -59,8 +59,8 @@ p {
   width: inherit;
   height: inherit;
   background: #ffffff;
-  border:1px solid #000000;
-  animation: 1.5s rotate reverse linear infinite ;
+  border: 1px solid #000000;
+  animation: 1.5s rotate reverse linear infinite;
 }
 
 button {
@@ -104,22 +104,22 @@ button:hover {
 }
 
 #home-btn {
-  position: absolute;  
-  text-decoration: none; 
-  top: 30px;  
-  left: 30px; 
+  position: absolute;
+  text-decoration: none;
+  top: 30px;
+  left: 30px;
   border: none;
   font-size: 30px;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-weight: thin;
-  color:#5d625c;
+  color: #5d625c;
   transition: 0.5s ease;
 }
 
 #home-btn:hover {
-  position: absolute; 
-  top: 40px;  
-  left: 40px; 
+  position: absolute;
+  top: 40px;
+  left: 40px;
   border: none;
   font-size: 40px;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
@@ -127,22 +127,22 @@ button:hover {
 }
 
 #gallery-btn {
-  position: absolute;  
-  text-decoration: none; 
-  top: 30px;  
-  right: 30px; 
+  position: absolute;
+  text-decoration: none;
+  top: 30px;
+  right: 30px;
   border: none;
   font-size: 30px;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-weight: thin;
-  color:#5d625c;
+  color: #5d625c;
   transition: 0.5s ease;
 }
 
 #gallery-btn:hover {
-  position: absolute; 
-  top: 40px;  
-  right: 40px; 
+  position: absolute;
+  top: 40px;
+  right: 40px;
   border: none;
   font-size: 40px;
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
@@ -181,16 +181,17 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  
 }
 
-.button-link::after, .button-link::before {
+.button-link::after,
+.button-link::before {
   content: "";
   position: absolute;
   transition: 0.5s;
   transform-origin: center;
 }
-.button-link:hover::before, .button-link:hover::after {
+.button-link:hover::before,
+.button-link:hover::after {
   transform: scale(0);
 }
 
@@ -199,6 +200,10 @@ button:hover {
 }
 
 @keyframes rotate {
-  0%{    transform: rotate(0deg)}
-  100%{    transform: rotate(360deg)}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

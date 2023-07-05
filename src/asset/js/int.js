@@ -4,12 +4,15 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { generatePromptInt, saveImageToLocalStorage, imagerequestBody } from "./service.js";
+import {
+  generatePromptInt,
+  saveImageToLocalStorage,
+  imagerequestBody,
+} from "./service.js";
 import { types } from "./type.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("int-btn").addEventListener("click", generateInt);
-
 
   function generateInt() {
     let img = document.getElementById("int-img");
@@ -75,8 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
             divImg.classList.remove("loader");
             img.classList.remove("int-img-hidden");
             img.classList.add("int-img-visible");
-            document.getElementById("int-img").src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(document.getElementById("int-result").textContent, `data:image/png;base64,${data.data[0].b64_json}`, types[3])
+            document.getElementById(
+              "int-img"
+            ).src = `data:image/png;base64,${data.data[0].b64_json}`;
+            saveImageToLocalStorage(
+              document.getElementById("int-result").textContent,
+              `data:image/png;base64,${data.data[0].b64_json}`,
+              types[3]
+            );
           });
       })
       .catch((error) => {

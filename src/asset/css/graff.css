@@ -66,7 +66,7 @@ button::after {
   left: 3%;
   width: 95%;
   height: 40%;
-  transition: background-color 0.5s ease;  
+  transition: background-color 0.5s ease;
   transition: 0.5s;
   transform-origin: center;
 }
@@ -156,12 +156,12 @@ button img {
 #home-btn {
   display: flex;
   font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
+  position: absolute;
   outline: none;
   color: white;
   transition: 1s;
   font-size: 30px;
-  top:30px;
+  top: 30px;
   left: 30px;
   text-decoration: none;
   cursor: pointer;
@@ -173,7 +173,6 @@ button img {
   position: absolute;
   cursor: pointer;
   transform-origin: center;
-  
 }
 
 #home-btn::before {
@@ -181,20 +180,19 @@ button img {
   transform-origin: center;
   position: absolute;
   left: 20px;
-  
 }
-#home-btn:hover{
+#home-btn:hover {
   top: 40px;
   left: 40px;
   font-size: 40px;
   transition: 0.5s ease;
   font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
+  position: absolute;
 }
 #gallery-btn {
   display: flex;
   font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
+  position: absolute;
   outline: none;
   color: white;
   transition: 1s;
@@ -205,29 +203,26 @@ button img {
   top: 30px;
   right: 30px;
 }
-#gallery-btn:hover{
+#gallery-btn:hover {
   top: 40px;
- right: 40px;
+  right: 40px;
   font-size: 40px;
   transition: 0.5s ease;
   font-family: "Futurama", Arial, Helvetica, sans-serif;
-  position: absolute; 
+  position: absolute;
 }
 #gallery-btn::after {
   content: "";
   position: absolute;
-  
 }
 
 #gallery-btn::before {
   content: "";
   transform-origin: center;
   position: absolute;
-  cursor:pointer;
+  cursor: pointer;
   transition: 0.5s;
 }
-
-
 
 @keyframes rotate {
   0% {

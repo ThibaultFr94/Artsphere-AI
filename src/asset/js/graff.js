@@ -4,7 +4,11 @@ import {
   OPENAI_TEXT_API_KEY,
   OPENAI_IMAGE_API_KEY,
 } from "./module_env.js";
-import { generatePromptGraff, saveImageToLocalStorage, imagerequestBody } from "./service.js";
+import {
+  generatePromptGraff,
+  saveImageToLocalStorage,
+  imagerequestBody,
+} from "./service.js";
 import { types } from "./type.js";
 
 const canvas = document.createElement("canvas");
@@ -135,9 +139,9 @@ function init() {
 function animate() {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, innerWidth, innerHeight);
-  particlesArray.map(item =>{
+  particlesArray.map((item) => {
     item.update();
-  })
+  });
 }
 
 init();
@@ -210,8 +214,14 @@ document.addEventListener("DOMContentLoaded", function () {
             divImg.classList.remove("loader");
             img.classList.remove("graff-img-hidden");
             img.classList.add("graff-img-visible");
-            document.getElementById("graff-img").src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(document.getElementById("graff-result").textContent, `data:image/png;base64,${data.data[0].b64_json}`, types[1])
+            document.getElementById(
+              "graff-img"
+            ).src = `data:image/png;base64,${data.data[0].b64_json}`;
+            saveImageToLocalStorage(
+              document.getElementById("graff-result").textContent,
+              `data:image/png;base64,${data.data[0].b64_json}`,
+              types[1]
+            );
           });
       })
       .catch((error) => {
@@ -219,4 +229,3 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
-
