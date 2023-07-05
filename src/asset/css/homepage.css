@@ -11,7 +11,6 @@ body {
 
 #container {
   position: fixed;
-  touch-action: none;
   z-index: -1;
   width: 100%;
   height: 100%;
@@ -162,8 +161,6 @@ h2 {
   font-size: 55px;
   transition: text-decoration 0.5s ease-in-out, color 0.5s ease-in-out,
     text-shadow 0.5s ease-in-out, font-size 0.5s ease-in-out;
-  text-shadow: -1px -1px 0 rgb(56, 216, 237), 1px -1px 0 rgb(56, 216, 237),
-    text2 -1px 1px 0 rgb(56, 216, 237), 1px 1px 0 rgb(56, 216, 237);
 }
 
 .circle-link2:hover .circle-text2 {
@@ -175,12 +172,7 @@ h2 {
 .circle-link3:hover .circle-text3 {
   color: rgb(55, 55, 55);
   font-size: 55px;
-  transition: color 0.5s ease-in-out, font-size 0.5s ease-in-out;
-  text-shadow: -1px -1px 0 rgb(55, 55, 55), 1px -1px 0 rgb(55, 55, 55),
-    -1px 1px 0 rgb(55, 55, 55), 1px 1px 0 rgb(55, 55, 55);
-  animation: glow 5s ease-in-out infinite;
-
-  -webkit-text-stroke: 2px rgb(55, 55, 55) d;
+  transition: color 0.5s ease-in-out, font-size 1s ease-in-out;
   font-weight: bolder;
 }
 

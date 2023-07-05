@@ -79,7 +79,7 @@ h2 {
 }
 
 .section-graff > h3 {
-  margin: 20px 0;
+  margin: 15px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
@@ -90,7 +90,7 @@ h2 {
   gap: 10px;
 }
 .section-art > h3 {
-  margin: 20px 0;
+  margin: 20px ;
   text-align: center;
   color: #000000;
   font-size: 30px;
@@ -102,32 +102,37 @@ h2 {
 }
 .section-design > h3 {
   display: flex;
-  margin: 20px 0;
+  margin: 10px 0;
   text-align: center;
   color: #000000;
   font-size: 30px;
   font-family: "Glitten", Arial, Helvetica, sans-serif;
-  -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.556);
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-top: 10px;
+ 
 }
 
 .section-graff > h3 > a > img {
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+
 }
 .section-art > h3 > a > img {
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+
 }
 .section-design > h3 > a > img {
   display: inline-flex;
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+  margin-top: 20px;
+  margin-bottom:10px;
 }
 .section-graff > h3 > a > img:hover {
   transition: 0.5s ease;
@@ -150,20 +155,20 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 30px;
+  gap: 70px;
 }
 
 .image-container img {
   width: 267px;
   height: 267px;
-  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
+  box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.737);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 .image-container img:hover {
   transform: scale(1.1);
-  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
 }

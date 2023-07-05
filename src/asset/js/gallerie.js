@@ -28,6 +28,22 @@ function init() {
   });
 }
 
+function onClickShuffle(type, letter){
+  // récup des images
+  const existingImages = JSON.parse(localStorage.getItem("images") || "[]");
+
+  const filterType = shuffle(existingImages.filter((img) => img.type === types[type]));
+
+  filterType.slice(-4).forEach((element, id) => {
+    document.getElementById(`${letter}${id}`).src = element.base64;
+    console.log(type,letter)
+  });
+}
+
 init();
 
-document.getElementById("shuffle").addEventListener("click", init);
+document.getElementById("shuffle-graff").addEventListener("click-graff",onClickShuffle(1,"g"));
+
+document.getElementById("shuffle-art").addEventListener("click-art",onClickShuffle(2,"a"));
+
+document.getElementById("shuffle-design").addEventListener("click-design",onClickShuffle(3,"d"));
