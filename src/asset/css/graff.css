@@ -20,11 +20,12 @@ canvas {
 }
 
 h1 {
-  font-weight: bold;
+  font-weight: lighter;
   font-family: "Computer Regular", Arial, Helvetica, sans-serif;
   font-size: 5.5rem;
   color: #fff;
   animation: textshadow 5s ease-in-out infinite;
+ letter-spacing: 6px ;
 }
 
 .main-div > p {
@@ -34,6 +35,7 @@ h1 {
   width: 100vw;
   text-align: inherit;
   animation: textshadow 5s ease-in-out infinite;
+  letter-spacing: 6px ;
 }
 p {
   font-family: "Blouse", Arial, Helvetica, sans-serif;
