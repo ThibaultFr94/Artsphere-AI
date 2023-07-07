@@ -59,7 +59,7 @@ h2 {
 }
 
 .circle-link1{
-  background-image: url("/src/asset/img/graff.svg");
+  background-image: url("/src/asset/img/Graff.svg");
 }
 
 .circle-link2{
@@ -72,8 +72,7 @@ h2 {
 .circle-link1,
 .circle-link2,
 .circle-link3 {
- 
-  display: flex;
+  border: 1px solid #050505;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -86,13 +85,14 @@ h2 {
   transition: 1s ease-out, box-shadow 1s ease-in-out;
   transition: background-color 1s ease-in-out, border 1s ease-in-out,
     width 1s ease-in-out, height 1s ease-in-out;
-  transition: background-image 1s ease-in-out;
+  transition: background-image 1.5s ease-in-out;
   overflow: hidden;
   -webkit-animation: bubble-anim 1s ease-in-out;
   -moz-animation: bubble-anim 1s ease-out;
   -o-animation: bubble-anim 1s ease-in-out;
   -ms-animation: bubble-anim 1s ease-out;
   animation: bubble-anim 1s ease-in-out;
+  transition: 0.5s all;
 }
 
 .circle-link1::after,
@@ -102,12 +102,11 @@ h2 {
   position: absolute;
   top: -15px;
   left: -15px;
-  width: calc(100% + 20px);
-  height: calc(100% + 20px);
   background: inherit;
   border-radius: 50%;
   z-index: -1;
   box-shadow: 10px 10px 20px rgba(227, 227, 227, 0.386);
+  transition: 0.5s all;
 
 }
 
@@ -147,7 +146,7 @@ h2 {
   transform: scale(1.2);
   border: none;
   transition: background-color 1s ease-in-out, border 1s ease-in-out,
-  color 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   box-shadow: none;
   background-image: none;
 }
@@ -168,7 +167,7 @@ h2 {
   border: none;
   transform: scale(1.2);
   transition: background-color 1s ease-in-out, border 1s ease-in-out,
-    color 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+    color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   box-shadow: none;
   background-image: none;
   -webkit-text-stroke: 2px rgb(55, 55, 55) d;
@@ -178,8 +177,7 @@ h2 {
 .circle-link1:hover .circle-text1 {
   color: rgb(255, 255, 255);
   font-size: 55px;
-  transition: text-decoration 1s ease-in-out, color 1s ease-in-out,
-    text-shadow 1s ease-in-out, font-size 1s ease-in-out;
+  transition: color 1s ease-in-out, font-size 1s ease-in-out;
     opacity: 100%;
 }
 
@@ -197,7 +195,6 @@ h2 {
   font-weight: bolder;
   opacity: 100%;
 }
-
 .styled-button {
   position: relative;
   margin: 100px;
