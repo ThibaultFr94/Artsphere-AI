@@ -3,9 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  padding: 0;
   cursor: none;
 }
 
@@ -16,22 +15,22 @@ body {
   height: 100%;
 }
 
-h1 {
+h1, h2 {
   color: white;
   text-align: center;
-  font-size: 9rem;
   margin: 0;
-  font-family: "Bemock", Helvetica, sans-serif;
-  font-weight: lighter;
-  animation: glow 5s ease-in-out infinite;
   -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
 }
 
+h1 {
+  font-size: 9rem;
+  font-family: "Bemock", Helvetica, sans-serif;
+  font-weight: lighter;
+  animation: glow 5s ease-in-out infinite;
+}
+
 h2 {
-  color: white;
-  text-align: center;
   font-size: 2.5rem;
-  margin: 0;
   margin-top: 20px;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   text-shadow: 1px 1px 0px rgb(255, 255, 255);
@@ -47,6 +46,7 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: fadeIn 1s ease-in;
 }
 
 .circles-container {
@@ -60,18 +60,19 @@ h2 {
 
 .circle-link1{
   background-image: url("/src/asset/img/Graff.svg");
+  animation: bubble-anim 3s ease-in,fadeInZoom 2s ease-in-out ;
 }
-
 .circle-link2{
   background-image: url("/src/asset/img/Art.svg");
+  animation: bubble-anim 3s ease-in-out,fadeInZoom 3s ease-in-out ;
 }
 
 .circle-link3{
   background-image: url("/src/asset/img/Design.svg");
+  animation: bubble-anim 3s ease-out,fadeInZoom 4s ease-in-out ;
 }
-.circle-link1,
-.circle-link2,
-.circle-link3 {
+
+.circle-link1, .circle-link2, .circle-link3 {
   border: 1px solid #050505;
   justify-content: center;
   align-items: center;
@@ -80,19 +81,12 @@ h2 {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  text-decoration: none;
   box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
-  transition: 1s ease-out, box-shadow 1s ease-in-out;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out;
-  transition: background-image 1.5s ease-in-out;
+  transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
+    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, color 0s ease-out, box-shadow 1s ease-in-out,background-image 1.5s ease-in-out;
   overflow: hidden;
-  -webkit-animation: bubble-anim 1s ease-in-out;
-  -moz-animation: bubble-anim 1s ease-out;
-  -o-animation: bubble-anim 1s ease-in-out;
-  -ms-animation: bubble-anim 1s ease-out;
-  animation: bubble-anim 1s ease-in-out;
-  transition: 0.5s all;
+  
+  
 }
 
 .circle-link1::after,
@@ -107,7 +101,7 @@ h2 {
   z-index: -1;
   box-shadow: 10px 10px 20px rgba(227, 227, 227, 0.386);
   transition: 0.5s all;
-
+  
 }
 
 .circle-text1,
@@ -121,23 +115,23 @@ h2 {
   font-size: 45px;
   text-align: center;
   color: white;
-  transition: 0.2s ease-out;
+  transition:opacity 0.5s ,0.2s ease-out;
 }
 
 .circle-text1 {
   font-family: "Computer Regular", Arial, Helvetica, sans-serif;
-  transition: 0.2s ease-out;
+  transition:opacity 0.5s , 0.2s ease-out;
   opacity: 0%;
 }
 .circle-text2 {
   font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
-  transition: 0.2s ease-out;
+  transition:opacity 0.5s , 0.2s ease-out;
   opacity: 0%;
 }
 
 .circle-text3 {
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
-  transition: 0.2s ease-out;
+  transition:opacity 0.5s , 0.2s ease-out;
   opacity: 0%;
 }
 
@@ -145,7 +139,7 @@ h2 {
   background-color: #4e58e0;
   transform: scale(1.2);
   border: none;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
+  transition: opacity 0.5s ,background-color 1s ease-in-out, border 1s ease-in-out,
   color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   box-shadow: none;
   background-image: none;
@@ -155,8 +149,8 @@ h2 {
   transform: scale(1.2);
   background-color: #f1db5b;
   border: none;
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
-    color 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+  transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
+    color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   text-transform: #9c0303;
   box-shadow: none;
   background-image: none;
@@ -165,33 +159,32 @@ h2 {
 .circle-link3:hover {
  background-color: rgb(207, 207, 207);
   border: none;
-  transform: scale(1.2);
-  transition: background-color 1s ease-in-out, border 1s ease-in-out,
+  transform: scale(1.2) ;
+  transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
     color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   box-shadow: none;
   background-image: none;
-  -webkit-text-stroke: 2px rgb(55, 55, 55) d;
-  
+
 }
 
 .circle-link1:hover .circle-text1 {
   color: rgb(255, 255, 255);
   font-size: 55px;
-  transition: color 1s ease-in-out, font-size 1s ease-in-out;
+  transition: opacity 0.5s ,color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
     opacity: 100%;
 }
 
 .circle-link2:hover .circle-text2 {
   color: #9c0303;
   font-size: 55px;
-  transition: color 1s ease-in-out, font-size 1s ease-in-out;
+  transition:opacity 0.5s , color 1s ease-in, color 0s ease-out ,font-size 1s ease-in-out;
   opacity: 100%;
 }
 
 .circle-link3:hover .circle-text3 {
   color: rgb(55, 55, 55);
   font-size: 55px;
-  transition: color 1s ease-in-out, font-size 1s ease-in-out;
+  transition:opacity 0.5s ease-in-out, color 1s ease-in,color 0s ease-out, font-size 1s ease-in-out;
   font-weight: bolder;
   opacity: 100%;
 }
@@ -461,6 +454,32 @@ h2 {
 
   97%,
   100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeout{
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
