@@ -147,3 +147,5 @@ function render(delta) {
     capturer.capture(renderer.domElement);
   }
 }
+let cursor = document.getElementById('cursor');
+

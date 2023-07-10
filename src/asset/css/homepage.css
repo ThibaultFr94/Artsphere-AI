@@ -11,8 +11,7 @@ body {
 #container {
   position: fixed;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+
 }
 
 h1, h2 {
@@ -33,8 +32,8 @@ h2 {
   font-size: 2.5rem;
   margin-top: 20px;
   font-family: "Modeco Trial", Helvetica, sans-serif;
-  text-shadow: 1px 1px 0px rgb(255, 255, 255);
-  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.842);
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.01px rgba(92, 92, 92, 0.374);
 }
 
 .center-container {
@@ -60,16 +59,19 @@ h2 {
 
 .circle-link1{
   background-image: url("/src/asset/img/Graff.svg");
-  animation: bubble-anim 3s ease-in,fadeInZoom 2s ease-in-out ;
+  animation: bubble-anim 3s ease-in,fadeInZoom 1.5s ease-in-out,background-color 1s ease-in-out ;
+  transition:background-color 1s ease-in-out;
 }
 .circle-link2{
   background-image: url("/src/asset/img/Art.svg");
-  animation: bubble-anim 3s ease-in-out,fadeInZoom 3s ease-in-out ;
+  animation: bubble-anim 3.5s ease-in-out,fadeInZoom 2s ease-in-out,background-color 1s ease-in-out ;
+  
 }
 
 .circle-link3{
   background-image: url("/src/asset/img/Design.svg");
-  animation: bubble-anim 3s ease-out,fadeInZoom 4s ease-in-out ;
+  animation: bubble-anim 4s ease-out,fadeInZoom 2.5s ease-in-out ;
+  transition:background-color 1s ease-in-out;
 }
 
 .circle-link1, .circle-link2, .circle-link3 {
@@ -83,10 +85,8 @@ h2 {
   border-radius: 50%;
   box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
   transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, color 0s ease-out, box-shadow 1s ease-in-out,background-image 1.5s ease-in-out;
+    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, color 0s ease-out, box-shadow 0s ease-in-out,background-image 1.5s ease-in-out;
   overflow: hidden;
-  
-  
 }
 
 .circle-link1::after,
@@ -101,13 +101,11 @@ h2 {
   z-index: -1;
   box-shadow: 10px 10px 20px rgba(227, 227, 227, 0.386);
   transition: 0.5s all;
-  
 }
 
 .circle-text1,
 .circle-text2,
 .circle-text3 {
-  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -115,23 +113,23 @@ h2 {
   font-size: 45px;
   text-align: center;
   color: white;
-  transition:opacity 0.5s ,0.2s ease-out;
+ 
 }
 
 .circle-text1 {
   font-family: "Computer Regular", Arial, Helvetica, sans-serif;
-  transition:opacity 0.5s , 0.2s ease-out;
+  transition:opacity 0.5s ease-in  ,opacity 0.2s ease-out;
   opacity: 0%;
 }
 .circle-text2 {
   font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
-  transition:opacity 0.5s , 0.2s ease-out;
+  transition:opacity 0.5s ease-in ,opacity 0.2s ease-out;
   opacity: 0%;
 }
 
 .circle-text3 {
   font-family: "Coolvetica", Arial, Helvetica, sans-serif;
-  transition:opacity 0.5s , 0.2s ease-out;
+  transition:opacity 0.5s ease-in , 0.2s ease-out;
   opacity: 0%;
 }
 
@@ -139,7 +137,7 @@ h2 {
   background-color: #4e58e0;
   transform: scale(1.2);
   border: none;
-  transition: opacity 0.5s ,background-color 1s ease-in-out, border 1s ease-in-out,
+  transition: opacity 0.5s ease-in ,background-color 1s ease-in-out, border 1s ease-in-out,
   color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   box-shadow: none;
   background-image: none;
@@ -149,7 +147,7 @@ h2 {
   transform: scale(1.2);
   background-color: #f1db5b;
   border: none;
-  transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
+  transition:opacity 0.5s ease-in , background-color 1s ease-in-out, border 1s ease-in-out,
     color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
   text-transform: #9c0303;
   box-shadow: none;
@@ -170,24 +168,25 @@ h2 {
 .circle-link1:hover .circle-text1 {
   color: rgb(255, 255, 255);
   font-size: 55px;
-  transition: opacity 0.5s ,color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
+  transition: background-color 1s ease-in-out, opacity 0.5s ,color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
     opacity: 100%;
 }
 
 .circle-link2:hover .circle-text2 {
   color: #9c0303;
   font-size: 55px;
-  transition:opacity 0.5s , color 1s ease-in, color 0s ease-out ,font-size 1s ease-in-out;
+  transition: background-color 1s ease-in-out,opacity 0.5s , color 1s ease-in, color 0s ease-out ,font-size 1s ease-in-out;
   opacity: 100%;
 }
 
 .circle-link3:hover .circle-text3 {
   color: rgb(55, 55, 55);
   font-size: 55px;
-  transition:opacity 0.5s ease-in-out, color 1s ease-in,color 0s ease-out, font-size 1s ease-in-out;
+  transition: background-color 1s ease-in-out,opacity 0.5s ease-in-out, color 1s ease-in,color 0s ease-out, font-size 1s ease-in-out;
   font-weight: bolder;
   opacity: 100%;
 }
+
 .styled-button {
   position: relative;
   margin: 100px;
@@ -457,22 +456,7 @@ h2 {
     transform: scale(1);
   }
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeout{
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-}
+
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
