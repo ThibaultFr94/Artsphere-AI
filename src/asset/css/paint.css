@@ -1,6 +1,10 @@
 body {
-  background: #f1db5b;
+  background-image: url("/src/asset/img/tibs2014_A_water_painting_yellow_pattern_swirling_extremely_det_3750d33b-16bb-4d1c-8998-4c099c71e2da.png"); 
   overflow: hidden;
+  background-position: fill;
+  background-repeat: repeat;
+  background-size: cover;
+  
 }
 
 .main-div {
@@ -22,6 +26,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
+  animation: textshadow 10s ease-in-out infinite;
 }
 #home-btn:hover {
   top: 40px;
@@ -29,6 +34,7 @@ body {
   font-size: 40px;
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 #home-btn::after {
@@ -58,6 +64,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 #gallery-btn:hover {
@@ -67,6 +74,7 @@ body {
   cursor: pointer;
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 #gallery-btn::after {
@@ -92,15 +100,18 @@ h1 {
   color: #9c0303;
   position: relative;
   overflow: hidden;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 .main-div > p {
   top: 200px;
   font-family: "GOLDEN", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
+  font-weight: bolder;
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
+  animation: textshadow 10s ease-in-out infinite;
 }
 p {
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
@@ -109,22 +120,25 @@ p {
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
+  animation: textshadow 10s ease-in-out infinite;
+
 }
 button {
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: thin;
   width: 10em;
   position: relative;
   height: 2em;
   border: 3px dotted #8b3620;
   outline: none;
-  background-color: #f1db5b;
+  background-color: transparent;
   color: #9c0303;
   transition: 1s;
   border-radius: 0.3em;
   font-size: 20px;
   z-index: 2000;
   cursor: pointer;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 button::after {
@@ -151,7 +165,7 @@ button::before {
 
 button:hover {
   transition: 0.5s;
-  box-shadow: inset 0px 0px 15px #9c0303;
+  box-shadow: inset 0px 0px 15px #f1db5b;
   font-size: 20px;
 }
 
@@ -176,6 +190,7 @@ button:hover {
   align-items: center;
   perspective: 1000px;
   border-radius: 50%;
+  animation: textshadow 10s ease-in-out infinite;
 }
 
 .loader::before,
@@ -272,26 +287,26 @@ button:hover {
 }
 @keyframes textshadow {
   0% {
-    text-shadow: 0 0 10px #ef767e, #bd3e47, 0 0 30px #f11c2a, 0 0 40px #860710;
+    text-shadow: 0 0 0.5px #0000008b,0 0 1px #0000008b, 0 0 2px #0000008b, 0 0 3px #0000008b;
   }
   20% {
-    text-shadow: 0 0 5px #bd5d63, 0 0 10px #ad4950, 0 0 20px #b0242d,
-      0 0 30px #ba0e19, 0 0 40px #bd000d;
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
   }
   40% {
-    text-shadow: 0 0 5px #bd5d63, 0 0 10px #ad4950, 0 0 20px #b0242d,
-      0 0 30px #ba0e19, 0 0 40px #bd000d;
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
   }
   60% {
-    text-shadow: 0 0 5px #bd5d63, 0 0 10px #ad4950, 0 0 20px #b0242d,
-      0 0 30px #ba0e19, 0 0 40px #bd000d;
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
   }
   80% {
-    text-shadow: 0 0 5px #ef767e, 0 0 8px #bd1722, 0 0 15px #b0242d,
-      0 0 20px #860710;
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
   }
   100% {
-    text-shadow: 0 0 5px #bd5d63, 0 0 10px #ad4950, 0 0 20px #b0242d,
-      0 0 30px #ba0e19, 0 0 40px #bd000d;
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
   }
 }

@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "invent a name for a graffiti inspired by street art around the world";
+      "invent a name for a graffiti inspired by street art around the world,2 words max";
     const requestBodyText = {
       messages: [
         {
