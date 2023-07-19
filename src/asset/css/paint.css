@@ -4,7 +4,6 @@ body {
   background-position: fill;
   background-repeat: repeat;
   background-size: cover;
-  
 }
 
 .main-div {
@@ -100,7 +99,6 @@ h1 {
   color: #9c0303;
   position: relative;
   overflow: hidden;
-  animation: textshadow 10s ease-in-out infinite;
 }
 
 .main-div > p {
@@ -120,7 +118,7 @@ p {
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
-  animation: textshadow 10s ease-in-out infinite;
+  
 
 }
 button {
