@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       ],
       temperature: 0.7,
-      model: "gpt-3.5-turbo",
+      model: "gpt-4",
     };
 
     fetch(OPENAI_TEXT_URL, {

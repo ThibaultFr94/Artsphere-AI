@@ -21,6 +21,7 @@ h1 {
   font-weight: bolder;
   font-size: 5rem;
   color: #5d625c;
+  text-shadow: 13px 13px 13px rgba(108, 108, 108, 0.633);
 }
 
 .main-div > p {
@@ -78,6 +79,7 @@ button {
   font-size: 20px;
   z-index: 2000;
   cursor: pointer;
+  text-shadow: 13px 13px 13px rgba(108, 108, 108, 0.633);
 }
 
 button::after {
@@ -164,7 +166,7 @@ button:hover {
   border-radius: 15px;
   border: 6px solid #5d625c;
   border-style: ridge;
-  animation: glow 5s ease-in-out infinite;
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
 }
 
 .button-link {
