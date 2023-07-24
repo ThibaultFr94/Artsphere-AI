@@ -85,7 +85,7 @@ h2 {
   border-radius: 50%;
   box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
   transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, color 0s ease-out, box-shadow 0s ease-in-out,background-image 1.5s ease-in-out;
+    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, box-shadow 0s ease-in-out,background-image 1.5s ease-in-out;
   overflow: hidden;
 }
 
