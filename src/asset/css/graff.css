@@ -157,7 +157,7 @@ button img {
 
 #home-btn {
   display: flex;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  font-family: "Futurama", Helvetica, sans-serif;
   position: absolute;
   outline: none;
   color: white;
@@ -188,7 +188,7 @@ button img {
   left: 40px;
   font-size: 40px;
   transition: 0.5s ease;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  font-family: "Futurama", Helvetica, Arial, Helvetica, sans-serif;
   position: absolute;
 }
 #gallery-btn {

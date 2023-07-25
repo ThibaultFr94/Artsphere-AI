@@ -1,10 +1,12 @@
+
 body {
-  background-image: url("https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3JtMjE4LWV5ZS0wOC5qcGc.jpg");
+  background-color: #ffffff;
   background-position: fill;
   background-repeat: repeat;
   background-size: cover;
   overflow: hidden;
 }
+
 
 .main-div {
   text-align: center;
@@ -17,30 +19,34 @@ img {
 }
 
 h1 {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: 5rem;
-  color: #5d625c;
-  text-shadow: 13px 13px 13px rgba(108, 108, 108, 0.633);
+  color: #42a32f;
+  -webkit-text-stroke: 0.1px #3aff12;
+  text-shadow: 13px 13px 13px #1012107f;
 }
 
 .main-div > p {
-  font-family: "Brand", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-size: 1.5rem;
-  color: #5d625c;
+  color: #42a32f;
   text-align: inherit;
+  -webkit-text-stroke: 0.01px #7ce467;
 }
 
 p {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 2rem;
-  color: #626262;
+  color:#42a32f;
   text-align: inherit;
+  -webkit-text-stroke: 0.01px #7ce467;
+  
 }
 
 .loader {
-  background: #515151;
+  background:#7ce467;
   width: 48px;
   height: 48px;
   position: absolute;
@@ -65,21 +71,24 @@ p {
 }
 
 button {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  
   font-weight: thin;
   width: 8em;
   position: relative;
   height: 2em;
-  border: 3px ridge #5d625c;
+  border: 3px ridge #7ce467;
   outline: none;
-  background-color: #f5e56c00;
-  color: #5d625c;
+  background-color: transparent;
+  color: #7ce467;
   transition: 1s;
   border-radius: 0.3em;
   font-size: 20px;
   z-index: 2000;
   cursor: pointer;
-  text-shadow: 13px 13px 13px rgba(108, 108, 108, 0.633);
+  color:#42a32f;
+  text-align: inherit;
+  -webkit-text-stroke: 0.01px #7ce467;
 }
 
 button::after {
@@ -102,7 +111,8 @@ button:hover::after {
 }
 
 button:hover {
-  box-shadow: inset 0px 0px 25px #5d625c;
+  box-shadow: inset 0px 0px 25px #7ce467;
+  -webkit-text-stroke: 0.1px #000000;
 }
 
 #home-btn {
@@ -112,10 +122,12 @@ button:hover {
   left: 30px;
   border: none;
   font-size: 30px;
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-weight: thin;
-  color: #5d625c;
+  color: #7ce467;
   transition: 0.5s ease;
+  -webkit-text-stroke: 0.1px #3aff12;
+  
 }
 
 #home-btn:hover {
@@ -124,8 +136,10 @@ button:hover {
   left: 40px;
   border: none;
   font-size: 40px;
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
+  -webkit-text-stroke: 0.1px #3aff12;
+  text-shadow: 13px 13px 13px #10121021;
 }
 
 #gallery-btn {
@@ -133,12 +147,12 @@ button:hover {
   text-decoration: none;
   top: 30px;
   right: 30px;
-  border: none;
   font-size: 30px;
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
-  font-weight: thin;
-  color: #5d625c;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  color: #7ce467;
   transition: 0.5s ease;
+  -webkit-text-stroke: 0.1px #3aff12;
+  
 }
 
 #gallery-btn:hover {
@@ -147,9 +161,12 @@ button:hover {
   right: 40px;
   border: none;
   font-size: 40px;
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
-}
+  -webkit-text-stroke: 0.1px #3aff12;
+  text-shadow: 13px 13px 13px #1012101d;
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
+  transform: scale(1.05)}
 
 #int-result {
   font-size: 1.5em;
@@ -164,16 +181,16 @@ button:hover {
 #int-img {
   position: relative;
   border-radius: 15px;
-  border: 6px solid #5d625c;
+  border: 6px solid #7ce467;
   border-style: ridge;
   box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
 }
 
 .button-link {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-weight: thin;
   background-color: #f5e56c00;
-  color: #5d625c;
+  color: #7ce467;
   transition: 1s;
   border-radius: 0.3em;
   font-size: 20px;
@@ -194,11 +211,12 @@ button:hover {
 }
 .button-link:hover::before,
 .button-link:hover::after {
-  transform: scale(0);
+  transform: scale(1.5);
 }
 
 .button-link:hover {
-  box-shadow: inset 0px 0px 25px #5d625c;
+  
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.92);
 }
 
 @keyframes rotate {

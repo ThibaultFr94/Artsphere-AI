@@ -26,6 +26,7 @@ h1 {
   font-family: "Bemock", Helvetica, sans-serif;
   font-weight: lighter;
   animation: glow 5s ease-in-out infinite;
+  
 }
 
 h2 {
@@ -69,7 +70,7 @@ h2 {
 }
 
 .circle-link3{
-  background-image: url("/src/asset/img/Design.svg");
+  background-image: url("/src/asset/img/pixel.svg");
   animation: bubble-anim 4s ease-out,fadeInZoom 2.5s ease-in-out ;
   transition:background-color 1s ease-in-out;
 }
@@ -128,7 +129,7 @@ h2 {
 }
 
 .circle-text3 {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   transition:opacity 0.5s ease-in , 0.2s ease-out;
   opacity: 0%;
 }
@@ -180,7 +181,8 @@ h2 {
 }
 
 .circle-link3:hover .circle-text3 {
-  color: rgb(55, 55, 55);
+  color: #7ce467;
+  -webkit-text-stroke: 0.1px #656565;
   font-size: 55px;
   transition: background-color 1s ease-in-out,opacity 0.5s ease-in-out, color 1s ease-in,color 0s ease-out, font-size 1s ease-in-out;
   font-weight: bolder;

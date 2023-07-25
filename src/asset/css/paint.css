@@ -1,5 +1,5 @@
 body {
-  background-image: url("/src/asset/img/tibs2014_A_water_painting_yellow_pattern_swirling_extremely_det_3750d33b-16bb-4d1c-8998-4c099c71e2da.png"); 
+background-color: #f1db5b;
   overflow: hidden;
   background-position: fill;
   background-repeat: repeat;
@@ -14,7 +14,7 @@ body {
 
 #home-btn {
   display: flex;
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -25,15 +25,15 @@ body {
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  animation: textshadow 10s ease-in-out infinite;
+  
 }
 #home-btn:hover {
   top: 40px;
   right: 40px;
   font-size: 40px;
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
-  animation: textshadow 10s ease-in-out infinite;
+  
 }
 
 #home-btn::after {
@@ -63,7 +63,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  animation: textshadow 10s ease-in-out infinite;
+
 }
 
 #gallery-btn:hover {
@@ -73,7 +73,7 @@ body {
   cursor: pointer;
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
-  animation: textshadow 10s ease-in-out infinite;
+ 
 }
 
 #gallery-btn::after {
@@ -109,7 +109,7 @@ h1 {
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
-  animation: textshadow 10s ease-in-out infinite;
+ 
 }
 p {
   font-family: "LettreClassique", Arial, Helvetica, sans-serif;
@@ -136,7 +136,7 @@ button {
   font-size: 20px;
   z-index: 2000;
   cursor: pointer;
-  animation: textshadow 10s ease-in-out infinite;
+ 
 }
 
 button::after {

@@ -33,8 +33,7 @@ export function generatePromptPaint(paint) {
 }
 
 export function generatePromptInt(int) {
-  return `A beautiful and stylishly designed interior.For the interior design wide angle . We'll use a combination of Claymotion and Unreal Engine to create a stunning 3D rendering that brings the space to life.
-  In terms of design style, we can incorporate elements of modernism, inspired by the work of Frank Lloyd Wright, I. M. Pei, and John Lautner, as well as the iconic Palm Springs aesthetic of Arthur Elrod. By blending these styles, we can create a unique and timeless design that is both functional and beautiful, based on this name : ${int}`;
+  return `Let's create a pixel art. The subject includes  a variety of pixel art style. The environment is a sunny day with a clear blue sky. The mood is peaceful, tranquil, and calming. The artistic medium is pixel art, using warm and natural colors to bring out the beauty of the forest. Techniques include layering, shading, and perspective. The inspiration comes from the works of Mark Ferrari, Kyle Fewell, and the pixel art movement. Camera type is not applicable.${int}`;
 }
 
 export const imagerequestBody = {
