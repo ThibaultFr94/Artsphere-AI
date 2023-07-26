@@ -10,7 +10,7 @@ L'objectif est de stimuler l'imagination des artistes.
 
 ## Comment ça fonctionne?
 
-1. **Génération du nom** : À l'aide de l'API de GPT-3.5 turbo, nous générons un nom pour une oeuvre d'art unique basée sur un prompt spécifique. Il existe 3 thèmes interne au site , Graffitis, Tableaux, et idées deco/design d'intérieur.
+1. **Génération du nom** : À l'aide de l'API du modèle GPT-4, nous générons un nom pour une oeuvre d'art unique basée sur un prompt spécifique. Il existe 3 thèmes interne au site , Graffitis, Tableaux, et Pixel Art d'intérieur.
 
 2. **Génération de l'image** : En utilisant l'API de DALL·E, nous créons une image basée sur le nom généré. DALL·E est un modèle qui peut produire des images uniques à partir de descriptions textuelles.
 
