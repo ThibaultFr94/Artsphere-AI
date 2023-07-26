@@ -165,8 +165,8 @@ button:hover {
   transition: 0.5s ease;
   -webkit-text-stroke: 0.1px #3aff12;
   text-shadow: 13px 13px 13px #1012101d;
-  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
-  transform: scale(1.05)}
+}  
+  
 
 #int-result {
   font-size: 1.5em;
@@ -183,6 +183,7 @@ button:hover {
   border-radius: 15px;
   border: 6px solid #7ce467;
   border-style: ridge;
+  transition: transform 0.3s ease-in-out;
   box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
 }
 

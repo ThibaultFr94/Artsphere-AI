@@ -1,5 +1,5 @@
 body {
-  background-image: url("/src/asset/img/10.jpg");
+  background-color: #000000;
   background-size: cover;
   background-repeat: repeat;
   background-position: center;
@@ -13,13 +13,13 @@ body {
 main {
   width: 100%vw;
 }
+
 #home-btn {
   display: flex;
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+  font-family: "Bemock", Helvetica, sans-serif;
   position: absolute;
   outline: none;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 252, 252);
   transition: 1s;
   font-size: 30px;
   top: 30px;
@@ -46,25 +46,27 @@ main {
   top: 40px;
   left: 40px;
   font-size: 40px;
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-family:"Bemock", Helvetica, sans-serif;
   transition: 0.5s ease;
   position: absolute;
-  text-shadow: 8px 8px 12px rgb(126, 125, 125);
+  text-shadow: 8px 8px 12px rgb(230, 230, 230);
 }
 
 h1 {
-  font-family: "Rosart", Arial, Helvetica, sans-serif;
+  font-size: 9rem;
+  font-family: "Bemock", Helvetica, sans-serif;
   font-weight: lighter;
-  font-size: 7rem;
-  color: #000000;
+  animation: glow 5s ease-in-out infinite;
+  color: #ffffff;
   position: relative;
-  text-shadow: 8px 8px 12px rgb(0, 0, 0);
   overflow: hidden;
   text-align: center;
   z-index: 2;
   top: -10%;
-  height: 100px;
+  height: 150px;
   margin-top: 20px;
+  
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
 }
 
 .header {
@@ -72,18 +74,19 @@ h1 {
 }
 
 h2 {
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-family:  "Modeco Trial", Helvetica, sans-serif;
   font-size: 3rem;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
+  -webkit-text-stroke: 0.3px rgba(135, 135, 135, 0.842);
 }
 
 .section-graff > h3 {
   margin: 15px 0;
   text-align: center;
-  color: #000000;
+  color: #4e58e0;
   font-size: 30px;
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,21 +95,22 @@ h2 {
 .section-art > h3 {
   margin: 20px ;
   text-align: center;
-  color: #000000;
+  color: #9c0303;
   font-size: 30px;
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: lighter;
   gap: 10px;
 }
 .section-design > h3 {
   display: flex;
   margin: 10px 0;
   text-align: center;
-  color: #000000;
+  color: #3bf116;
   font-size: 30px;
-  font-family: "Glitten", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -118,12 +122,14 @@ h2 {
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+  color: #4e58e0;
 
 }
 .section-art > h3 > button  > img {
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+  color: #9c0303;
 
 }
 .section-design > h3 > button  > img {
@@ -131,6 +137,7 @@ h2 {
   width: 25px;
   height: 20px;
   transition: 0.5s ease;
+  color: #3bf116;
   margin-top: 20px;
   margin-bottom:10px;
 }
@@ -161,7 +168,7 @@ h2 {
 .image-container img {
   width: 267px;
   height: 267px;
-  box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.737);
+  box-shadow: 5px 5px 13px rgba(255, 255, 255, 0.737);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -170,7 +177,7 @@ h2 {
   transform: scale(1.1);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
-  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
+  box-shadow: 13px 13px 13px rgba(255, 253, 253, 0.633);
 }
 button{
   cursor:pointer;
@@ -178,4 +185,27 @@ button{
   appearance: none;
   background-color: inherit;
 
+}
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff,
+      0 0 6px #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff,
+      0 0 6px #ffffff, 0 0 8px #ffffff;
+  }
+}
+@keyframes textshadow {
+  0%,
+  100% {
+    text-shadow: 0 0 1px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
 }

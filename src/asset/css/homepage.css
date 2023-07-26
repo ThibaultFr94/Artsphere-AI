@@ -156,7 +156,7 @@ h2 {
 }
 
 .circle-link3:hover {
- background-color: rgb(207, 207, 207);
+ background-color: rgb(255, 255, 255);
   border: none;
   transform: scale(1.2) ;
   transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
@@ -181,8 +181,8 @@ h2 {
 }
 
 .circle-link3:hover .circle-text3 {
-  color: #7ce467;
-  -webkit-text-stroke: 0.1px #656565;
+  color: #4b8e3d;
+  -webkit-text-stroke: 0.1px #3bf116;
   font-size: 55px;
   transition: background-color 1s ease-in-out,opacity 0.5s ease-in-out, color 1s ease-in,color 0s ease-out, font-size 1s ease-in-out;
   font-weight: bolder;
@@ -228,8 +228,8 @@ h2 {
     #f1db5b 23.86%,
     #000000 23.86%,
     #000000 25%,
-    #d3d3d3 25%,
-    #d3d3d3 36.36%,
+    #7ce467 25%,
+    #7ce467 36.36%,
     #000000 36.36%,
     #000000 37.5%,
     #5ba1fc 37.5%,
@@ -244,8 +244,8 @@ h2 {
     #f1db5b 73.86%,
     #000000 73.86%,
     #000000 75%,
-    #d3d3d3 75%,
-    #d3d3d3 86.36%,
+    #7ce467 75%,
+    #7ce467 86.36%,
     #000000 86.36%,
     #000000 87.5%,
     #5ba1fc 87.5%,
