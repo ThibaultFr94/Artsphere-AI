@@ -14,7 +14,7 @@ background-color: #f1db5b;
 
 #home-btn {
   display: flex;
-  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "Bemock",  Arial, sans-serif;
   position: absolute;
   top: 30px;
   left: 30px;
@@ -31,7 +31,7 @@ background-color: #f1db5b;
   top: 40px;
   right: 40px;
   font-size: 40px;
-  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "Bemock",Arial, sans-serif;
   transition: 0.5s ease;
   
 }
@@ -52,7 +52,7 @@ background-color: #f1db5b;
 
 #gallery-btn {
   display: flex;
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "LettreClassique", Arial, sans-serif;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -71,7 +71,7 @@ background-color: #f1db5b;
   right: 40px;
   font-size: 40px;
   cursor: pointer;
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "LettreClassique", Arial, sans-serif;
   transition: 0.5s ease;
  
 }
@@ -93,7 +93,7 @@ background-color: #f1db5b;
 }
 
 h1 {
-  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
+  font-family: "Classic Mosaic", Arial, sans-serif;
   font-weight: lighter;
   font-size: 5rem;
   color: #9c0303;
@@ -103,7 +103,7 @@ h1 {
 
 .main-div > p {
   top: 200px;
-  font-family: "GOLDEN", Arial, Helvetica, sans-serif;
+  font-family: "GOLDEN", Arial, sans-serif;
   font-size: 2rem;
   font-weight: bolder;
   color: #9c0303;
@@ -112,7 +112,7 @@ h1 {
  
 }
 p {
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "LettreClassique", Arial,  sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   color: #9c0303;
@@ -122,7 +122,7 @@ p {
 
 }
 button {
-  font-family: "LettreClassique", Arial, Helvetica, sans-serif;
+  font-family: "LettreClassique", Arial, sans-serif;
   font-weight: thin;
   width: 10em;
   position: relative;
