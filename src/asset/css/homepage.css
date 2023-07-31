@@ -119,18 +119,18 @@ h2 {
 }
 
 .circle-text1 {
-  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
+  font-family: "Computer Regular", Arial, sans-serif;
   transition:opacity 0.5s ease-in  ,opacity 0.2s ease-out;
   opacity: 0%;
 }
 .circle-text2 {
-  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
+  font-family: "Classic Mosaic", Arial, sans-serif;
   transition:opacity 0.5s ease-in ,opacity 0.2s ease-out;
   opacity: 0%;
 }
 
 .circle-text3 {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   transition:opacity 0.5s ease-in , 0.2s ease-out;
   opacity: 0%;
 }
@@ -140,8 +140,8 @@ h2 {
   transform: scale(1.2);
   border: none;
   transition: opacity 0.5s ease-in ,background-color 1s ease-in-out, border 1s ease-in-out,
-  color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
-  box-shadow: none;
+  color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,box-shadow 0.5s ease-in-out;
+  box-shadow: 10px 15px 30px rgba(255, 255, 255, 0.505);
   background-image: none;
 }
 
@@ -150,9 +150,9 @@ h2 {
   background-color: #f1db5b;
   border: none;
   transition:opacity 0.5s ease-in , background-color 1s ease-in-out, border 1s ease-in-out,
-    color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+    color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 0.5s ease-in-out;
   text-transform: #9c0303;
-  box-shadow: none;
+  box-shadow: 10px 15px 30px rgba(255, 255, 255, 0.5);
   background-image: none;
 }
 
@@ -161,8 +161,8 @@ h2 {
   border: none;
   transform: scale(1.2) ;
   transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
-    color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
-  box-shadow: none;
+    color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-ou, box-shadow 0.5s ease-in-out;
+    box-shadow: 10px 15px 30px rgba(255, 255, 255, 0.497);
   background-image: none;
 
 }
@@ -275,7 +275,7 @@ h2 {
   border-radius: 100px;
   z-index: -1;
   font-weight: bolder;
-  font-family: "Modeco Trial", Arial, Helvetica, sans-serif;
+  font-family: "Modeco Trial", Arial, sans-serif;
   transition: background-color 1s ease-in-out, border 1s ease-in-out,
     width 1s ease-in-out, height 1s ease-in-out;
 }

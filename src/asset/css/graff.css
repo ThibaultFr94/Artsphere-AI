@@ -21,15 +21,15 @@ canvas {
 
 h1 {
   font-weight: lighter;
-  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
+  font-family: "Computer Regular", Arial, sans-serif;
   font-size: 5.5rem;
-  color: #fff;
+  color: #ffffff;
   animation: textshadow 5s ease-in-out infinite;
  letter-spacing: 6px ;
 }
 
 .main-div > p {
-  font-family: "Street Block", Arial, Helvetica, sans-serif;
+  font-family: "Street Block", Arial, sans-serif;
   font-size: 2.5rem;
   color: #fff;
   width: 100vw;
@@ -38,7 +38,7 @@ h1 {
   letter-spacing: 6px ;
 }
 p {
-  font-family: "Blouse", Arial, Helvetica, sans-serif;
+  font-family: "Blouse", Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   color: #fff;
@@ -46,7 +46,7 @@ p {
   text-align: inherit;
 }
 button {
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  font-family: "Futurama", Arial, sans-serif;
   width: 10em;
   position: relative;
   height: 2em;
@@ -157,7 +157,7 @@ button img {
 
 #home-btn {
   display: flex;
-  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "Bemock", Arial,  sans-serif;
   position: absolute;
   outline: none;
   color: white;
@@ -188,12 +188,12 @@ button img {
   left: 40px;
   font-size: 40px;
   transition: 0.5s ease;
-  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
+  font-family: "Bemock",  Arial, sans-serif;
   position: absolute;
 }
 #gallery-btn {
   display: flex;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  font-family: "Futurama", Arial, sans-serif;
   position: absolute;
   outline: none;
   color: white;
@@ -210,7 +210,7 @@ button img {
   right: 40px;
   font-size: 40px;
   transition: 0.5s ease;
-  font-family: "Futurama", Arial, Helvetica, sans-serif;
+  font-family: "Futurama", Arial, sans-serif;
   position: absolute;
 }
 #gallery-btn::after {

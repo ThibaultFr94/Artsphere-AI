@@ -77,7 +77,7 @@ h1 {
 }
 
 h2 {
-  font-family:  "Modeco Trial", Helvetica, sans-serif;
+  font-family:  "Modeco Trial", arial, sans-serif;
   font-size: 3rem;
   color: #ffffff;
   text-align: center;
@@ -86,23 +86,25 @@ h2 {
 }
 
 .section-graff > h3 {
-  margin: 40px ;
+  margin: 30px ;
   text-align: center;
   color: #ffffff;
-  font-size: 30px;
-  font-family: "Computer Regular", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: "Computer Regular", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  letter-spacing: 4px ;
   border-bottom: 2px solid #ffffff; 
 }
 .section-art > h3 {
-  margin: 40px ;
+  margin: 30px ;
   text-align: center;
   color: #ffffff;
-  font-size: 30px;
-  font-family: "Classic Mosaic", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-family: "Classic Mosaic", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,12 +113,12 @@ h2 {
   border-bottom: 3px ridge #ffffff; 
 }
 .section-design > h3 {
-  margin: 40px ;
+  margin:30px ;
   display: flex;
   text-align: center;
   color: #ffffff;
-  font-size: 30px;
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-family: "LLPixel", Arial, sans-serif;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -124,37 +126,39 @@ h2 {
 }
 
 .section-graff > h3 > button > img {
-  width: 25px;
-  height: 20px;
+  width: 50px;
+  height: 40px;
   transition: 0.5s ease;
+  margin-top: 30px;
 }
 .section-art > h3 > button  > img {
-  width: 25px;
-  height: 20px;
+  width: 50px;
+  height: 40px;
   transition: 0.5s ease;
+  margin-top: 30px;
 }
 .section-design > h3 > button  > img {
   display: inline-flex;
-  width: 25px;
-  height: 20px;
+  width: 50px;
+  height: 40px;
   transition: 0.5s ease;
   fill: #3bf116;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom:10px;
 }
 
 .section-graff > h3 > button  > img:hover {
   transition: 0.5s ease;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .section-art > h3 >  button > img:hover {
   transition: 0.5s ease;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .section-design > h3 > button > img:hover {
   display: inline-flex;
   transition: 0.5s ease;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .section > h3 > button {
   display: inline-flex;
@@ -167,14 +171,11 @@ h2 {
   gap: 70px;
 }
 
-#shuffle-graff {
-  fill: #4e58e0e5;
-}
 
 .image-container img {
   width: 267px;
   height: 267px;
-  box-shadow: 5px 5px 13px rgb(255, 255, 255);
+  box-shadow: 5px 5px 13px rgba(255, 255, 255, 0.393);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -183,7 +184,7 @@ h2 {
   transform: scale(1.1);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
-  box-shadow: 13px 13px 20px rgb(255, 255, 255);
+  box-shadow: 13px 13px 25px rgba(255, 255, 255, 0.404);
 }
 button{
   cursor:pointer;

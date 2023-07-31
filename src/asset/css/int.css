@@ -19,7 +19,7 @@ img {
 }
 
 h1 {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial,  sans-serif;
   font-weight: bolder;
   font-size: 5rem;
   color: #42a32f;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .main-div > p {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   font-size: 3rem;
   color: #42a32f;
   text-align: inherit;
@@ -36,7 +36,7 @@ h1 {
 }
 
 p {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   font-weight: bold;
   color:#42a32f;
   text-align: inherit;
@@ -70,7 +70,7 @@ p {
 }
 
 button {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   font-weight: thin;
   width: 8em;
   position: relative;
@@ -185,7 +185,7 @@ button:hover {
 }
 
 .button-link {
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   font-weight: thin;
   background-color: #f5e56c00;
   color: #7ce467;
