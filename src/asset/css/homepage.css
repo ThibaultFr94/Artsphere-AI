@@ -35,6 +35,7 @@ h2 {
   font-family: "Modeco Trial", Helvetica, sans-serif;
   text-shadow: 1px 1px 4px rgb(255, 255, 255);
   -webkit-text-stroke: 0.01px rgba(92, 92, 92, 0.374);
+  -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
 }
 
 .center-container {
@@ -208,6 +209,7 @@ h2 {
   text-align: center;
   text-decoration: none;
   justify-content: center;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.301);
 }
 
 .styled-button::before {

@@ -67,12 +67,12 @@ function init() {
   document.addEventListener("pointermove", (e) => {
     let ratio = window.innerHeight / window.innerWidth;
     uniforms.u_mouse.value.x =
-      (e.pageX - window.innerWidth / 2) / window.innerWidth / ratio;
+      (e.clientX - window.innerWidth / 2) / window.innerWidth / ratio;
     uniforms.u_mouse.value.y =
-      ((e.pageY - window.innerHeight / 2) / window.innerHeight) * -1;
+      ((e.clientY - window.innerHeight / 2) / window.innerHeight) * -1;
 
     e.preventDefault();
-  });
+});
 }
 function onWindowResize(event) {
   renderer.setSize(window.innerWidth, window.innerHeight);
