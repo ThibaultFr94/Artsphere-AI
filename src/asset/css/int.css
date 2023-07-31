@@ -29,7 +29,7 @@ h1 {
 
 .main-div > p {
   font-family: "LLPixel", Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: #42a32f;
   text-align: inherit;
   -webkit-text-stroke: 0.01px #7ce467;
@@ -38,7 +38,7 @@ h1 {
 p {
   font-family: "LLPixel", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;;
   color:#42a32f;
   text-align: inherit;
   -webkit-text-stroke: 0.01px #7ce467;
@@ -122,7 +122,7 @@ button:hover {
   left: 30px;
   border: none;
   font-size: 30px;
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
   font-weight: thin;
   color: #7ce467;
   transition: 0.5s ease;
@@ -136,7 +136,7 @@ button:hover {
   left: 40px;
   border: none;
   font-size: 40px;
-  font-family: "LLPixel", Arial, Helvetica, sans-serif;
+  font-family: "Bemock", Helvetica, Arial, Helvetica, sans-serif;
   transition: 0.5s ease;
   -webkit-text-stroke: 0.1px #3aff12;
   text-shadow: 13px 13px 13px #10121021;

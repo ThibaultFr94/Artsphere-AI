@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "Find a short name for a pixel art creation based on the great  developpers of the 21st century,2 words max.";
+      "Find a short name for a pixel art creation based on the better videos games of the century,2 words max.";
     const requestBodyText = {
       messages: [
         {
