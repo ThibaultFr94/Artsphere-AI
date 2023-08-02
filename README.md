@@ -38,6 +38,16 @@ Nous sommes toujours à la recherche de contributions pour améliorer notre proj
 
 Vous devez créer un fichier module.js dans le dossier asset/js afin d'y importer vos clées API pour Chat GPT et Dall-E ainsi que les URL associées
 Ensuite rendez-vous sur le site de OpenAI section API Documentation et suivez le guide dédié.
+Voici la liste des polices à télécharger pour une meilleure expérience:
+Futurama : https://www.dafont.com/fr/futurama-2.font
+Classic Mosaic : https://www.dafont.com/fr/classic-mosaic.font
+Bemock: https://www.dafont.com/fr/bemock.font
+Modeco : https://www.dafont.com/fr/modeco.font
+Computer: https://www.dafont.com/fr/computer-2.font
+LLPixel: https://www.dafont.com/fr/llpixel.font
+Street Blocks: https://www.dafont.com/fr/street-blocks.font
+Lettre Classique :https://www.dafont.com/fr/lettreclassique.font
+Golden : https://www.dafont.com/fr/golden-2.font
 ## Licence
 
 Pour plus d'informations, veuillez consulter le fichier LICENCE
