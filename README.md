@@ -1,6 +1,5 @@
 # Projet Générateur d'art : ARTSPHERE-AI
 
-
 ## Description du projet
 
 Le projet Artsphere-IA est un site web qui utilise les API de OpenAI qui sont GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspirés des grands peintres de notre siècle, ou des idées deco/design d'interieur. L'utilisateur clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes et la décoration.
