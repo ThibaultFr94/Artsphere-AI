@@ -1,6 +1,5 @@
 body {
 background-color: #f1db5b;
-  overflow: hidden;
   background-position: fill;
   background-repeat: repeat;
   background-size: cover;
@@ -16,21 +15,21 @@ background-color: #f1db5b;
   display: flex;
   font-family: "Bemock",  Arial, sans-serif;
   position: absolute;
-  top: 30px;
-  left: 30px;
+  font-size:  2vw;
+  top: 1.56vw;
+  left: 1.56vw;
   outline: none;
   color: #9c0303;
   transition: 1s;
-  font-size: 30px;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
   
 }
 #home-btn:hover {
-  top: 40px;
-  right: 40px;
-  font-size: 40px;
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
   font-family: "Bemock",Arial, sans-serif;
   transition: 0.5s ease;
   
@@ -54,12 +53,12 @@ background-color: #f1db5b;
   display: flex;
   font-family: "LettreClassique", Arial, sans-serif;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  font-size:  2vw;
+  top: 1.56vw;
+  right: 1.56vw;
   outline: none;
   color: #9c0303;
   transition: 1s;
-  font-size: 30px;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
@@ -67,9 +66,9 @@ background-color: #f1db5b;
 }
 
 #gallery-btn:hover {
-  top: 40px;
-  right: 40px;
-  font-size: 40px;
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size: 2.5vw;
   cursor: pointer;
   font-family: "LettreClassique", Arial, sans-serif;
   transition: 0.5s ease;
@@ -78,9 +77,9 @@ background-color: #f1db5b;
 
 #gallery-btn::after {
   content: "";
-  top: 40px;
-  right: 40px;
-  font-size: 40px;
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size: 2.5vw;
   position: absolute;
 }
 
@@ -95,7 +94,7 @@ background-color: #f1db5b;
 h1 {
   font-family: "Classic Mosaic", Arial, sans-serif;
   font-weight: lighter;
-  font-size: 5rem;
+  font-size: 6vw;
   color: #9c0303;
   position: relative;
   overflow: hidden;
@@ -104,11 +103,11 @@ h1 {
 .main-div > p {
   top: 200px;
   font-family: "GOLDEN", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 2vw;
   font-weight: bolder;
   color: #9c0303;
   width: 100vw;
-  text-align: inherit;
+ 
  
 }
 p {
@@ -124,16 +123,16 @@ p {
 button {
   font-family: "LettreClassique", Arial, sans-serif;
   font-weight: thin;
-  width: 10em;
+  width: 14vw;
   position: relative;
-  height: 2em;
+  height: 3vw;
   border: 3px dotted #8b3620;
   outline: none;
   background-color: transparent;
   color: #9c0303;
   transition: 1s;
   border-radius: 0.3em;
-  font-size: 20px;
+  font-size: 2vw;
   z-index: 2000;
   cursor: pointer;
  
@@ -172,14 +171,14 @@ button:hover {
 }
 
 .paint-img-hidden {
-  width: 400px;
-  height: 400px;
+  width: 20.83vw;
+  height: 20.83vw; 
   visibility: hidden;
 }
 
 .loader {
-  width: 48px;
-  height: 48px;
+  width: 2.5vw;
+  height: 2.5vw;
   display: inline-block;
   position: absolute;
   top: 65%;

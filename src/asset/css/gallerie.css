@@ -25,9 +25,9 @@ body {
   outline: none;
   color: rgb(255, 252, 252);
   transition: 1s;
-  font-size: 30px;
-  top: 30px;
-  left: 30px;
+  font-size:  2vw;
+  top: 1.56vw;
+  left: 1.56vw;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
@@ -47,9 +47,9 @@ body {
   left: 20px;
 }
 #home-btn:hover {
-  top: 40px;
-  left: 40px;
-  font-size: 40px;
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
   font-family:"Bemock", Helvetica, sans-serif;
   transition: 0.5s ease;
   position: absolute;
@@ -57,16 +57,15 @@ body {
 }
 
 h1 {
-  font-size: 9rem;
   font-family: "Bemock", Helvetica, sans-serif;
   font-weight: lighter;
-  animation: glow 5s ease-in-out infinite;
   color: #ffffff;
   position: relative;
   overflow: hidden;
   text-align: center;
   top: -10%;
- 
+  font-size: 8vw; 
+  animation: glow 5s ease-in-out infinite;
 
   
   -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
@@ -78,32 +77,34 @@ h1 {
 
 h2 {
   font-family:  "Modeco Trial", arial, sans-serif;
-  font-size: 3rem;
   color: #ffffff;
+  font-size: 2vw; 
+  margin-top: 1vh;
   text-align: center;
-  -webkit-text-stroke: 0.01px rgb(0, 0, 0);
-  text-shadow: 10px 10px 20px rgba(255, 255, 255, 0.74);
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.01px rgba(92, 92, 92, 0.374);
+  -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
 }
 
 .section-graff > h3 {
-  margin: 30px ;
+  margin: 3vw ;
   text-align: center;
   color: #ffffff;
-  font-size: 50px;
+  font-size: 2vw;
   font-weight: lighter;
   font-family: "Computer Regular", Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0.5vw;
   letter-spacing: 4px ;
   border-bottom: 2px solid #ffffff; 
 }
 .section-art > h3 {
-  margin: 30px ;
+  margin: 3vw ;
   text-align: center;
   color: #ffffff;
-  font-size: 50px;
+  font-size: 2vw;
   font-family: "Classic Mosaic", Arial, sans-serif;
   display: flex;
   align-items: center;
@@ -113,38 +114,36 @@ h2 {
   border-bottom: 3px ridge #ffffff; 
 }
 .section-design > h3 {
-  margin:30px ;
-  display: flex;
+  margin: 3vw ;
   text-align: center;
   color: #ffffff;
-  font-size: 50px;
-  font-family: "LLPixel", Arial, sans-serif;
+  font-size: 2vw;
+  font-family: "Classic Mosaic", Arial, sans-serif;
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: lighter;
   gap: 10px;
- border-bottom: 3px dotted #ffffff; 
+  border-bottom: 3px ridge #ffffff; 
 }
 
 .section-graff > h3 > button > img {
-  width: 50px;
-  height: 40px;
+  width: 2.5vw;
+  height: 2vw;
   transition: 0.5s ease;
   margin-top: 30px;
 }
 .section-art > h3 > button  > img {
-  width: 50px;
-  height: 40px;
+  width: 2.5vw;
+  height: 2vw;
   transition: 0.5s ease;
   margin-top: 30px;
 }
 .section-design > h3 > button  > img {
-  display: inline-flex;
-  width: 50px;
-  height: 40px;
+  width: 2.5vw;
+  height: 2vw;
   transition: 0.5s ease;
-  fill: #3bf116;
   margin-top: 30px;
-  margin-bottom:10px;
 }
 
 .section-graff > h3 > button  > img:hover {
@@ -156,29 +155,29 @@ h2 {
   transform: scale(1.2);
 }
 .section-design > h3 > button > img:hover {
-  display: inline-flex;
+
   transition: 0.5s ease;
   transform: scale(1.2);
 }
-.section > h3 > button {
-  display: inline-flex;
-}
+
 
 .image-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 70px;
+  gap: 3vw;
 }
 
 
 .image-container img {
-  width: 267px;
-  height: 267px;
+  width: 20vw;
+  height: auto;
   box-shadow: 5px 5px 13px rgba(255, 255, 255, 0.393);
   border-radius: 5px;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  margin-left: 0.1vw;
+  margin-right: 0.1vw;
 }
 .image-container img:hover {
   transform: scale(1.1);
@@ -196,12 +195,12 @@ button{
 @keyframes glow {
   0%,
   100% {
-    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff,
+    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
       0 0 6px #ffffff;
   }
   50% {
-    text-shadow: 0 0 1px #ffffff, 0 0 2px #ffffff, 0 0 4px #ffffff,
-      0 0 6px #ffffff, 0 0 8px #ffffff;
+    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
+      0 0 3px #ffffff, 0 0 4px #ffffff;
   }
 }
 @keyframes textshadow {

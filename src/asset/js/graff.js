@@ -11,115 +11,6 @@ import {
 } from "./service.js";
 import { types } from "./type.js";
 
-const canvas = document.createElement("canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.appendChild(canvas);
-const ctx = canvas.getContext("2d");
-
-let cursor = {
-  x: null,
-  y: null,
-};
-
-canvas.addEventListener("mousemove", function (e) {
-  cursor.x = e.x;
-  cursor.y = e.y;
-});
-
-let particlesArray;
-let mouse = {
-  x: null,
-  y: null,
-  radius: (canvas.height / 70) * (canvas.width / 70) * 0.2,
-};
-
-window.addEventListener("resize", function () {
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-  mouse.radius = 0.5;
-});
-
-window.addEventListener("mousemove", function (event) {
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
-class Particle {
-  constructor(x, y, directionX, directionY, size, color) {
-    this.x = x;
-    this.y = y;
-    this.directionX = directionX;
-    this.directionY = directionY;
-    this.size = size;
-    this.color = color;
-  }
-  draw() {
-    const gradient = ctx.createRadialGradient(
-      this.x,
-      this.y,
-      0,
-      this.x,
-      this.y,
-      this.size
-    );
-
-    gradient.addColorStop(0, "#86bef6");
-    gradient.addColorStop(0.2, "#6db5fe");
-    gradient.addColorStop(0.6, "#49a4ff");
-    gradient.addColorStop(1, "#1a8cff");
-
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-    ctx.fillStyle = gradient;
-    ctx.fill();
-  }
-  update() {
-    let button = document.getElementById("graff-btn");
-    let buttonRect = button.getBoundingClientRect();
-    if (
-      this.x > buttonRect.left &&
-      this.x < buttonRect.right &&
-      this.y > buttonRect.top &&
-      this.y < buttonRect.bottom
-    ) {
-      this.directionX = -this.directionX;
-      this.directionY = -this.directionY;
-    }
-    if (this.x + this.size > canvas.width || this.x - this.size < 0) {
-      this.directionX = -this.directionX;
-    }
-    if (this.y + this.size > canvas.height || this.y - this.size < 0) {
-      this.directionY = -this.directionY;
-    }
-    let dx = mouse.x - this.x;
-    let dy = mouse.y - this.y;
-    let distance = Math.sqrt(dx * dx + dy * dy);
-    let forceDirectionX = dx / distance;
-    let forceDirectionY = dy / distance;
-
-    const maxDistance = mouse.radius;
-    let force = (maxDistance - distance) / maxDistance;
-    if (distance < mouse.radius + this.size) {
-      this.x -= forceDirectionX * force * 100;
-      this.y -= forceDirectionY * force * 100;
-    } else {
-      this.x += this.directionX;
-      this.y += this.directionY;
-    }
-    let directionX = forceDirectionX * force * this.size;
-    let directionY = forceDirectionY * force * this.size;
-
-    if (distance < mouse.radius + this.size) {
-      this.x -= directionX;
-      this.y -= directionY;
-    } else {
-      this.x += this.directionX;
-      this.y += this.directionY;
-    }
-
-    this.draw();
-  }
-}
 function init() {
   particlesArray = [];
   let numberOfParticles = (canvas.height * canvas.width) / 4000;
@@ -136,16 +27,8 @@ function init() {
     );
   }
 }
-function animate() {
-  requestAnimationFrame(animate);
-  ctx.clearRect(0, 0, innerWidth, innerHeight);
-  particlesArray.map((item) => {
-    item.update();
-  });
-}
 
-init();
-animate();
+
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("graff-btn").addEventListener("click", generateGraff);
