@@ -47,6 +47,8 @@ LLPixel: https://www.dafont.com/fr/llpixel.font
 Street Blocks: https://www.dafont.com/fr/street-blocks.font
 Lettre Classique :https://www.dafont.com/fr/lettreclassique.font
 Golden : https://www.dafont.com/fr/golden-2.font
+Minecraft : https://www.dafont.com/fr/minecraft.font
+
 ## Licence
 
 Pour plus d'informations, veuillez consulter le fichier LICENCE

@@ -27,19 +27,17 @@ h1 {
 }
 
 .main-div > p {
-  font-family: "LLPixel", Arial, sans-serif;
+  font-family: "Minecraft", Arial, sans-serif;
   font-size: 2vw;
   color: #42a32f;
   text-align: inherit;
-  -webkit-text-stroke: 0.01px #7ce467;
 }
 
 p {
-  font-family: "LLPixel", Arial, sans-serif;
+  font-family: "Minecraft", Arial, sans-serif;
   font-weight: bold;
   color:#42a32f;
   text-align: inherit;
-  -webkit-text-stroke: 0.01px #7ce467;
   font-size: 1vw;
 }
 
@@ -119,11 +117,9 @@ button:hover {
   top:1.56vw;
   left:1.56vw;
   font-family: "Bemock", Arial, sans-serif;
-  font-weight: thin;
-  color: #7ce467;
-  transition:0.5s ease;
-  -webkit-text-stroke: 0.5px #3aff12;
-  
+  font-weight: bolder;
+  color: #42a32f;;
+  transition:0.5s ease;  
 }
 
 #home-btn:hover {
@@ -134,7 +130,7 @@ button:hover {
   border: none;
   font-family: "Bemock", Arial, sans-serif;
   transition: 0.5s ease;
-  -webkit-text-stroke: 0.1px #3aff12;
+font-weight: bolder;
   text-shadow: 13px 13px 13px #10121021;
 }
 
@@ -144,10 +140,9 @@ button:hover {
   font-size:  2vw;
   top: 1.56vw;
   right: 1.56vw;
-  font-family: "LLPixel", Arial, sans-serif;
-  color: #7ce467;
+  font-family:"Minecraft", Arial, sans-serif;
+  color: #42a32f;;
   transition: 0.5s ease;
-  -webkit-text-stroke: 0.5px #3aff12;
   
 }
 
@@ -157,9 +152,9 @@ button:hover {
   top: 2.08vw;
   right: 2.08vw;
   font-size:  2.5vw;
-  font-family: "LLPixel", Arial, sans-serif;
+  font-family: "Minecraft", Arial, sans-serif;
   transition: 0.5s ease;
-  -webkit-text-stroke: 0.1px #3aff12;
+
   text-shadow: 13px 13px 13px #1012101d;
 }  
   
