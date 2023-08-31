@@ -5,7 +5,7 @@
 Le projet Artsphere-IA est un site web qui utilise les API de OpenAI qui sont GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspirés des grands peintres de notre siècle, ou des idées deco/design d'interieur. L'utilisateur clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes et la décoration.
 L'objectif est de stimuler l'imagination des artistes.
 
-![Image 1](/src/asset/img/hp.PNG)
+![Image 1](/frontend/asset/img/hp.PNG)
 
 ## Comment ça fonctionne?
 
@@ -17,17 +17,17 @@ L'objectif est de stimuler l'imagination des artistes.
 
 Les utilisateurs peuvent visiter le site web, choisir quelle type d'inspiration ils veulent (Art, Graff ou Pixel Art) et cliquer sur la shpère de leur choix. En arrivant sur la page thématiques cliquez sur le "Générer". Le site web produira alors un nom unique et l'oeuvre correspondante.
 
-![Image 1](/src/asset/img/graff.PNG)
+![Image 1](/frontend/asset/img/graff.PNG)
 
-![Image 1](/src/asset/img/art.PNG)
+![Image 1](/frontend/asset/img/art.PNG)
 
-![Image 1](/src/asset/img/pixel.PNG)
+![Image 1](/frontend/asset/img/pixel.PNG)
 
 ## Galerie
 
  Une galerie communautaire est également disponible où les utilisateurs peuvent consulter des selections alèatoires des trois types d'oeuvre d'art, elles . Nous prévoyons également pour le futur un système de notation.
 
-![Image 1](/src/asset/img/gallerie.PNG)
+![Image 1](/frontend/asset/img/gallerie.PNG)
 ## Contributions
 
 Nous sommes toujours à la recherche de contributions pour améliorer notre projet. Si vous avez des idées ou des suggestions, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
