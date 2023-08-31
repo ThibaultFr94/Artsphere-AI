@@ -21,7 +21,7 @@ Les utilisateurs peuvent visiter le site web, choisir quelle type d'inspiration 
 
 ![Image 1](/src/asset/img/art.PNG)
 
-![Image 1](/src/asset/img/design.PNG)
+![Image 1](/src/asset/img/pixel.PNG)
 
 ## Galerie
 
