@@ -2,7 +2,7 @@
 
 ## Description du projet
 
-Le projet Artsphere-IA est un site web qui utilise les API de OpenAI qui sont GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspirés des grands peintres de notre siècle, ou des idées deco/design d'interieur. L'utilisateur clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes et la décoration.
+Le projet Artsphere-AI est un site web qui utilise les API de OpenAI qui sont GPT-3,5 turbo et DALL·E, pour générer automatiquement des graffitis uniques, des tableaux inspirés des grands peintres de notre siècle, ou des idées deco/design d'interieur. L'utilisateur clique sur le bouton générer et le site produit un nom de graffiti et une image de graffiti basée sur ce nom, pareil pour les peintres impressionistes et la décoration.
 L'objectif est de stimuler l'imagination des artistes.
 
 ![Image 1](/frontend/asset/img/hp.PNG)
@@ -38,6 +38,7 @@ Nous sommes toujours à la recherche de contributions pour améliorer notre proj
 Vous devez créer un fichier module.js dans le dossier asset/js afin d'y importer vos clées API pour Chat GPT et Dall-E ainsi que les URL associées
 Ensuite rendez-vous sur le site de OpenAI section API Documentation et suivez le guide dédié.
 Voici la liste des polices à télécharger pour une meilleure expérience:
+
 Futurama : https://www.dafont.com/fr/futurama-2.font
 
 Classic Mosaic : https://www.dafont.com/fr/classic-mosaic.font
