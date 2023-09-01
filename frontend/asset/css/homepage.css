@@ -394,6 +394,10 @@ h3 {
   display: none;
 }
 
+#registrationForm >.close{
+  right: 0%;
+}
+
 @keyframes barberpole {
   100% {
     background-position: 50% 50%;
