@@ -13,7 +13,8 @@ body {
   z-index: -1;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: white;
   text-align: center;
   margin: 0;
@@ -21,14 +22,14 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 8vw; 
+  font-size: 8vw;
   font-family: "Bemock", Helvetica, sans-serif;
   font-weight: lighter;
   animation: glow 5s ease-in-out infinite;
 }
 
 h2 {
-  font-size: 2vw; 
+  font-size: 2vw;
   margin-top: 1vh;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
@@ -56,7 +57,9 @@ h2 {
   height: 15vw;
 }
 
-.circle-link1, .circle-link2, .circle-link3 {
+.circle-link1,
+.circle-link2,
+.circle-link3 {
   border: 0.2px solid #050505;
   justify-content: center;
   align-items: center;
@@ -65,14 +68,15 @@ h2 {
   width: 16vw;
   height: 16vw;
   border-radius: 50%;
-  box-shadow: .5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
-  transition: opacity 0.5s, background-color 1s ease-in-out, border 1s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, box-shadow 0s ease-in-out, background-image 1.5s ease-in-out;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
+  transition: opacity 0.5s, background-color 1s ease-in-out,
+    border 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,
+    color 1s ease-in, box-shadow 0s ease-in-out,
+    background-image 1.5s ease-in-out;
   overflow: hidden;
- 
 }
 .circle-link1 {
-  animation:  bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 2s forwards;
+  animation: bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 2s forwards;
   transition: opacity 1;
 }
 
@@ -82,20 +86,24 @@ h2 {
 }
 
 .circle-link3 {
-  animation:bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 5s forwards;
+  animation: bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 5s forwards;
   transition: opacity 1;
 }
-.circle-link1 img, .circle-link2 img, .circle-link3 img {
-  width: 100%;   
-  height: 100%;  
+.circle-link1 img,
+.circle-link2 img,
+.circle-link3 img {
+  width: 100%;
+  height: 100%;
   opacity: 1;
-  position: absolute; 
-  top: 0;  
-  left: 0;  
-  z-index: -1;  
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-.circle-link1:hover img, .circle-link2:hover img, .circle-link3:hover img {
-  opacity: 0; 
+.circle-link1:hover img,
+.circle-link2:hover img,
+.circle-link3:hover img {
+  opacity: 0;
 }
 .circle-text1,
 .circle-text2,
@@ -112,18 +120,18 @@ h2 {
 
 .circle-text1 {
   font-family: "Computer Regular", Arial, sans-serif;
-  transition:opacity 0.5s ease-in  ,opacity 0.2s ease-out;
+  transition: opacity 0.5s ease-in, opacity 0.2s ease-out;
   opacity: 0%;
 }
 .circle-text2 {
   font-family: "Classic Mosaic", Arial, sans-serif;
-  transition:opacity 0.5s ease-in ,opacity 0.2s ease-out;
+  transition: opacity 0.5s ease-in, opacity 0.2s ease-out;
   opacity: 0%;
 }
 
 .circle-text3 {
   font-family: "LLPixel", Arial, sans-serif;
-  transition:opacity 0.5s ease-in , 0.2s ease-out;
+  transition: opacity 0.5s ease-in, 0.2s ease-out;
   opacity: 0%;
 }
 
@@ -131,8 +139,9 @@ h2 {
   background-color: #4e58e0;
   transform: scale(1.2);
   border: none;
-  transition: opacity 0.5s ease-in ,background-color 1s ease-in-out, border 1s ease-in-out,
-  color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,box-shadow 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in, background-color 1s ease-in-out,
+    border 1s ease-in-out, color 1s ease-in-out, width 1s ease-in-out,
+    height 1s ease-in-out, box-shadow 0.5s ease-in-out;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.505);
   background-image: none;
 }
@@ -141,69 +150,74 @@ h2 {
   transform: scale(1.2);
   background-color: #f1db5b;
   border: none;
-  transition:opacity 0.5s ease-in , background-color 1s ease-in-out, border 1s ease-in-out,
-color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in, background-color 1s ease-in-out,
+    border 1s ease-in-out, color 0.5s ease-in-out, width 1s ease-in-out,
+    height 1s ease-in-out, box-shadow 0.5s ease-in-out;
   text-transform: #9c0303;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.5);
   background-image: none;
 }
 
 .circle-link3:hover {
- background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   border: none;
-  transform: scale(1.2) ;
-  transition:opacity 0.5s , background-color 1s ease-in-out, border 1s ease-in-out,
-    color  1s ease-in-out, width 1s ease-in-out, height 1s ease-in-ou, box-shadow 0.5s ease-in-out;
-    box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.497);
+  transform: scale(1.2);
+  transition: opacity 0.5s, background-color 1s ease-in-out,
+    border 1s ease-in-out, color 1s ease-in-out, width 1s ease-in-out,
+    height 1s ease-in-ou, box-shadow 0.5s ease-in-out;
+  box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.497);
   background-image: none;
-
 }
 
 .circle-link1:hover .circle-text1 {
   color: rgb(255, 255, 255);
-  font-size: 3vw; 
-  transition: background-color 1s ease-in-out, opacity 0.5s ,color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s, color 1s ease-in,
+    color 0s ease-out, font-size 1s ease-in-out;
   opacity: 100%;
 }
 
 .circle-link2:hover .circle-text2 {
   color: #9c0303;
-  font-size: 3vw; 
-  transition: background-color 1s ease-in-out, opacity 0.5s , color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s, color 1s ease-in,
+    color 0s ease-out, font-size 1s ease-in-out;
   opacity: 100%;
 }
 
 .circle-link3:hover .circle-text3 {
   color: #4b8e3d;
   -webkit-text-stroke: 0.1px #3bf116;
-  font-size: 3vw; 
-  transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out, color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out,
+    color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
   font-weight: bolder;
   opacity: 100%;
 }
 
 .styled-button {
   position: relative;
-  margin: 7vw; 
-  width: 14vw;  
-  height: 4.9vw; 
-  top: 10.5vw; 
-  line-height: 5.25vw; 
+  margin: 7vw;
+  width: 14vw;
+  height: 4.9vw;
+  top: 7.5vw;
+  line-height: 5.25vw;
   font-size: 1.5vw;
   background: transparent;
   border-radius: 60px;
   color: #ffffff;
   cursor: pointer;
   font-family: "Modeco Trial", Arial, Helvetica, sans-serif;
-  box-shadow: .5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
+  box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
   font-weight: bold;
   overflow: hidden;
   align-items: center;
   text-align: center;
   text-decoration: none;
   justify-content: center;
-  transition: opacity 0.5s, background-color 0.5s ease-in-out, border 0.5sease-in-out,
-  width 0.5s ease-in-out, height 0.5s ease-in-out, color 0.5s ease-in, box-shadow 1s ease-in-out;
+  transition: opacity 0.5s, background-color 0.5s ease-in-out,
+    border 0.5sease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out,
+    color 0.5s ease-in, box-shadow 1s ease-in-out;
 }
 
 .styled-button::before {
@@ -213,8 +227,8 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
   font-weight: bold;
   top: 0;
   left: 0;
-  width: 140vw; 
-  height: 70vw; 
+  width: 140vw;
+  height: 70vw;
   background-size: 10.5vw 10.5vw;
   background-image: linear-gradient(
     45deg,
@@ -261,12 +275,12 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 12.6vw;  
-  height: 3.5vw; 
+  width: 12.6vw;
+  height: 3.5vw;
   border-radius: 70px;
   background: #000000;
   border: 2px solid #000000;
- 
+
   z-index: -1;
   font-weight: bolder;
   font-family: "Modeco Trial", Arial, sans-serif;
@@ -276,15 +290,16 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
 
 .styled-button:hover {
   color: #000;
-  
+
   -webkit-animation: bubble-anim 1s ease-in-out;
   -moz-animation: bubble-anim 1s ease-out;
   -o-animation: bubble-anim 1s ease-in-out;
   -ms-animation: bubble-anim 1s ease-out;
   animation: bubble-anim 1s ease-in-out;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.497);
-  transition: opacity 0.5s, background-color 0.5s ease-in-out, border 0.5s ease-in-out,
-    width 1s ease-in-out, height 1s ease-in-out, color 1s ease-in, box-shadow 0.5s ease-in-out, 
+  transition: opacity 0.5s, background-color 0.5s ease-in-out,
+    border 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,
+    color 1s ease-in, box-shadow 0.5s ease-in-out;
 }
 
 .styled-button:hover::after {
@@ -303,6 +318,82 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
   background: #000;
 }
 
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#social li {
+  margin: 0 1vw;
+}
+
+#social img {
+  width: 2vw;
+}
+#social img:hover {
+  scale: calc(1.4);
+  transition: scale 1 ease-in-out;
+}
+
+#register img {
+  position: absolute;
+  top: 1.56vw;
+  right: 1.56vw;
+  width: 3vw;
+}
+#register img:hover {
+  scale: calc(1.4);
+  transition: scale 1 ease-in-out;
+}
+
+#registrationForm {
+  z-index: 10000000;
+  width: 65vw;
+  height: 18vw;
+  color: white;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #000000;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1vw;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
+  transition: background-color 1s ease-in-out, color 1s ease-in,
+    box-shadow 1s ease-in-out;
+    cursor: pointer;
+}
+
+form {
+
+  align-items: center;
+  justify-content: center;
+} 
+
+form>button{
+display: flex;
+align-items: center;
+justify-items: center;
+}
+
+h3 {
+  padding-bottom: 6vw;
+}
+
+.hidden {
+  display: none;
+}
+
 @keyframes barberpole {
   100% {
     background-position: 50% 50%;
@@ -311,11 +402,11 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
 @keyframes glow {
   0%,
   100% {
-    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
+    text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff, 0 0 1px #ffffff,
       0 0 6px #ffffff;
   }
   50% {
-    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
+    text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff, 0 0 1px #ffffff,
       0 0 3px #ffffff, 0 0 4px #ffffff;
   }
 }
@@ -368,10 +459,11 @@ color 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, box-shadow 
   }
 }
 
-
 @media only screen and (max-width: 768px) {
-  .circle-link1, .circle-link2, .circle-link3 {
-      flex-direction: column;
-      gap: 2vw; 
+  .circle-link1,
+  .circle-link2,
+  .circle-link3 {
+    flex-direction: column;
+    gap: 2vw;
   }
 }

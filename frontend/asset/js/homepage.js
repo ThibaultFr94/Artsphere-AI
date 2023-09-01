@@ -16,6 +16,19 @@ loader.load(
     animate();
   }
 );
+document.getElementById('register').addEventListener('click', function(event) {
+  event.preventDefault(); 
+  var form = document.getElementById('registrationForm');
+  if (form.classList.contains('hidden')) {
+    form.classList.remove('hidden'); 
+    // document.addEventListener('click', e => {
+    //   // form.classList.add('hidden');
+    //   // console.log('coucou');
+    // });
+  } else {
+      form.classList.add('hidden');    
+  }
+});
 
 function init() {
   container = document.getElementById("container");
@@ -143,9 +156,10 @@ function render(delta) {
   renderer.render(scene, camera);
   renderTexture();
 
-  if (capturing) {
-    capturer.capture(renderer.domElement);
-  }
+  // if (capturing) {
+  //   capturer.capture(renderer.domElement);
+  // }
 }
 let cursor = document.getElementById('cursor');
+
 
