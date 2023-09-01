@@ -35,3 +35,4 @@ CREATE TABLE artsphereai.Art (
     FOREIGN KEY (user_id) REFERENCES artsphereai.User(id),
     FOREIGN KEY (arttype_id) REFERENCES artsphereai.ArtType(id)
 );
+
