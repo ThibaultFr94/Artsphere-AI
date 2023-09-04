@@ -69,10 +69,7 @@ h2 {
   height: 16vw;
   border-radius: 50%;
   box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
-  transition: opacity 0.5s, background-color 1s ease-in-out,
-    border 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,
-    color 1s ease-in, box-shadow 0s ease-in-out,
-    background-image 1.5s ease-in-out;
+  transition: all 2s;
   overflow: hidden;
 }
 .circle-link1 {
@@ -139,9 +136,7 @@ h2 {
   background-color: #4e58e0;
   transform: scale(1.2);
   border: none;
-  transition: opacity 0.5s ease-in, background-color 1s ease-in-out,
-    border 1s ease-in-out, color 1s ease-in-out, width 1s ease-in-out,
-    height 1s ease-in-out, box-shadow 0.5s ease-in-out;
+  transition: all 2s;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.505);
   background-image: none;
 }
@@ -150,9 +145,7 @@ h2 {
   transform: scale(1.2);
   background-color: #f1db5b;
   border: none;
-  transition: opacity 0.5s ease-in, background-color 1s ease-in-out,
-    border 1s ease-in-out, color 0.5s ease-in-out, width 1s ease-in-out,
-    height 1s ease-in-out, box-shadow 0.5s ease-in-out;
+  transition: all 2s;
   text-transform: #9c0303;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.5);
   background-image: none;
@@ -162,9 +155,7 @@ h2 {
   background-color: rgb(255, 255, 255);
   border: none;
   transform: scale(1.2);
-  transition: opacity 0.5s, background-color 1s ease-in-out,
-    border 1s ease-in-out, color 1s ease-in-out, width 1s ease-in-out,
-    height 1s ease-in-ou, box-shadow 0.5s ease-in-out;
+  transition: all 2s;
   box-shadow: 5px 10px 20px rgba(255, 255, 255, 0.497);
   background-image: none;
 }
@@ -355,6 +346,7 @@ h2 {
 
 #registrationForm {
   z-index: 10000000;
+  position: relative;
   width: 65vw;
   height: 18vw;
   color: white;
@@ -365,25 +357,29 @@ h2 {
   position: fixed;
   top: 50%;
   left: 50%;
+  border-radius: 1vw;
+  border: 0.2vw solid white;
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 1vw;
   box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
-  transition: background-color 1s ease-in-out, color 1s ease-in,
-    box-shadow 1s ease-in-out;
-    cursor: pointer;
+  transition: background-color 1s ease-in-out, color 1s ease-in,box-shadow 1s ease-in-out;
+  cursor: pointer;
 }
 
 form {
-
   align-items: center;
   justify-content: center;
 } 
 
-form>button{
-display: flex;
-align-items: center;
-justify-items: center;
+form > button {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h3 {
@@ -394,8 +390,15 @@ h3 {
   display: none;
 }
 
-#registrationForm >.close{
-  right: 0%;
+#registrationForm > .close {
+  position: absolute;
+  top: 5px; 
+  right: 10px; 
+  cursor: pointer; 
+  background-color: #000000;  
+  color: white; 
+  padding: 5px;
+  border-radius: 5px; 
 }
 
 @keyframes barberpole {
