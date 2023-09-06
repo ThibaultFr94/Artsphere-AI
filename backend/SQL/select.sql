@@ -1,15 +1,15 @@
 -- Sélectionner tous les utilisateurs
 
-SELECT * FROM artsphereai.User;
+SELECT user.* FROM artsphereai.user;
 
 -- Sélectionner tous les types d'art
 
-SELECT * FROM artsphereai.ArtType;
+SELECT type.* FROM artsphereai.type;
 
 -- Sélectionner tous les types d'art favoris des utilisateurs
 
-SELECT * FROM artsphereai.UserFavoriteType;
+SELECT user_type.* FROM artsphereai.user_type;
 
 -- Sélectionner toutes les œuvres d'art
 
-SELECT * FROM artsphereai.Art;
+SELECT art.* FROM artsphereai.art;
