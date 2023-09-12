@@ -1,11 +1,9 @@
 * {
-  background-position: fill;
-  background-repeat: repeat;
-  background-size: cover;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   margin-bottom: 15px;
+  max-width: 100%;
 }
 
 body {
