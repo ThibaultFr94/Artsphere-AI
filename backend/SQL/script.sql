@@ -1,21 +1,17 @@
 DROP DATABASE IF EXISTS artsphereai;
 CREATE DATABASE artsphereai;
 
-
--- Table User
 CREATE TABLE artsphereai.user (
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(60) NOT NULL UNIQUE,
-    password VARCHAR(60) NOT NULL
+    password VARCHAR(150) NOT NULL
 );
 
--- Table ArtType
 CREATE TABLE artsphereai.type (
     id TINYINT(1) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(60) NOT NULL UNIQUE
 );
 
--- Table UserFavoriteType (Table intermédiaire pour la relation many to many)
 CREATE TABLE artsphereai.user_type (
     user_id TINYINT UNSIGNED,
     type_id TINYINT(1) UNSIGNED,
@@ -24,7 +20,6 @@ CREATE TABLE artsphereai.user_type (
     FOREIGN KEY (type_id) REFERENCES artsphereai.type(id)
 );
 
--- Table Art
 CREATE TABLE artsphereai.art (
     id MEDIUMINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
@@ -35,10 +30,20 @@ CREATE TABLE artsphereai.art (
     FOREIGN KEY (type_id) REFERENCES artsphereai.type(id)
 );
 
--- insertion des types
 INSERT INTO artsphereai.type
 VALUES
     ( NULL, 'Graff'),
     ( NULL, 'Art'),
     ( NULL, 'Pixel art')
+;
+
+INSERT INTO artsphereai.user
+VALUES
+    ( NULL, 'user@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q')
+;
+
+INSERT INTO artsphereai.user_type
+VALUES
+    ( 1, 1 ),
+    ( 1, 2 )
 ;
