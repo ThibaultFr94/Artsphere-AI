@@ -1,7 +1,10 @@
 // import des dépendances
-import express, { json } from "express";
-import { log } from "node:console";
+import express from "express";
 import http from "node:http";
+// import studentRouter from "./routes/studentRouter.js";
+import cors from "cors";
+import userRouter from "./routes/userRouter.js";
+// import userRouter from "./routes/userRouter.js";
 
 // création d'une application
 const app = express();
@@ -12,9 +15,21 @@ const router = express.Router();
 // associer l'application au routeur
 app.use(router);
 
-// ajouter la méthode json a toutes les routes pour recuperer le body des requetes
-
+// ajouter la méthode JSON à toutes les routes, pour récupérer le body des requêtes
 router.use(express.json());
+
+// autoriser les serveurs à dialoguer avec l'API
+// router.use(cors());
+
+router.use(
+	cors({
+		origin: ["http://localhost:5500", 'http://127.0.0.1:5500']
+	}),
+);
+
+// appel des routeurs avec un préfixe de routes (éviter de répéter le préfixe dans le routeur)
+router.use("/", userRouter);
+// router.use("/users", userRouter);
 
 /*
 	création d'une route
@@ -24,29 +39,6 @@ router.use(express.json());
 	res: paramètre représente la réponse HTTP
 */
 router.get("/", (req, res) => res.send("coucou"));
-router.get("/products/:id", (req, res) => {
-  const { id } = req.params;
-
-  return res.send(`product ${id}`);
-});
-
-router.get("/products", (req, res) => {
-  return res.status(200).json({
-    status: 200,
-    messsage: "OK",
-    data: [
-      { id: 1, name: "product1", price: 10 },
-      { id: 5, name: "product5", price: 50 },
-    ],
-  });
-});
-
-//creer une route avec la méthode post:
-
-router.post("/products", (req, res) => {
-  console.log(req.body);
-  return res.send("POST products 123");
-});
 
 // création du serveur http
 const server = http.createServer(app);

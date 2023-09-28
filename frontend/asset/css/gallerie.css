@@ -190,6 +190,7 @@ button{
   background-color: inherit;
 
 }
+
 @keyframes glow {
   0%,
   100% {
@@ -213,3 +214,83 @@ button{
       0 0 3px #ffffff;
   }
 }
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+  .image-container {
+      flex-wrap: wrap;
+  }
+
+  .image-container img {
+      width: 35%; /* Ajustez cette valeur si nécessaire pour obtenir l'espacement souhaité */
+  }
+
+  #shuffle-design{
+    width: 3vw;
+    height: 2.5vw;
+  }
+
+  h1 {
+      font-size: 8vw; /* Ajustez selon vos préférences */
+  }
+
+  h2 {
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+  h3{
+    font-size: 3vw;
+  }
+
+  .section-graff > h3, .section-art > h3, .section-design > h3{
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+
+  #home-btn {
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+}
+
+/* Pour les smartphones */
+@media (max-width: 480px) {
+  .image-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .image-container img {
+      width: 80%; /* Ajustez cette valeur si nécessaire pour obtenir la taille souhaitée */
+      margin: 10px 0; /* Ajoutez une marge verticale pour espacer les images */
+  }
+  .section-design > h3 > button  > img
+  .section-art > h3 > button  > img
+  .section-design > h3 > button  > img{
+    width: 6vw;
+    height: 5vw;
+  }
+  h1 {
+      font-size: 12vw; /* Ajustez selon vos préférences */
+  }
+
+  h2 {
+      font-size: 4vw; /* Ajustez selon vos préférences */
+  }
+  h3{
+    font-size: 4vw;
+  }
+
+  .section-design > h3 > button  > img
+  .section-art > h3 > button  > img
+  .section-pixel > h3 > button  > img{
+      font-size: 6vw; /* Ajustez selon vos préférences */
+  }
+
+  #home-btn {
+      font-size: 4vw; /* Ajustez selon vos préférences */
+  }
+}
+
+
+
+
+

@@ -20,13 +20,34 @@ document.getElementById('register').addEventListener('click', function(event) {
   event.preventDefault(); 
   var form = document.getElementById('registrationForm');
   if (form.classList.contains('hidden')) {
-    form.classList.remove('hidden'); 
-    // document.addEventListener('click', e => {
-    //   // form.classList.add('hidden');
-    //   // console.log('coucou');
-    // });
+      form.classList.remove('hidden'); 
   } else {
       form.classList.add('hidden');    
+  }
+});
+
+document.getElementById('createAccount').addEventListener('click', function(event) {
+  event.preventDefault();
+  var form = document.getElementById('detailedRegistrationForm');
+  form.classList.remove('hidden');
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+  var form = document.getElementById('registrationForm');
+  form.classList.add('hidden');
+});
+
+document.querySelector('.closeDetailed').addEventListener('click', function() {
+  var form = document.getElementById('detailedRegistrationForm');
+  form.classList.add('hidden');
+});
+document.querySelector('#detailedRegistrationForm form').addEventListener('submit', function(event) {
+  var password = this.querySelector('input[type="password"][placeholder="Password"]');
+  var confirmPassword = this.querySelector('input[type="password"][placeholder="Confirm your password"]');
+  
+  if (password.value !== confirmPassword.value) {
+      alert("Password doesn't match!");
+      event.preventDefault();
   }
 });
 

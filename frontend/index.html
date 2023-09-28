@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>ArtSphere-AI</title>
 <link rel="stylesheet" href="asset/css/homepage.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body style="background-color: black;">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
 <script id="vertexShader" type="x-shader/x-vertex">
     void main() {
@@ -111,20 +111,61 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
 </script>
 <div id="container" touch-action="none"></div>
 <div class="header">
-  <a href="" id="register"><img src="asset/img/profile.svg" alt=""></a>
+  <a href="" id="register" ><img src="asset/img/profile.svg" alt=""></a>
   <h1>Artsphere-AI</h1>
   <h2>Inspiration generator</h2>
+  <br>
+  <p class="desc">Choose one of the spaces in one of the spheres below and use your creations to improve your art.</p>
 </div>
 <div id="registrationForm" class="hidden">
   <h3>Sign in</h3>
-  <p class="close">x</p>
-  <form>
-      <input type="text" placeholder="E-Mail" required>
-      <input type="text" placeholder="Mot de passe" required>
-      <input type="password" placeholder="Style" required>
-      <button type="submit">Register</button>
+  <p class="close">X</p>
+  <form class="form-login">
+      <input type="text" placeholder="E-Mail" name="email" required>
+      <input type="text" placeholder="Password" name="password" required>
+      <button type="submit">Connexion</button>
+  </form>
+  <a href="" id="createAccount" class="create">Create an account</a>
+
+</div>
+
+
+
+
+<div id="detailedRegistrationForm" class="hidden">
+  <h3>Create an account</h3>
+  <p class="closeDetailed">X</p>
+  <form class="form-register">
+    <input type="text" placeholder="E-Mail" required name="email">
+    <input type="password" placeholder="Password" required name="password">
+    <input type="password" placeholder="Confirm password" required  name="confirmPassword">
+
+    <div class="styles-container">
+        <div>
+            <input type="checkbox" id="graff" name="style" value="graff">
+            <label for="graff">Graff</label>
+        </div>
+        <div>
+            <input type="checkbox" id="art" name="style" value="art">
+            <label for="art">Art</label>
+        </div>
+        <div>
+            <input type="checkbox" id="pixel" name="style" value="pixel">
+            <label for="pixel">Pixel</label>
+        </div>
+    </div>
+
+    <div>
+        <input type="checkbox" id="inspirationMail" name="inspirationMail" value="yes">
+        <label for="inspirationMail">I want to receive inspiration by E-mail</label>
+    </div>
+
+    <button type="submit">Register</button>
   </form>
 </div>
+
+
+
 <div class="scene">
 <div class="center-container">
   <div class="circles-container">
@@ -132,7 +173,7 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
     <a href="paint.html" class="circle-link2"><span class="circle-text2">Art</span><img src="asset/img/Art.svg" alt=""></a>
     <a href="int.html" class="circle-link3"><span class="circle-text3">Pixel</span><img src="asset/img/pixel.svg" alt=""></a>
   </div>
-  <a href="gallerie.html" class="styled-button">Galler-IA</a>
+  <a href="gallerie.html" class="styled-button">Galer-IA</a>
 </div>
 <ul id="social">
   <li><a href="https://www.instagram.com/"><img src="asset/img/instagram.svg" alt=""></a></li>
@@ -142,5 +183,6 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
 </ul>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/ccapture.js'></script>
 <script src="asset/js/homepage.js"></script>
+<script src="asset/js/register.js"></script>
  </body>
 </html>
