@@ -1,10 +1,11 @@
 import mysql from "mysql2/promise";
+import configuration from "./configuration.js";
 
 const dbConnection = await mysql.createConnection({
-	host: process.env.DB_HOST,
-	database: process.env.DB_NAME,
-	user: process.env.DB_USER,
-	password: process.env.DB_PASSWORD,
+	host: configuration.database.host,
+	database: configuration.database.database,
+	user: configuration.database.user,
+	password: configuration.database.password,
 	namedPlaceholders: true,
 });
 
