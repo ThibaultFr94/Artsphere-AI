@@ -152,4 +152,4 @@ sftp-config.json
 # add private files
 
 .env
-module_env.js
+asset/js/module_env.js
