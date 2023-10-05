@@ -13,7 +13,6 @@ const getUsers = async (id) => {
 		const [results] = await dbConnection.execute(query, { id: id });
 		return results.shift();
 	} catch (error) {
-		// renvoyer une erreur
 		return error;
 	}
 };

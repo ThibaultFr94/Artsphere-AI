@@ -7,7 +7,6 @@ const getExtensionFromMimeType = (mimeType) => {
 		"image/avif": "avif",
 		"image/svg+xml": "svg",
 	};
-
 	return extensions[mimeType];
 };
 
