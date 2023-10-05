@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+body {
+  cursor: none;
+  z-index: 1;
+}
+
+#container {
+  position: fixed;
+  z-index: -1;
+
+}
+#home-btn {
+  display: flex;
+  font-family: "Bemock", Helvetica, sans-serif;
+  position: absolute;
+  outline: none;
+  color: rgb(255, 252, 252);
+  transition: 1s;
+  font-size:  2vw;
+  top: 1.56vw;
+  left: 1.56vw;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+#home-btn::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+#home-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  left: 20px;
+}
+#home-btn:hover {
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
+  font-family:"Bemock", Helvetica, sans-serif;
+  transition: 0.5s ease;
+  position: absolute;
+  text-shadow: 8px 8px 12px rgb(230, 230, 230);
+}
+
+h1 {
+  font-family: "Bemock", Helvetica, sans-serif;
+  font-weight: lighter;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  top: -10%;
+  font-size: 10vw; 
+  animation: glow 5s ease-in-out infinite;
+
+  
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
+}
+
+.header {
+  text-align: center;
+}
+
+h2 {
+  font-family:  "Modeco Trial", arial, sans-serif;
+  color: #ffffff;
+  font-size: 2vw; 
+  margin-top: 1vh;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.01px rgba(92, 92, 92, 0.374);
+  -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
+}
+
+.section-graff > h3 {
+  margin: 3vw ;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: lighter;
+  font-family: "Computer Regular", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+  letter-spacing: 4px ;
+  border-bottom: 2px solid #ffffff; 
+}
+.section-art > h3 {
+  margin: 3vw ;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2vw;
+  font-family: "Classic Mosaic", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+  gap: 10px;
+  border-bottom: 3px ridge #ffffff; 
+}
+.section-design > h3 {
+  margin: 3vw ;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2vw;
+  font-family: "Classic Mosaic", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+  gap: 10px;
+  border-bottom: 3px ridge #ffffff; 
+}
+
+.section-graff > h3 > button > img {
+  width: 2.5vw;
+  height: 2vw;
+  transition: 0.5s ease;
+  margin-top: 30px;
+}
+.section-art > h3 > button  > img {
+  width: 2.5vw;
+  height: 2vw;
+  transition: 0.5s ease;
+  margin-top: 30px;
+}
+.section-design > h3 > button  > img {
+  width: 2.5vw;
+  height: 2vw;
+  transition: 0.5s ease;
+  margin-top: 30px;
+}
+
+.section-graff > h3 > button  > img:hover {
+  transition: 0.5s ease;
+  transform: scale(1.2);
+}
+.section-art > h3 >  button > img:hover {
+  transition: 0.5s ease;
+  transform: scale(1.2);
+}
+.section-design > h3 > button > img:hover {
+
+  transition: 0.5s ease;
+  transform: scale(1.2);
+}
+
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3vw;
+}
+
+
+.image-container img {
+  width: 20vw;
+  height: auto;
+  box-shadow: 5px 5px 13px rgba(255, 255, 255, 0.393);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  margin-left: 0.1vw;
+  margin-right: 0.1vw;
+}
+.image-container img:hover {
+  transform: scale(1.1);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+  box-shadow: 13px 13px 25px rgba(255, 255, 255, 0.404);
+}
+button{
+  cursor:pointer;
+  border: none;
+  appearance: none;
+  background-color: inherit;
+
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
+      0 0 6px #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 .5px #ffffff, 0 0 .5px #ffffff, 0 0 1px #ffffff,
+      0 0 3px #ffffff, 0 0 4px #ffffff;
+  }
+}
+@keyframes textshadow {
+  0%,
+  100% {
+    text-shadow: 0 0 1px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
+}
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+  .image-container {
+      flex-wrap: wrap;
+  }
+
+  .image-container img {
+      width: 35%; /* Ajustez cette valeur si nécessaire pour obtenir l'espacement souhaité */
+  }
+
+  #shuffle-design{
+    width: 3vw;
+    height: 2.5vw;
+  }
+
+  h1 {
+      font-size: 8vw; /* Ajustez selon vos préférences */
+  }
+
+  h2 {
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+  h3{
+    font-size: 3vw;
+  }
+
+  .section-graff > h3, .section-art > h3, .section-design > h3{
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+
+  #home-btn {
+      font-size: 3vw; /* Ajustez selon vos préférences */
+  }
+}
+
+/* Pour les smartphones */
+@media (max-width: 480px) {
+  .image-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .image-container img {
+      width: 80%; /* Ajustez cette valeur si nécessaire pour obtenir la taille souhaitée */
+      margin: 10px 0; /* Ajoutez une marge verticale pour espacer les images */
+  }
+  .section-design > h3 > button  > img
+  .section-art > h3 > button  > img
+  .section-design > h3 > button  > img{
+    width: 6vw;
+    height: 5vw;
+  }
+  h1 {
+      font-size: 12vw; /* Ajustez selon vos préférences */
+  }
+
+  h2 {
+      font-size: 4vw; /* Ajustez selon vos préférences */
+  }
+  h3{
+    font-size: 4vw;
+  }
+
+  .section-design > h3 > button  > img
+  .section-art > h3 > button  > img
+  .section-pixel > h3 > button  > img{
+      font-size: 6vw; /* Ajustez selon vos préférences */
+  }
+
+  #home-btn {
+      font-size: 4vw; /* Ajustez selon vos préférences */
+  }
+}
+
+
+
+
+

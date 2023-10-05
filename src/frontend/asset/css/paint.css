@@ -1,0 +1,313 @@
+body {
+background-color: #f1db5b;
+  background-position: fill;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.main-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-btn {
+  display: flex;
+  font-family: "Bemock",  Arial, sans-serif;
+  position: absolute;
+  font-size:  2vw;
+  top: 1.56vw;
+  left: 1.56vw;
+  outline: none;
+  color: #9c0303;
+  transition: 1s;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+  
+}
+#home-btn:hover {
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
+  font-family: "Bemock",Arial, sans-serif;
+  transition: 0.5s ease;
+  
+}
+
+#home-btn::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+#home-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  left: 20px;
+}
+
+#gallery-btn {
+  display: flex;
+  font-family: "LettreClassique", Arial, sans-serif;
+  position: absolute;
+  font-size:  2vw;
+  top: 1.56vw;
+  right: 1.56vw;
+  outline: none;
+  color: #9c0303;
+  transition: 1s;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+
+}
+
+#gallery-btn:hover {
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size: 2.5vw;
+  cursor: pointer;
+  font-family: "LettreClassique", Arial, sans-serif;
+  transition: 0.5s ease;
+ 
+}
+
+#gallery-btn::after {
+  content: "";
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size: 2.5vw;
+  position: absolute;
+}
+
+#gallery-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+h1 {
+  font-family: "Classic Mosaic", Arial, sans-serif;
+  font-weight: lighter;
+  font-size: 6vw;
+  color: #9c0303;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-div > p {
+  top: 200px;
+  font-family: "GOLDEN", Arial, sans-serif;
+  font-size: 2vw;
+  font-weight: bolder;
+  color: #9c0303;
+  width: 100vw;
+ 
+ 
+}
+p {
+  font-family: "LettreClassique", Arial,  sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #9c0303;
+  width: 100vw;
+  text-align: inherit;
+  
+
+}
+button {
+  font-family: "LettreClassique", Arial, sans-serif;
+  font-weight: thin;
+  width: 14vw;
+  position: relative;
+  height: 3vw;
+  border: 3px dotted #8b3620;
+  outline: none;
+  background-color: transparent;
+  color: #9c0303;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 2vw;
+  z-index: 2000;
+  cursor: pointer;
+ 
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+button:hover {
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 15px #f1db5b;
+  font-size: 20px;
+}
+
+#paint-result {
+  font-size: 1.5em;
+}
+
+.paint-img-hidden {
+  width: 20.83vw;
+  height: 20.83vw; 
+  visibility: hidden;
+}
+
+.loader {
+  width: 2.5vw;
+  height: 2.5vw;
+  display: inline-block;
+  position: absolute;
+  top: 65%;
+  left: 48%;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  border-radius: 50%;
+  animation: textshadow 10s ease-in-out infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 2px solid #de3939;
+  box-sizing: border-box;
+  animation: rotation 2s ease-in-out infinite;
+}
+
+.loader::after {
+  border-color: #9c0303;
+  animation-delay: 1s;
+}
+
+#paint-img {
+  position: relative;
+  border-radius: 15px;
+  border: 6px solid #cd2828;
+  border-style: dotted;
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes paint {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #f39e9e, 0 0 10px #f98686, 0 0 15px #f74f4f,
+      0 0 20px #d13232;
+  }
+  25% {
+    box-shadow: 0 0 5px #f39e9e, 0 0 10px #f98686, 0 0 15px #f74f4f,
+      0 0 20px #d13232;
+  }
+  50% {
+    box-shadow: 0 0 5px #f39e9e, 0 0 10px #f98686, 0 0 15px #f74f4f,
+      0 0 20px #d13232;
+  }
+  75% {
+    box-shadow: 0 0 5px #f39e9e, 0 0 10px #f98686, 0 0 15px #f74f4f,
+      0 0 20px #d13232;
+  }
+}
+@keyframes textshadow {
+  0% {
+    text-shadow: 0 0 0.5px #0000008b,0 0 1px #0000008b, 0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+  20% {
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+  40% {
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+  60% {
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+  80% {
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+  100% {
+    text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
+      0 0 2px #0000008b, 0 0 3px #0000008b;
+  }
+}
+
+
+
+

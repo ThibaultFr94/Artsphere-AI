@@ -1,0 +1,298 @@
+body {
+ 
+  background: #4e58e0;
+ 
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+  
+}
+.main-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-weight: lighter;
+  font-family: "Computer Regular", Arial, sans-serif;
+  font-size: 6.5vw; 
+  color: #ffffff;
+  animation: textshadow 5s ease-in-out infinite;
+ letter-spacing: 6px ;
+}
+
+.main-div > p {
+  font-family: "Street Block", Arial, sans-serif;
+  font-size: 2vw;
+  color: #fff;
+  width: 100vw;
+  animation: textshadow 5s ease-in-out infinite;
+  letter-spacing: 6px ;
+}
+p {
+  font-family: "Blouse", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1vw;
+  color: #fff;
+  width: 100vw;
+
+}
+button {
+  font-family: "Futurama", Arial, sans-serif;
+  width: 14vw;
+  position: relative;
+  height: 3vw;
+  border: 3px ridge #149cea;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 2vw;
+  cursor: pointer;
+  z-index: 2000;
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: background-color 0.5s ease;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 90%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(0);
+  transition: background-color 0.5s ease;
+  box-shadow: inset 0px 0px 25px #1478ea62;
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #1479ea;
+}
+
+#graff-result {
+  font-size: 1.5em;
+  font-family: "Futurama", Arial, sans-serif;
+}
+
+.graff-img-hidden {
+  width: 20.83vw;
+  height: 20.83vw; 
+  visibility: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 35vw; 
+  left: 50vw;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 2.5vw;
+  height: 2.5vw;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: textshadow 5s ease-in-out infinite;
+}
+
+
+.loader:before,
+.loader:after {
+  content: "";
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #203f6c;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+#graff-img {
+  border-radius: 15px;
+  border: 3px solid #5bbdfe;
+  border-style: solid;
+  animation: glow 5s ease-in-out infinite;
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  color: #149cea;
+}
+
+#home-btn {
+  display: flex;
+  font-family: "Bemock", Arial,  sans-serif;
+  position: absolute;
+  outline: none;
+  color: white;
+  transition: 1s;
+  font-size:  2vw;
+  top: 1.56vw;
+  left: 1.56vw;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+#home-btn:hover {
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
+  transition: 0.5s ease;
+  font-family: "Bemock",  Arial, sans-serif;
+  position: absolute;
+}
+
+#gallery-btn {
+  display: flex;
+  font-family: "Futurama", Arial, sans-serif;
+  position: absolute;
+  outline: none;
+  color: white;
+  transition: 1s;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 2000;
+  font-size:  2vw;
+  top: 1.56vw;
+  right: 1.56vw;
+}
+
+#gallery-btn:hover {
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size: 2.5vw;
+  transition: 0.5s ease;
+  font-family: "Futurama", Arial, sans-serif;
+  position: absolute;
+}
+#gallery-btn::after {
+  content: "";
+  position: absolute;
+}
+
+#gallery-btn::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+@keyframes textshadow {
+  0%,
+  100% {
+    text-shadow: 0 0 10px #86bef6, 0 0 20px #6db5fe, 0 0 30px #49a4ff,
+      0 0 40px #1a8cff;
+  }
+  25% {
+    text-shadow: 0 0 10px #6d85cc, 0 0 20px #536fc2, 0 0 30px #1b44bd,
+      0 0 40px #0735c1;
+  }
+  50% {
+    text-shadow: 0 0 10px #595a9a, 0 0 20px #2e3083, 0 0 30px #a3a5fd,
+      0 0 40px #040680;
+  }
+  75% {
+    text-shadow: 0 0 10px #327bc8, 0 0 20px #1d44b8, 0 0 30px #6f7894,
+      0 0 40px #b3c6ff;
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px #86bef6, 0 0 20px #6db5fe, 0 0 30px #49a4ff,
+      0 0 40px #1a8cff;
+  }
+  25% {
+    box-shadow: 0 0 10px #6d85cc, 0 0 20px #536fc2, 0 0 30px #1b44bd,
+      0 0 40px #0735c1;
+  }
+  50% {
+    box-shadow: 0 0 10px #595a9a, 0 0 20px #2e3083, 0 0 30px #191b81,
+      0 0 40px #040680;
+  }
+  75% {
+    box-shadow: 0 0 10px #327bc8, 0 0 20px #1d44b8, 0 0 30px #173387,
+      0 0 40px #0032ca;
+  }
+}

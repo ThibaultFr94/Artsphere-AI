@@ -1,0 +1,564 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  cursor: none;
+}
+
+#container {
+  position: fixed;
+  z-index: -1;
+}
+
+h1,
+h2 {
+  color: white;
+  text-align: center;
+  margin: 0;
+  -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
+}
+
+h1 {
+  font-size: 8vw;
+  font-family: "Bemock", Helvetica, sans-serif;
+  font-weight: lighter;
+  animation: glow 5s ease-in-out infinite;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 0.5vh;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.01px rgb(0, 0, 0);
+  -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
+
+}
+
+.header>:last-child{
+  font-size: 1rem;
+  top: 2.5vh;
+  color: white;
+  text-align: center;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+  -webkit-text-stroke: 0.01px rgb(0, 0, 0);
+  -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
+}
+.center-container {
+  transform: translate(0%, 30%);
+}
+
+.circles-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:10px;
+  flex-wrap: wrap;
+  margin-top: -5vh;
+}
+
+.circle-link1,
+.circle-link2,
+.circle-link3 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.505);
+  transition: all 2s;
+  overflow: hidden;
+}
+
+.circle-link1 {
+  animation: bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 2s forwards;
+  transition: opacity 1s;
+}
+
+.circle-link2 {
+  animation: bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 4s forwards;
+  transition: opacity 1s;
+}
+
+.circle-link3 {
+  animation: bubble-anim 2s ease-in-out 1s forwards, appearFromDepth 5s forwards;
+  transition: opacity 1s;
+}
+.circle-link1 img,
+.circle-link2 img,
+.circle-link3 img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+
+  z-index: -1;
+}
+.circle-link1:hover img,
+.circle-link2:hover img,
+.circle-link3:hover img {
+  opacity: 0;
+  transform: scale(1.2);
+}
+.circle-text1,
+.circle-text2,
+.circle-text3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.circle-text1 {
+  font-family: "Computer Regular", Arial, sans-serif;
+  transition: opacity 0.5s ease-in, opacity 0.2s ease-out;
+  opacity: 0%;
+}
+.circle-text2 {
+  font-family: "Classic Mosaic", Arial, sans-serif;
+  transition: opacity 0.5s ease-in, opacity 0.2s ease-out;
+  opacity: 0%;
+}
+
+.circle-text3 {
+  font-family: "LLPixel", Arial, sans-serif;
+  transition: opacity 0.5s ease-in, 0.2s ease-out;
+  opacity: 0%;
+}
+
+.circle-link1:hover {
+  background-color: #4e58e0;
+  scale: calc(1.2);
+  border: none;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.505);
+  background-image: none;
+  transition: all 2s;
+}
+
+.circle-link2:hover {
+  background-color: #f1db5b;
+  border: none;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.505);
+  background-image: none;
+  scale: calc(1.2);
+  transition: all 2s, scale 1s ease-in-out;
+}
+
+.circle-link3:hover {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  scale: calc(1.2);
+  transition: all 2s, scale 1s ease-in-out;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.505);
+  background-image: none;
+}
+
+
+.circle-link1:hover .circle-text1 {
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s, color 1s ease-in,
+    color 0s ease-out, font-size 1s ease-in-out;
+  opacity: 100%;
+  
+}
+
+.circle-link2:hover .circle-text2 {
+  color: #9c0303;
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s, color 1s ease-in,
+    color 0s ease-out, font-size 1s ease-in-out;
+  opacity: 100%;
+}
+
+.circle-link3:hover .circle-text3 {
+  color: #4b8e3d;
+  -webkit-text-stroke: 0.1px #3bf116;
+  font-size: 3vw;
+  transition: background-color 1s ease-in-out, opacity 0.5s ease-in-out,
+    color 1s ease-in, color 0s ease-out, font-size 1s ease-in-out;
+  font-weight: bolder;
+  opacity: 100%;
+}
+
+.styled-button {
+  position: relative;
+  display: block;
+  left: calc(15% - 15vw);
+  margin: auto;
+  width: 150px;
+  height: 50px;
+  top: 7vh;
+  line-height: 50px;
+  font-size: 15px;
+  background: transparent;
+  border-radius: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Modeco Trial", Arial, Helvetica, sans-serif;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.505);
+  font-weight: bold;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  justify-content: center;
+  transition: opacity 0.5s, background-color 0.5s ease-in-out,
+    border 0.5sease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out,
+    color 0.5s ease-in, box-shadow 1s ease-in-out;
+}
+
+.styled-button::before {
+  display: block;
+  content: "";
+  position: absolute;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  background-size: 10.5vw 10.5vw;
+  background-image: linear-gradient(
+    45deg,
+    #9c0303 11.36%,
+    #000000 11.36%,
+    #000000 12.5%,
+    #f1db5b 12.5%,
+    #f1db5b 23.86%,
+    #000000 23.86%,
+    #000000 25%,
+    #7ce467 25%,
+    #7ce467 36.36%,
+    #000000 36.36%,
+    #000000 37.5%,
+    #5ba1fc 37.5%,
+    #5ba1fc 48.86%,
+    #000000 48.86%,
+    #000000 50%,
+    #9c0303 50%,
+    #9c0303 61.36%,
+    #000000 61.36%,
+    #000000 62.5%,
+    #f1db5b 62.5%,
+    #f1db5b 73.86%,
+    #000000 73.86%,
+    #000000 75%,
+    #7ce467 75%,
+    #7ce467 86.36%,
+    #000000 86.36%,
+    #000000 87.5%,
+    #5ba1fc 87.5%,
+    #5ba1fc 98.86%,
+    #000000 98.86%,
+    #000000 100%
+  );
+  -webkit-animation: barberpole 7s linear infinite;
+  animation: barberpole 7s linear infinite;
+  z-index: -1;
+}
+.styled-button::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 35px;
+  border-radius: 40px;
+  background: #000000;
+  border: 1px solid #000000;
+  z-index: -1;
+  font-weight: bolder;
+  font-family: "Modeco Trial", Arial, sans-serif;
+  transition: background-color 1s ease-in-out, border 1s ease-in-out,
+    width 1s ease-in-out, height 1s ease-in-out;
+}
+
+.styled-button:hover {
+  color: #000;
+  -webkit-animation: bubble-anim 1s ease-in-out;
+  -moz-animation: bubble-anim 1s ease-out;
+  -o-animation: bubble-anim 1s ease-in-out;
+  -ms-animation: bubble-anim 1s ease-out;
+  animation: bubble-anim 1s ease-in-out;
+  box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.505);
+  transition: opacity 0.5s, background-color 0.5s ease-in-out,
+    border 0.5s ease-in-out, width 1s ease-in-out, height 1s ease-in-out,
+    color 1s ease-in, box-shadow 0.5s ease-in-out;
+}
+
+.styled-button:hover::after {
+  background: #ffffff;
+}
+
+.styled-button:active {
+  color: #ffffff;
+}
+
+.styled-button:active::before {
+  animation-play-state: paused;
+}
+
+.styled-button:active::after {
+  background: #000;
+}
+
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 28vh;
+  list-style-type: none;
+
+}
+#social li {
+  margin: 0 1vw;
+}
+
+#social img {
+  width: 20px;
+  height: 20px;
+}
+#social img:hover {
+  scale: calc(1.4);
+  transition: scale 1s ease-in-out;
+}
+
+#register img {
+  position: absolute;
+  top: 1.56vw;
+  right: 1.56vw;
+  width: 3vw;
+}
+#register img:hover {
+  scale: calc(1.4);
+  transition: scale 1s ease-in-out;
+}
+
+#registrationForm {
+  z-index: 10000000;
+  position: relative;
+  width: 40vw;
+  height: 18vw;
+  color: white;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  background-color: #000000;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  border-radius: 1vw;
+  border:0.1vw solid white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1vw;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
+  transition: background-color 1s ease-in-out, color 1s ease-in,
+    box-shadow 1s ease-in-out;
+  cursor: pointer;
+}
+
+form {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+}
+
+form > button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+}
+
+h3 {
+  padding-bottom: 6vw;
+}
+
+.hidden {
+  display: none;
+}
+
+#registrationForm > .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: larger;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+}
+
+.create {
+  text-decoration: none;
+  color : white;
+ margin-top: 0px;
+}
+
+#detailedRegistrationForm {
+  z-index: 10000001;
+  position: relative;
+  width: 40vw;
+  height: 22vw;
+  color: white;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  background-color: #000000;
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  border-radius: 1vw;
+  border: 0.1vw solid white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1vw;
+  box-shadow: 0.5vw 0.5vw 1vw rgba(255, 255, 255, 0.301);
+  transition: background-color 1s ease-in-out, color 1s ease-in,
+    box-shadow 1s ease-in-out;
+  cursor: pointer;
+}
+
+
+.closeDetailed {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #000000;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+form select[multiple] {
+  height: 6vw;
+  width: 30vw;
+  margin-bottom: 2vw;
+}
+
+.styles-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.styles-container > div {
+  margin: 0 10px;
+  text-align: center;
+}
+
+#detailedRegistrationForm form > div,
+#detailedRegistrationForm form > input,
+#detailedRegistrationForm form > button {
+  margin-bottom: 1vw; 
+}
+
+#detailedRegistrationForm form > button {
+  margin-top: 2vw; 
+}
+
+#detailedRegistrationForm input[type="text"],
+#detailedRegistrationForm input[type="password"] {
+    margin-bottom: 2vw;
+    font-family: "Modeco Trial", Helvetica, sans-serif; 
+}
+
+.styles-container {
+    margin-top: 2vw; 
+}
+.styles-container {
+  margin-bottom: 2vw;
+}
+
+#detailedRegistrationForm div > input[type="checkbox"] + label {
+  margin-top: 3vw; /* Augmentez cette valeur si vous voulez un écart plus grand */
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 50% 50%;
+  }
+}
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff, 0 0 1px #ffffff,
+      0 0 6px #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 0.5px #ffffff, 0 0 0.5px #ffffff, 0 0 1px #ffffff,
+      0 0 3px #ffffff, 0 0 4px #ffffff;
+  }
+}
+@keyframes textshadow {
+  0%,
+  100% {
+    text-shadow: 0 0 1px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
+  25%,
+  75% {
+    text-shadow: 0 0 px #f9f9f9, 0 0 1px #e3e5e7, 0 0 2px #fafafa,
+      0 0 3px #ffffff;
+  }
+}
+@keyframes bubble-anim {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scaleY(0.95) scaleX(1.05);
+  }
+
+  48% {
+    transform: scaleY(1.1) scaleX(0.9);
+  }
+
+  68% {
+    transform: scaleY(0.98) scaleX(1.02);
+  }
+
+  80% {
+    transform: scaleY(1.02) scaleX(0.98);
+  }
+
+  97%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes appearFromDepth {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+

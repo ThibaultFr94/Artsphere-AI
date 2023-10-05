@@ -1,0 +1,222 @@
+
+body {
+  background-color: #ffffff;
+  background-position: fill;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+
+.main-div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  z-index: -200000;
+}
+
+h1 {
+  font-family: "LLPixel", Arial,  sans-serif;
+  font-weight: bolder;
+  font-size: 6.5vw;
+  color: #42a32f;
+  -webkit-text-stroke: 0.1px #3aff12;
+  text-shadow: 13px 13px 13px #10121047;
+}
+
+.main-div > p {
+  font-family: "Minecraft", Arial, sans-serif;
+  font-size: 2vw;
+  color: #42a32f;
+  text-align: inherit;
+}
+
+p {
+  font-family: "Minecraft", Arial, sans-serif;
+  font-weight: bold;
+  color:#42a32f;
+  text-align: inherit;
+  font-size: 1vw;
+}
+
+.loader {
+  background:#7ce467;
+  width: 2.5vw;
+  height: 2.5vw;
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  border: 1px solid #000000;
+  align-items: center;
+  animation: 3s rotate linear infinite;
+  left: 48.5%;
+  top: 65%;
+}
+
+.loader:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #ffffff;
+  border: 1px solid #000000;
+  animation: 1.5s rotate reverse linear infinite;
+}
+
+button {
+  font-family: "LLPixel", Arial, sans-serif;
+  font-weight: thin;
+  width: 14vw;
+  position: relative;
+  height: 3vw;
+  border: 3px ridge #7ce467;
+  outline: none;
+  background-color: transparent;
+  color: #7ce467;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 2vw;
+  z-index: 2000;
+  cursor: pointer;
+  text-align: inherit;
+  -webkit-text-stroke: 0.5px #3aff12;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+  transform: scale(1.1);
+}
+
+button:hover {
+  box-shadow: inset 0px 0px 25px #7ce467;
+  -webkit-text-stroke: 0.1px #000000;
+}
+
+#home-btn {
+  position: absolute;
+  text-decoration: none;
+  border: none;
+  font-size:2vw;
+  top:1.56vw;
+  left:1.56vw;
+  font-family: "Bemock", Arial, sans-serif;
+  font-weight: bolder;
+  color: #42a32f;;
+  transition:0.5s ease;  
+}
+
+#home-btn:hover {
+  position: absolute;
+  top: 2.08vw;
+  left: 2.08vw;
+  font-size:  2.5vw;
+  border: none;
+  font-family: "Bemock", Arial, sans-serif;
+  transition: 0.5s ease;
+font-weight: bolder;
+  text-shadow: 13px 13px 13px #10121021;
+}
+
+#gallery-btn {
+  position: absolute;
+  text-decoration: none;
+  font-size:  2vw;
+  top: 1.56vw;
+  right: 1.56vw;
+  font-family:"Minecraft", Arial, sans-serif;
+  color: #42a32f;;
+  transition: 0.5s ease;
+  
+}
+
+#gallery-btn:hover {
+  position: absolute;
+  border: none;
+  top: 2.08vw;
+  right: 2.08vw;
+  font-size:  2.5vw;
+  font-family: "Minecraft", Arial, sans-serif;
+  transition: 0.5s ease;
+
+  text-shadow: 13px 13px 13px #1012101d;
+}  
+  
+
+#int-result {
+  font-size: 1.5em;
+}
+
+.int-img-hidden {
+  width: 20.83vw;
+  height: 20.83vw; 
+ 
+  visibility: hidden;
+}
+
+#int-img {
+  position: relative;
+  border-radius: 15px;
+  border: 6px solid #7ce467;
+  border-style: ridge;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.633);
+}
+
+.button-link {
+  font-family: "LLPixel", Arial, sans-serif;
+  font-weight: thin;
+  background-color: #f5e56c00;
+  color: #7ce467;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 20px;
+  position: absolute;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.button-link::after,
+.button-link::before {
+  content: "";
+  position: absolute;
+  transition: 0.5s;
+  transform-origin: center;
+}
+.button-link:hover::before,
+.button-link:hover::after {
+  transform: scale(1.5);
+}
+
+.button-link:hover {
+  
+  box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.92);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
