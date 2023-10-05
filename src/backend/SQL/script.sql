@@ -40,6 +40,7 @@ VALUES
 INSERT INTO artsphereai.user
 VALUES
     ( NULL, 'user@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q')
+    ( NULL, 'guest@guest.com', '')
 ;
 
 INSERT INTO artsphereai.user_type

@@ -14,7 +14,6 @@ L'objectif est de stimuler l'imagination des artistes.
 2. **Génération de l'image** : En utilisant l'API de DALL·E, nous créons une image basée sur le nom généré. DALL·E est un modèle qui peut produire des images uniques à partir de descriptions textuelles.
 
 ## Comment l'utiliser?
-
 Les utilisateurs peuvent visiter le site web, choisir quelle type d'inspiration ils veulent (Art, Graff ou Pixel Art) et cliquer sur la shpère de leur choix. En arrivant sur la page thématiques cliquez sur le "Générer". Le site web produira alors un nom unique et l'oeuvre correspondante.
 
 ![Image 1](/frontend/asset/img/graff.PNG)
@@ -24,17 +23,14 @@ Les utilisateurs peuvent visiter le site web, choisir quelle type d'inspiration 
 ![Image 1](/frontend/asset/img/pixel.PNG)
 
 ## Galerie
-
  Une galerie communautaire est également disponible où les utilisateurs peuvent consulter des selections alèatoires des trois types d'oeuvre d'art, elles . Nous prévoyons également pour le futur un système de notation.
 
 ![Image 1](/frontend/asset/img/gallerie.PNG)
 ## Contributions
-
 Nous sommes toujours à la recherche de contributions pour améliorer notre projet. Si vous avez des idées ou des suggestions, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
 
 
 ## Secrets
-
 Vous devez créer un fichier module.js dans le dossier asset/js afin d'y importer vos clées API pour Chat GPT et Dall-E ainsi que les URL associées
 Ensuite rendez-vous sur le site de OpenAI section API Documentation et suivez le guide dédié.
 Voici la liste des polices à télécharger pour une meilleure expérience:
@@ -60,5 +56,4 @@ Golden : https://www.dafont.com/fr/golden-2.font
 Minecraft : https://www.dafont.com/fr/minecraft.font
 
 ## Licence
-
 Pour plus d'informations, veuillez consulter le fichier LICENCE

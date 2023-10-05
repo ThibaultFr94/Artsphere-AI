@@ -39,6 +39,7 @@ router.use("/", userRouter);
 	res: paramètre représente la réponse HTTP
 */
 router.get("/", (req, res) => res.send("coucou"));
+router.get("/a", (req, res) => res.send(req));
 
 // création du serveur http
 const server = http.createServer(app);
