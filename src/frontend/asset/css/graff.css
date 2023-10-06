@@ -1,16 +1,16 @@
-body {
- 
-  background: #4e58e0;
- 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10000;
-  
+
+body {
+  background: #4e58e0;
 }
+
+
 .main-div {
   text-align: center;
   justify-content: center;
@@ -31,16 +31,17 @@ h1 {
   font-size: 2vw;
   color: #fff;
   width: 100vw;
+  margin-top:6vh ;
   animation: textshadow 5s ease-in-out infinite;
   letter-spacing: 6px ;
 }
 p {
-  font-family: "Blouse", Arial, sans-serif;
+  font-family: "Graffiti City", Arial, sans-serif;
   font-weight: bold;
   font-size: 1vw;
   color: #fff;
   width: 100vw;
-
+  margin-top:4vh ;
 }
 button {
   font-family: "Futurama", Arial, sans-serif;
@@ -56,11 +57,12 @@ button {
   font-size: 2vw;
   cursor: pointer;
   z-index: 2000;
+   margin-top:4vh ;
 }
 button::after {
   content: "";
   position: absolute;
-  top: -10px;
+  margin-top: 2vh;
   left: 3%;
   width: 95%;
   height: 40%;
@@ -92,8 +94,10 @@ button:hover {
 }
 
 #graff-result {
-  font-size: 1.5em;
-  font-family: "Futurama", Arial, sans-serif;
+  margin-top: 4vh;
+  font-size: 5em;
+  font-family: "Graffiti City", Arial, sans-serif;
+  font-weight: lighter;
 }
 
 .graff-img-hidden {
@@ -140,11 +144,13 @@ button:hover {
 }
 
 #graff-img {
+  margin-top:2vh ;
   border-radius: 15px;
   border: 3px solid #5bbdfe;
   border-style: solid;
   animation: glow 5s ease-in-out infinite;
 }
+
 
 button img {
   width: 100%;

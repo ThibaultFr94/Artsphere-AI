@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
 body {
 background-color: #f1db5b;
   background-position: fill;
@@ -101,7 +109,7 @@ h1 {
 }
 
 .main-div > p {
-  top: 200px;
+  margin-top: 4vh;
   font-family: "GOLDEN", Arial, sans-serif;
   font-size: 2vw;
   font-weight: bolder;
@@ -111,9 +119,10 @@ h1 {
  
 }
 p {
+  margin-top: 8vh;
   font-family: "LettreClassique", Arial,  sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 4rem;
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
@@ -135,7 +144,7 @@ button {
   font-size: 2vw;
   z-index: 2000;
   cursor: pointer;
- 
+  margin-top: 4vh;
 }
 
 button::after {
@@ -167,7 +176,7 @@ button:hover {
 }
 
 #paint-result {
-  font-size: 1.5em;
+  font-size: 3rem;
 }
 
 .paint-img-hidden {
@@ -210,6 +219,7 @@ button:hover {
 }
 
 #paint-img {
+  margin-top: 4vh;
   position: relative;
   border-radius: 15px;
   border: 6px solid #cd2828;

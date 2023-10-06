@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "Find a short name for a pixel art creation based on the better videos games of the century,2 words max.";
+      "invent an original name for a pixel art inspired by multiple videos games around the world,you can be inspire by all this words :   Radiance, Glitch,  Brawl, Peak, Playbook, Classics, Realm, Sprites,  Prestige,  Rendition, Glyphs, Brilliance, Craft, Paragon, Glimmer, Beacon, Reflection,  Pioneers, Legacy,, Grid,  Resurgence, Cubes,  Prism,  Blossom, Gem,  Pulse, Code Chronicles ,2 words max.";
     const requestBodyText = {
       messages: [
         {
