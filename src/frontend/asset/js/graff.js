@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "invent a name for a graffiti inspired by street art around the world,2 words max";
+      "invent an original name for a graffiti inspired by multiple street art around the world,mix Echoed Alleys, Painted Pulse, Artful Atlas, Mural Mingle, Spray Spectrum, Urban Unity, Global Graff, Wall Wanderlust, Street Symphony, Tagged Tapestry, Vivid Voyage, Metro Mural, Cosmic Canvas, Alley Anthology, Spray Saga, World Walls, Global Glimpses, Painted Planet, Urban Odyssey, Street Stories.2 words max";
     const requestBodyText = {
       messages: [
         {
