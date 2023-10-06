@@ -111,12 +111,18 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
 </script>
 <div id="container" touch-action="none"></div>
 <div class="header">
-  <a href="" id="register" ><img src="asset/img/profile.svg" alt=""></a>
+
+  <a href="" id="register" >
+    <img src="asset/img/profile.svg" alt="">
+  </a>
+
   <h1>Artsphere-AI</h1>
   <h2>Inspiration generator</h2>
   <br>
   <p class="desc">Choose one of the spaces in one of the spheres below and use your creations to improve your art.</p>
 </div>
+
+
 <div id="registrationForm" class="hidden">
   <h3>Sign in</h3>
   <p class="close">X</p>
@@ -134,6 +140,7 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
 
 <div id="detailedRegistrationForm" class="hidden">
   <h3>Create an account</h3>
+  <p class="signin-message"></p>
   <p class="closeDetailed">X</p>
   <form class="form-register">
     <input type="text" placeholder="E-Mail" required name="email">

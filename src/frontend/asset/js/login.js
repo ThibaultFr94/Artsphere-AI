@@ -1,6 +1,6 @@
-const formRegister = document.querySelector('.form-login');
+const formLogin = document.querySelector('.form-login');
 
-formRegister.addEventListener('submit', async (e) => {
+formLogin.addEventListener('submit', async (e) => {
     e.preventDefault();
     const values = JSON.stringify(Object.fromEntries(new FormData(e.target)));
     
@@ -14,4 +14,12 @@ formRegister.addEventListener('submit', async (e) => {
 
     const request = await fetch(requestInfos);
     const response = await request.json();
+    formLogin.reset();
+    window.sessionStorage.setItem('user', JSON.stringify(response.data));
+    const registerImg = document.querySelector('#register img');
+    registerImg.setAttribute('src', `asset/img/logout.svg`);
+    var form = document.querySelector('#registrationForm');
+    form.classList.add('hidden');    
+    
+    // console.log(registerImg);
 });

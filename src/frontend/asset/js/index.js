@@ -16,14 +16,25 @@ loader.load(
     animate();
   }
 );
+
 document.getElementById('register').addEventListener('click', function(event) {
   event.preventDefault(); 
-  var form = document.getElementById('registrationForm');
-  if (form.classList.contains('hidden')) {
-      form.classList.remove('hidden'); 
+  if(window.sessionStorage.getItem('user')){
+    window.sessionStorage.removeItem('user')
+    // const userSessionStorage = JSON.parse(window.sessionStorage.getItem('user'));
+    // window.location.href = 'admin.html';
+    const registerImg = document.querySelector('#register img');
+    registerImg.setAttribute('src', `asset/img/profile.svg`);
   } else {
-      form.classList.add('hidden');    
-  }
+      var form = document.getElementById('registrationForm');
+      if (form.classList.contains('hidden')) {
+          form.classList.remove('hidden'); 
+      } else {
+          form.classList.add('hidden');    
+      }
+  };
+
+
 });
 
 document.getElementById('createAccount').addEventListener('click', function(event) {

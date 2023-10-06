@@ -1,4 +1,5 @@
 const formRegister = document.querySelector('.form-register');
+const signinMessage = document.querySelector('.signin-message');
 
 formRegister.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -13,4 +14,8 @@ formRegister.addEventListener('submit', async (e) => {
 
     const request = await fetch(requestInfos);
     const response = await request.json();
+    signinMessage.innerText = response.message;
+    // formRegister.reset();
+    // var form = document.getElementById('registrationForm');
+    // form.classList.add('hidden');
 });
