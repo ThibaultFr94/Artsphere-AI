@@ -4,7 +4,8 @@ CREATE DATABASE artsphereai;
 CREATE TABLE artsphereai.user (
     id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(60) NOT NULL UNIQUE,
-    password VARCHAR(150) NOT NULL
+    password VARCHAR(150) NOT NULL,
+    gpt_version VARCHAR(60) NULL DEFAULT 'gpt-3'
 );
 
 CREATE TABLE artsphereai.type (
@@ -38,8 +39,9 @@ VALUES
 ;
 
 INSERT INTO artsphereai.user
+(id, email, password)
 VALUES
-    ( NULL, 'user@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q')
+    ( NULL, 'user@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
     ( NULL, 'guest@guest.com', '')
 ;
 

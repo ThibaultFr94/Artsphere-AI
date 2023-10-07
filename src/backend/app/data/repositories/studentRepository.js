@@ -1,5 +1,6 @@
+import executeQuery from '../executeQuery.js';
 
-const newStudentRepository = (executeQuery) => ({
+const studentRepository = {
   // récupérer un étudiant par son identifiant
   get: (id) =>
     executeQuery(`
@@ -33,6 +34,6 @@ const newStudentRepository = (executeQuery) => ({
         student.classroom_id = :classroom_id
         WHERE student.id = :id;
     `, { id, firstname, lastname, age, birthday, isExternal, portrait, classroom_id })
-})
+};
 
-export default newStudentRepository;
+export default studentRepository;

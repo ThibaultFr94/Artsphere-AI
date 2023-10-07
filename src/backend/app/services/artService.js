@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import dataContext from "../data/dataContext.js";
+import studentRepository from "../data/repositories/studentRepository.js";
 
 const uploadDirectory = "public/img/";
 const extensions = {
@@ -30,12 +30,12 @@ const artService = {
   uploadDirectory,
   updateStudent: async (studentParams, file) => {
     // récupérer les informations dans la base de données pour connaître l'image existante
-    const student = await dataContext.studentRepository.get(studentParams.id);
+    const student = await studentRepository.get(studentParams.id);
     const portrait = !file
       ? student.shift().portrait
       : await replaceFile(student.shift().portrait, file.filename, file.mimetype, file.destination);
   
-    return await dataContext.studentRepository.update(
+    return await studentRepository.update(
       studentParams.id,
       studentParams.firstname,
       studentParams.lastname,
@@ -47,7 +47,7 @@ const artService = {
   },
 
   delete: async (id) => {
-    await dataContext.studentRepository.delete(id);
+    await studentRepository.delete(id);
   
     // supprimer l'image
     await fs.rm(`${uploadDirectory}${student.portrait}`);
@@ -57,7 +57,7 @@ const artService = {
     const fileName = file.filename;
     const destination = file.destination;
     const portrait = `${fileName}.${getExtensionFromMimeType(file.mimetype)}`;
-    const student = await dataContext.studentRepository.create(
+    const student = await studentRepository.create(
       studentParams.firstname,
       studentParams.lastname,
       studentParams.age,

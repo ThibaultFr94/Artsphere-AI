@@ -3,7 +3,9 @@ import express from "express";
 import cors from "cors";
 import multer from "multer";
 
-import dataContext from "./data/dataContext.js";
+import userRepository from "./data/repositories/userRepository.js";
+import studentRepository from "./data/repositories/studentRepository.js";
+import classroomRepository from "./data/repositories/classroomRepository.js";
 import artService from "./services/artService.js";
 import aiService from "./services/aiService.js";
 import userService from "./services/userService.js";
@@ -34,16 +36,20 @@ router.use(
 
 // générer du texte
 router.get("/ai/generateText/:prompt", (req, res) =>
-  aiService.generateText(req.params.prompt)
+  userService.currentUser(req.headers.authorization)
+    .then(currentUser => currentUser ? aiService.generateText(req.params.prompt, currentUser) : null)
+    // .catch(error => res.status(401).json({ error }))
     .then(text => res.json({ text }))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 // générer une image
 router.get("/ai/generateImage/:prompt", (req, res) =>
   aiService.generateImage(req.params.prompt)
     .then(text => res.json({ text }))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 
@@ -51,30 +57,34 @@ router.get("/ai/generateImage/:prompt", (req, res) =>
 
 // récupérer un étudiant par son identifiant : /students/:id
 router.get("/art/:id", (req, res) =>
-  dataContext.studentRepository.get(req.params.id)
+  studentRepository.get(req.params.id)
     .then(students => res.json(students.shift()))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 // créer un étudiant, ajouter le middleware de multer : uploader.any
 router.post("/art/create", uploader.any(), (req, res) =>
   artService.createStudent(req.body, req.files.length[0])
     .then(result => res.json(result))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 // modifier un étudiant, ajouter le middleware de multer : uploader.any
 router.put("/art/update", uploader.any(), (req, res) =>
   artService.updateStudent(req.body, req.files.length[0])
     .then(_ => res.json())
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 // supprimer un étudiant
 router.delete("/art/delete", (req, res) =>
   artService.delete(req.body.id)
     .then(_ => res.json())
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 
@@ -82,37 +92,42 @@ router.delete("/art/delete", (req, res) =>
 
 // liste des étudiants d'une classe
 router.get("/classrooms/list", async (req, res) => {
-  dataContext.classroomRepository.list()
+  classroomRepository.list()
     .then(classrooms => res.json(classrooms))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 });
 
 
 /////////////////////////// USER ROUTES ///////////////////////////
 
 router.get('/users/list', async (req, res) =>
-  dataContext.userRepository.list()
+  userRepository.list()
     .then(students => res.json(students))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 router.post('/users/register', async (req, res) =>
   userService.register(req.body.email, req.body.password)
     .then(_ => res.json({ message: "User created" }))
-    .catch(error => res.status(400).json({ error }))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
 );
 
 router.post('/users/login', (req, res) => {
   userService.login(req.body.email, req.body.password)
     .then(token => res.json({ token }))
-    .catch(error => res.status(401).json({ error }))
+    .catch(error => res.status(401)
+      .json({ error: error.message || error }))
 });
 
 // Récupérer l'utilisateur courant
 app.get('/users/current', (req, res) => {
   userService.currentUser(req.headers.authorization)
     .then(token => res.json({ token }))
-    .catch(error => res.status(401).json({ error }))
+    .catch(error => res.status(401)
+      .json({ error: error.message || error }))
 });
 
 

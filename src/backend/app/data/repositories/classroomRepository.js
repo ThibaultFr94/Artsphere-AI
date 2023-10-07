@@ -1,10 +1,11 @@
+import executeQuery from '../executeQuery.js';
 
-const newClassroomRepository = (executeQuery) => ({
+const classroomRepository = {
   list: () =>
     executeQuery(`
       SELECT classroom.*
       FROM formation.classroom;
     `),
-})
+}
 
-export default newClassroomRepository;
+export default classroomRepository;

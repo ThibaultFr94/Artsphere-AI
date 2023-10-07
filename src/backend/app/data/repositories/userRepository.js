@@ -1,6 +1,6 @@
+import executeQuery from '../executeQuery.js';
 
-
-const newUserRepository = (executeQuery) => ({
+const userRepository = {
   /** List all users */
 	list: () =>
 		executeQuery("SELECT id, email from artsphereai.user"),
@@ -9,15 +9,16 @@ const newUserRepository = (executeQuery) => ({
 	create: (email, password) =>
 		executeQuery(`
 			INSERT INTO artsphereai.user
-			VALUE (NULL, :email, :password);
+			(id, email, password)
+			VALUES (NULL, :email, :password);
 		`, { email, password }),
 
 	getConnectionInfo: (email) =>
 		executeQuery(`
-			SELECT password
+			SELECT password, gpt_version
 			FROM artsphereai.user
 			WHERE email = :email;
-		`, { email })
-});
+		`, { email }).then(result => result[0])
+};
 
-export default newUserRepository;
+export default userRepository;
