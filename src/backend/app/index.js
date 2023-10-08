@@ -38,16 +38,19 @@ router.use(
 router.get("/ai/generateText/:prompt", (req, res) =>
   userService.currentUser(req.headers.authorization)
     .then(currentUser => currentUser ? aiService.generateText(req.params.prompt, currentUser) : null)
-    // .catch(error => res.status(401).json({ error }))
-    .then(text => res.json({ text }))
+    .then(text => text.json())
+    .then(text => res.json(text))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );
 
 // générer une image
 router.get("/ai/generateImage/:prompt", (req, res) =>
-  aiService.generateImage(req.params.prompt)
-    .then(text => res.json({ text }))
+  userService.currentUser(req.headers.authorization)
+    .then(currentUser => currentUser ? aiService.generateImage(req.params.prompt, currentUser) : null)
+    // aiService.generateImage(req.params.prompt)
+    .then(text => text.json())
+    .then(text => res.json(text))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );

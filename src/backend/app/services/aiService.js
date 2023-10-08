@@ -8,20 +8,20 @@ const headers = {
 
 const aiService = {
   generateText: (prompt, currentUser) => 
-    !currentUser || !currentUser.gptVersion
+    !currentUser
       ? Promise.reject("User do not have access to a GPT version")
       : fetch(process.env.OPENAI_TEXT_URL, {
           method: "POST",
           headers: headers,
           body: JSON.stringify({
-            model: currentUser.gptVersion,
+            model: 'gpt-4',
             temperature: 0.7,
             messages: [ {role: "user", content: prompt, } ],
           })
       }),
 
-  generateImage: (prompt) => 
-    !currentUser || !currentUser.gptVersion
+  generateImage: (prompt, currentUser) => 
+    !currentUser
       ? Promise.reject("User do not have access to a GPT version")
       : fetch(process.env.OPENAI_IMAGE_URL, {
           method: "POST",
