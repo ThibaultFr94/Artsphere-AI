@@ -23,8 +23,13 @@ const userService = {
   currentUser: (bearerToken) => {
     if (!bearerToken) return null;
     const token = bearerToken?.split(' ')[1];
-    if (!token) return null;
-    return Promise.resolve(jwt.verify(token, tokenSecret));
+    try{
+      const verifiedToken = jwt.verify(token, tokenSecret)
+      return Promise.resolve(verifiedToken);
+    }
+    catch{
+      return Promise.resolve({});
+    }
   }
 }
 
