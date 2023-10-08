@@ -1,3 +1,5 @@
+// todo injection de vite_api
+
 
 function fetchApi(method, urlPath, body) {
   return fetch(`http://localhost:3000/${urlPath}`, {
