@@ -1,13 +1,7 @@
-import {
-  OPENAI_TEXT_URL,
-  OPENAI_IMAGE_URL,
-  OPENAI_TEXT_API_KEY,
-  OPENAI_IMAGE_API_KEY,
-} from "./module_env.js";
+import { artSphereApi } from "./artSphereApi.js";
 import {
   generatePromptPaint,
   saveImageToLocalStorage,
-  imagerequestBody,
 } from "./service.js";
 import { types } from "./type.js";
 
@@ -25,25 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const prompt =
       "Invent a name for a painting inspired by great paintings of great painters, 2 words max.";
-    const requestBodyText = {
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      temperature: 0.7,
-      model: "gpt-4",
-    };
-
-    fetch(OPENAI_TEXT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_TEXT_API_KEY}`,
-      },
-      body: JSON.stringify(requestBodyText),
-    })
+      artSphereApi.ai.generateText(prompt)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -56,25 +32,17 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
-
-        imagerequestBody.prompt = generatePromptPaint(paint);
         return paint;
       })
-      .then((paint) => {
-        fetch(OPENAI_IMAGE_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_IMAGE_API_KEY}`,
-          },
-          body: JSON.stringify(imagerequestBody),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
+        .then((paint) => {
+          artSphereApi.ai.generateImage(generatePromptPaint(paint))
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
+      
           .then((data) => {
             divImg.classList.remove("loader");
             img.classList.remove("paint-img-hidden");

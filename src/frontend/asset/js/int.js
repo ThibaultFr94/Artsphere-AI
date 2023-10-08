@@ -1,13 +1,7 @@
-import {
-  OPENAI_TEXT_URL,
-  OPENAI_IMAGE_URL,
-  OPENAI_TEXT_API_KEY,
-  OPENAI_IMAGE_API_KEY,
-} from "./module_env.js";
+import { artSphereApi } from "./artSphereApi.js";
 import {
   generatePromptInt,
   saveImageToLocalStorage,
-  imagerequestBody,
 } from "./service.js";
 import { types } from "./type.js";
 
@@ -25,29 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const prompt =
       "invent an original name for a pixel art inspired by multiple videos games around the world,you can be inspire by all this words :   Radiance, Glitch,  Brawl, Peak, Playbook, Classics, Realm, Sprites,  Prestige,  Rendition, Glyphs, Brilliance, Craft, Paragon, Glimmer, Beacon, Reflection,  Pioneers, Legacy,, Grid,  Resurgence, Cubes,  Prism,  Blossom, Gem,  Pulse, Code Chronicles ,2 words max.";
-    const requestBodyText = {
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      temperature: 0.7,
-      model: "gpt-4",
-    };
-
-    fetch(OPENAI_TEXT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_TEXT_API_KEY}`,
-      },
-      body: JSON.stringify(requestBodyText),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+    artSphereApi.ai.generateText(prompt)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
         return response.json();
       })
       .then((data) => {
@@ -56,18 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
-        imagerequestBody.prompt = generatePromptInt(int);
         return int;
       })
       .then((int) => {
-        fetch(OPENAI_IMAGE_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_IMAGE_API_KEY}`,
-          },
-          body: JSON.stringify(imagerequestBody),
-        })
+        artSphereApi.ai.generateImage(generatePromptInt(int))
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

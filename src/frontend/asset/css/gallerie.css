@@ -96,7 +96,7 @@ h2 {
   justify-content: center;
   gap: 0.5vw;
   letter-spacing: 4px ;
-  border-bottom: 2px solid #ffffff; 
+  border-top: 10px dotted #ffffff; 
 }
 .section-art > h3 {
   margin: 3vw ;
@@ -109,7 +109,7 @@ h2 {
   justify-content: center;
   font-weight: lighter;
   gap: 10px;
-  border-bottom: 3px ridge #ffffff; 
+ 
 }
 .section-design > h3 {
   margin: 3vw ;
@@ -122,7 +122,7 @@ h2 {
   justify-content: center;
   font-weight: lighter;
   gap: 10px;
-  border-bottom: 3px ridge #ffffff; 
+ 
 }
 
 .section-graff > h3 > button > img {
