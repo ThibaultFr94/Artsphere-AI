@@ -15,7 +15,7 @@ const userRepository = {
 
 	getConnectionInfo: (email) =>
 		executeQuery(`
-			SELECT password, gpt_version
+			SELECT password
 			FROM artsphereai.user
 			WHERE email = :email;
 		`, { email }).then(result => result[0])

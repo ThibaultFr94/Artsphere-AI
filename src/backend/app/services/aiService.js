@@ -8,7 +8,7 @@ const headers = {
 
 const aiService = {
   generateText: (prompt, currentUser) => 
-    !currentUser
+    !currentUser&&false
       ? Promise.reject("User do not have access to a GPT version")
       : fetch(process.env.OPENAI_TEXT_URL, {
           method: "POST",
@@ -21,7 +21,7 @@ const aiService = {
       }),
 
   generateImage: (prompt, currentUser) => 
-    !currentUser
+    !currentUser&&false
       ? Promise.reject("User do not have access to a GPT version")
       : fetch(process.env.OPENAI_IMAGE_URL, {
           method: "POST",
@@ -29,7 +29,7 @@ const aiService = {
           body: JSON.stringify({
             prompt: prompt,
             n: 1,
-            size: "256x256",
+            size: "512x512",
             response_format: "b64_json",
           })
         })

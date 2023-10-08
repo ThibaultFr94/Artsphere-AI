@@ -1,34 +1,10 @@
-import {
-  OPENAI_TEXT_URL,
-  OPENAI_IMAGE_URL,
-  OPENAI_TEXT_API_KEY,
-  OPENAI_IMAGE_API_KEY,
-} from "./module_env.js";
+
+import { artSphereApi } from "./artSphereApi.js";
 import {
   generatePromptGraff,
   saveImageToLocalStorage,
-  imagerequestBody,
 } from "./service.js";
 import { types } from "./type.js";
-
-function init() {
-  particlesArray = [];
-  let numberOfParticles = (canvas.height * canvas.width) / 4000;
-  for (let i = 0; i < numberOfParticles * 2; i++) {
-    let size = Math.random() * 1 + 1;
-    let x = Math.random() * (innerWidth - size * 1) + size;
-    let y = Math.random() * innerHeight;
-    let directionX = Math.random() * 5 - 2.5;
-    let directionY = Math.random() * 5 - 2.5;
-    let color = "#8C5523";
-
-    particlesArray.push(
-      new Particle(x, y, directionX, directionY, size, color)
-    );
-  }
-}
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("graff-btn").addEventListener("click", generateGraff);
@@ -44,25 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const prompt =
       "invent an original name for a graffiti inspired by multiple street art around the world,mix this words :  Alleys, Painted Pulse, Artful Atlas, Mural Mingle, Spray Spectrum,  Unity, Global Graff, Wall Wanderlust, Symphony, Tagged Tapestry, Vivid Voyage, Mural, Cosmic Canvas, Alley Anthology, Spray Saga, World Walls, Global Glimpses, Painted Planet,  Odyssey,Stories.2 words max";
-    const requestBodyText = {
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-      temperature: 0.7,
-      model: "gpt-4",
-    };
-
-    fetch(OPENAI_TEXT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${OPENAI_TEXT_API_KEY}`,
-      },
-      body: JSON.stringify(requestBodyText),
-    })
+    
+artSphereApi.ai.generateText(prompt)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -75,18 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
           /"/g,
           ""
         );
-        imagerequestBody.prompt = generatePromptGraff(graff);
         return graff;
       })
       .then((graff) => {
-        fetch(OPENAI_IMAGE_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAI_IMAGE_API_KEY}`,
-          },
-          body: JSON.stringify(imagerequestBody),
-        })
+        artSphereApi.ai.generateImage(generatePromptGraff(graff))
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

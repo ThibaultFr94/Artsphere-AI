@@ -37,7 +37,7 @@ router.use(
 // générer du texte
 router.get("/ai/generateText/:prompt", (req, res) =>
   userService.currentUser(req.headers.authorization)
-    .then(currentUser => currentUser ? aiService.generateText(req.params.prompt, currentUser) : null)
+    .then(currentUser =>  aiService.generateText(req.params.prompt, currentUser))
     .then(text => text.json())
     .then(text => res.json(text))
     .catch(error => res.status(400)
@@ -47,7 +47,7 @@ router.get("/ai/generateText/:prompt", (req, res) =>
 // générer une image
 router.get("/ai/generateImage/:prompt", (req, res) =>
   userService.currentUser(req.headers.authorization)
-    .then(currentUser => currentUser ? aiService.generateImage(req.params.prompt, currentUser) : null)
+    .then(currentUser =>  aiService.generateImage(req.params.prompt, currentUser))
     // aiService.generateImage(req.params.prompt)
     .then(text => text.json())
     .then(text => res.json(text))

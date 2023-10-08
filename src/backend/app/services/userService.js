@@ -16,12 +16,14 @@ const userService = {
     const connectionInfo = await userRepository.getConnectionInfo(email);
     const authorized = await argon2.verify(connectionInfo.password, password);
     if (!authorized) throw "Invalid username or password";
-    const jwtPayload = { authorized: true, username: email, gptVersion: connectionInfo.gpt_version };
+    const jwtPayload = { authorized: true, username: email };
     return jwt.sign(jwtPayload, tokenSecret, { expiresIn: '5000h' });
   },
 
   currentUser: (bearerToken) => {
+    if (!bearerToken) return null;
     const token = bearerToken?.split(' ')[1];
+    if (!token) return null;
     return Promise.resolve(jwt.verify(token, tokenSecret));
   }
 }
