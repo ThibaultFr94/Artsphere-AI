@@ -1,4 +1,5 @@
-// todo injection de vite_api
+// todo injection de vite_api (peut-être rennomer cette variable)
+// todo commenter le code backedn et retirer les codes inutiles
 
 
 function fetchApi(method, urlPath, body) {
@@ -17,15 +18,14 @@ export const artSphereApi = {
     generateText: (prompt) =>
       fetchApi('GET', `ai/generateText/${prompt}`),
 
-    generateImage: (prompt) =>
-      fetchApi('GET', `ai/generateImage/${prompt}`),
+    generateImage: (typeId, title, prompt) =>
+      fetchApi('POST', `ai/generateImage`, { typeId, title, prompt }),
+
+    list: () =>
+      fetchApi('GET', `ai/list`)
   },
 
   users: {
-    list: () =>
-      fetchApi('GET', `users/list`)
-        .then(response => response.json()),
-
     register: (email, password) =>
       fetchApi('POST', `users/register`, { email, password }),
 

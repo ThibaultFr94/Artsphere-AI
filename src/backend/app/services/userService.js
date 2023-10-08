@@ -14,21 +14,25 @@ const userService = {
   // Generate a token with the username
   login: async (email, password) => {
     const connectionInfo = await userRepository.getConnectionInfo(email);
-    const authorized = await argon2.verify(connectionInfo.password, password);
-    if (!authorized) throw "Invalid username or password";
-    const jwtPayload = { authorized: true, username: email };
-    return jwt.sign(jwtPayload, tokenSecret, { expiresIn: '5000h' });
+    if (!connectionInfo) {
+      throw "Invalid username or password";
+    }
+    const authenticated = await argon2.verify(connectionInfo.password, password);
+    if (!authenticated){
+      throw "Invalid username or password";
+    }
+
+    const tokenContent = { authenticated, username: email };// D'autres informations peuvent être ajoutées au token
+    return jwt.sign(tokenContent, tokenSecret, { expiresIn: '5000h' });
   },
 
-  currentUser: (bearerToken) => {
-    if (!bearerToken) return null;
-    const token = bearerToken?.split(' ')[1];
+  getCurrentUser: (req) => {
+    const token = req.headers.authorization?.split(' ')[1];
     try{
-      const verifiedToken = jwt.verify(token, tokenSecret)
-      return Promise.resolve(verifiedToken);
+      return { ip: req.ip, ...jwt.verify(token, tokenSecret) };
     }
-    catch{
-      return Promise.resolve({});
+    catch {
+      return { ip: req.ip, authenticated: false };
     }
   }
 }

@@ -4,6 +4,7 @@ import cors from "cors";
 import multer from "multer";
 
 import userRepository from "./data/repositories/userRepository.js";
+import artRepository from "./data/repositories/artRepository.js";
 import studentRepository from "./data/repositories/studentRepository.js";
 import classroomRepository from "./data/repositories/classroomRepository.js";
 import artService from "./services/artService.js";
@@ -32,28 +33,34 @@ router.use(
 );
 
 
+
+
+
 /////////////////////////// AI ROUTES ///////////////////////////
 
 // générer du texte
 router.get("/ai/generateText/:prompt", (req, res) =>
-  userService.currentUser(req.headers.authorization)
-    .then(currentUser =>  aiService.generateText(req.params.prompt, currentUser))
-    .then(text => text.json())
+  aiService.generateText(req.params.prompt, userService.getCurrentUser(req))
     .then(text => res.json(text))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );
 
 // générer une image
-router.get("/ai/generateImage/:prompt", (req, res) =>
-  userService.currentUser(req.headers.authorization)
-    .then(currentUser =>  aiService.generateImage(req.params.prompt, currentUser))
-    // aiService.generateImage(req.params.prompt)
-    .then(text => text.json())
+router.post("/ai/generateImage", (req, res) => {
+  aiService.generateImage(req.body.typeId, req.body.title, req.body.prompt, userService.getCurrentUser(req))
     .then(text => res.json(text))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
-);
+});
+
+
+router.get("/ai/list", (req, res) => {
+  artRepository.list()
+    .then(text => res.json(text))
+    .catch(error => res.status(400)
+      .json({ error: error.message || error }))
+});
 
 
 /////////////////////////// ART ROUTES ///////////////////////////
@@ -104,11 +111,9 @@ router.get("/classrooms/list", async (req, res) => {
 
 /////////////////////////// USER ROUTES ///////////////////////////
 
-router.get('/users/list', async (req, res) =>
-  userRepository.list()
-    .then(students => res.json(students))
-    .catch(error => res.status(400)
-      .json({ error: error.message || error }))
+// Récupérer l'utilisateur courant
+app.get('/users/current', (req, res) =>
+  res.json(userService.getCurrentUser(req))
 );
 
 router.post('/users/register', async (req, res) =>
@@ -120,14 +125,6 @@ router.post('/users/register', async (req, res) =>
 
 router.post('/users/login', (req, res) => {
   userService.login(req.body.email, req.body.password)
-    .then(token => res.json({ token }))
-    .catch(error => res.status(401)
-      .json({ error: error.message || error }))
-});
-
-// Récupérer l'utilisateur courant
-app.get('/users/current', (req, res) => {
-  userService.currentUser(req.headers.authorization)
     .then(token => res.json({ token }))
     .catch(error => res.status(401)
       .json({ error: error.message || error }))
