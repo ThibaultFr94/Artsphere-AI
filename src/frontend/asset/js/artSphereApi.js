@@ -1,6 +1,5 @@
-// todo injection de vite_api (peut-être rennomer cette variable)
-// todo commenter le code backedn et retirer les codes inutiles
-export const types = {
+
+const types = {
   1: "section graff",
   2: "section art",
   3: "section design",
