@@ -52,14 +52,24 @@ document.querySelector('.closeDetailed').addEventListener('click', function() {
   var form = document.getElementById('detailedRegistrationForm');
   form.classList.add('hidden');
 });
+
 document.querySelector('#detailedRegistrationForm form').addEventListener('submit', function(event) {
-  var password = this.querySelector('input[type="password"][placeholder="Password"]');
-  var confirmPassword = this.querySelector('input[type="password"][placeholder="Confirm your password"]');
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+  const confirmPassword = document.querySelector('#confirmPassword').value;
   
   if (password.value !== confirmPassword.value) {
       alert("Password doesn't match!");
       event.preventDefault();
   }
+  else{
+    artSphereApi.users.register(email, password).then(function(){
+      const registerImg = document.querySelector('#register img');
+        registerImg.setAttribute('src', `asset/img/logout.svg`);
+        var form = document.querySelector('#registrationForm');
+        form.classList.add('hidden'); 
+     });
+  } 
 });
 
 function init() {
@@ -139,13 +149,13 @@ function animate(delta) {
   render(delta);
 }
 
-let capturer = new Capture({
-  verbose: true,
-  framerate: 60,
-  quality: 90,
-  format: "webm",
-  workersPath: "js/",
-});
+// let capturer = new Capturer({
+//   verbose: true,
+//   framerate: 60,
+//   quality: 90,
+//   format: "webm",
+//   workersPath: "js/",
+// });
 
 let capturing = false;
 

@@ -13,7 +13,7 @@ function fetchApi(method, urlPath, body) {
   })
 }
 
-export const artSphereApi = {
+const artSphereApi = {
   ai: {
     generateText: (prompt) =>
       fetchApi('GET', `ai/generateText/${prompt}`),

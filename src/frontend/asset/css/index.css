@@ -491,7 +491,7 @@ form select[multiple] {
 }
 
 #detailedRegistrationForm div > input[type="checkbox"] + label {
-  margin-top: 3vw; /* Augmentez cette valeur si vous voulez un écart plus grand */
+  margin-top: 3vw;
 }
 
 @keyframes barberpole {

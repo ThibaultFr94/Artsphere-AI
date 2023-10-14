@@ -1,5 +1,3 @@
-import { artSphereApi } from "./artSphereApi";
-
 const formLogin = document.querySelector('.form-login');
 
 formLogin.addEventListener('submit', async (e) => {
