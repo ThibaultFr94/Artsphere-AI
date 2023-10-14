@@ -34,6 +34,9 @@ VALUES
 INSERT INTO artsphereai.user
 (id, email, password)
 VALUES
-    ( NULL, 'user@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
-    ( NULL, 'guest@guest.com', '')
+    ( NULL, 'user2@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
+    ( NULL, 'user3@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
+    ( NULL, 'user4@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
+    ( NULL, 'user5@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q'),
+    ( NULL, 'user6@user.com', '$argon2i$v=19$m=16,t=2,p=1$VkRNcFdkeVczWWwzZHowVw$gcvMtAROIyiloQgPje2E4Q')
 ;

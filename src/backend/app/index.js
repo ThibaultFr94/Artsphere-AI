@@ -1,12 +1,8 @@
 // import des dépendances
 import express from "express";
 import cors from "cors";
-import multer from "multer";
 
-import userRepository from "./data/repositories/userRepository.js";
 import artRepository from "./data/repositories/artRepository.js";
-import studentRepository from "./data/repositories/studentRepository.js";
-import classroomRepository from "./data/repositories/classroomRepository.js";
 import aiService from "./services/aiService.js";
 import userService from "./services/userService.js";
 
