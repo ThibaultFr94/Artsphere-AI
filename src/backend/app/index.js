@@ -123,15 +123,6 @@ router.post('/users/login', (req, res) => {
 /////////////////////////// STARTUP ///////////////////////////
 
 // lancer le serveur
-app.listen(process.env.SERVER_PORT, () =>{
-  // Variables to customize rendered text
-  const cyanColor = '\x1b[36m';
-  const boldText = '\x1b[1m';
-  const endOfAnsi = '\x1b[0m';
-  
-  console.log('');
-  console.log(`${cyanColor}-------------------------------------------${endOfAnsi}`);
-  console.log(`${cyanColor}--  ${boldText}ArtSphere API${endOfAnsi}${endOfAnsi} listening on port ${process.env.SERVER_PORT} ${cyanColor}--`);
-  console.log(`${cyanColor}-------------------------------------------${endOfAnsi}`);
-  console.log('');
-});
+app.listen(process.env.SERVER_PORT, () =>
+  console.log(`ArtSphere API listening on port ${process.env.SERVER_PORT}`)
+);

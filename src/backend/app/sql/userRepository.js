@@ -16,7 +16,7 @@ const userRepository = {
 		// Get user info
 	getConnectionInfo: (email) =>
 		executeQuery(`
-			SELECT password
+			SELECT password, id
 			FROM artsphereai.user
 			WHERE email = :email;
 		`, { email }).then(result => result[0])
