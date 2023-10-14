@@ -94,7 +94,7 @@ router.post('/users/register', async (req, res) =>
 
 router.post('/users/login', (req, res) => {
   userService.login(req.body.email, req.body.password)
-    .then(token => res.json({ token }))
+    .then(token => res.json(token))
     .catch(error => res.status(401)
       .json({ error: error.message || error }))
 });

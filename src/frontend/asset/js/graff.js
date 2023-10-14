@@ -1,10 +1,3 @@
-import { artSphereApi } from "./artSphereApi.js";
-import {
-  generatePromptGraff,
-  saveImageToLocalStorage,
-} from "./service.js";
-import { types } from "./type.js";
-
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("graff-btn").addEventListener("click", generateGraff);
 

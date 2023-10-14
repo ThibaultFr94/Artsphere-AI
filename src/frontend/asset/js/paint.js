@@ -1,9 +1,3 @@
-import { artSphereApi } from "./artSphereApi.js";
-import {
-  generatePromptPaint,
-  saveImageToLocalStorage,
-} from "./service.js";
-import { types } from "./type.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("paint-btn").addEventListener("click", generatePaint);

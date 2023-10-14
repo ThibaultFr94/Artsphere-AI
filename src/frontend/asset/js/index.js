@@ -23,11 +23,12 @@ formLogin.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
+
    artSphereApi.users.login(email, password).then(function(){
+    
       const loginImg = document.querySelector('#register img');
         loginImg.setAttribute('src', `asset/img/logout.svg`);
-        var form = document.querySelector('#loginForm');
-        form.classList.add('hidden'); ;
+        formLogin.classList.add('hidden'); ;
     formLogin.reset();
    })   
 });

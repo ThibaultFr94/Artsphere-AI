@@ -1,5 +1,3 @@
-import { types } from "./type.js";
-import { shuffle } from "./service.js";
 
 function init() {
   const existingImages = JSON.parse(localStorage.getItem("images") || "[]");
