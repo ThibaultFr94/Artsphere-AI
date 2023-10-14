@@ -1,6 +1,6 @@
 import argon2 from 'argon2';
 import jwt from 'jsonwebtoken';
-import userRepository from "../data/repositories/userRepository.js";
+import userRepository from "../sql/userRepository.js";
 (await import('dotenv')).config();
 
 const tokenSecret = process.env.SERVER_TOKEN_SECRET;

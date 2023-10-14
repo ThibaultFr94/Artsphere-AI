@@ -2,7 +2,7 @@
 import express from "express";
 import cors from "cors";
 
-import artRepository from "./data/repositories/artRepository.js";
+import artRepository from "./sql/artRepository.js";
 import aiService from "./services/aiService.js";
 import userService from "./services/userService.js";
 
@@ -12,7 +12,6 @@ import userService from "./services/userService.js";
 
 // création d'une application
 const app = express();
-const uploader = multer({ dest: artService.uploadDirectory });
 
 // création d'un routeur
 const router = express.Router();
@@ -69,21 +68,6 @@ router.get("/art/:id", (req, res) =>
       .json({ error: error.message || error }))
 );
 
-// créer un étudiant, ajouter le middleware de multer : uploader.any
-router.post("/art/create", uploader.any(), (req, res) =>
-  artService.createStudent(req.body, req.files.length[0])
-    .then(result => res.json(result))
-    .catch(error => res.status(400)
-      .json({ error: error.message || error }))
-);
-
-// modifier un étudiant, ajouter le middleware de multer : uploader.any
-router.put("/art/update", uploader.any(), (req, res) =>
-  artService.updateStudent(req.body, req.files.length[0])
-    .then(_ => res.json())
-    .catch(error => res.status(400)
-      .json({ error: error.message || error }))
-);
 
 // supprimer un étudiant
 router.delete("/art/delete", (req, res) =>

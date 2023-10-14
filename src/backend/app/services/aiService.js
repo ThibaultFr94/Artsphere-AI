@@ -1,4 +1,4 @@
-import artRepository from '../data/repositories/artRepository.js';
+import artRepository from '../sql/artRepository.js';
 (await import('dotenv')).config();
 
 async function getPendingTimeMinutes(currentUser) {   
