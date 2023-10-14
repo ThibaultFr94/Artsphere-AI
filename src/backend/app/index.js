@@ -7,7 +7,6 @@ import userRepository from "./data/repositories/userRepository.js";
 import artRepository from "./data/repositories/artRepository.js";
 import studentRepository from "./data/repositories/studentRepository.js";
 import classroomRepository from "./data/repositories/classroomRepository.js";
-import artService from "./services/artService.js";
 import aiService from "./services/aiService.js";
 import userService from "./services/userService.js";
 
@@ -28,6 +27,7 @@ app.use(router);
 // ajouter la méthode JSON à toutes les routes, pour récupérer le body des requêtes
 router.use(express.json());
 
+// ajouter le middleware CORS à toutes les routes
 router.use(
   cors({ origin: process.env.SERVER_CORS?.split(',') })
 );
@@ -96,17 +96,6 @@ router.delete("/art/delete", (req, res) =>
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );
-
-
-/////////////////////////// CLASSROOM ROUTES ///////////////////////////
-
-// liste des étudiants d'une classe
-router.get("/classrooms/list", async (req, res) => {
-  classroomRepository.list()
-    .then(classrooms => res.json(classrooms))
-    .catch(error => res.status(400)
-      .json({ error: error.message || error }))
-});
 
 
 /////////////////////////// USER ROUTES ///////////////////////////
