@@ -54,11 +54,11 @@ document.querySelector('.closeDetailed').addEventListener('click', function() {
 });
 
 document.querySelector('#detailedRegistrationForm form').addEventListener('submit', function(event) {
-  const email = document.querySelector('#email').value;
-  const password = document.querySelector('#password').value;
-  const confirmPassword = document.querySelector('#confirmPassword').value;
+  const email = document.querySelector('#register-email').value;
+  const password = document.querySelector('#register-password').value;
+  const confirmPassword = document.querySelector('#register-confirmPassword').value;
   
-  if (password.value !== confirmPassword.value) {
+  if (password !== confirmPassword) {
       alert("Password doesn't match!");
       event.preventDefault();
   }
