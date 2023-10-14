@@ -16,16 +16,30 @@ loader.load(
     animate();
   }
 );
+//  se logger sur le site
+const formLogin = document.querySelector('.form-login');
 
+formLogin.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+   artSphereApi.users.login(email, password).then(function(){
+      const loginImg = document.querySelector('#login img');
+        loginImg.setAttribute('src', `asset/img/logout.svg`);
+        var form = document.querySelector('#loginForm');
+        form.classList.add('hidden'); ;
+    formLogin.reset();
+   })   
+});
+//s enregistrer sur le site
 document.getElementById('register').addEventListener('click', function(event) {
   event.preventDefault(); 
   if(window.sessionStorage.getItem('user')){
     window.sessionStorage.removeItem('user')
-    // const userSessionStorage = JSON.parse(window.sessionStorage.getItem('user'));
-    // window.location.href = 'admin.html';
     const registerImg = document.querySelector('#register img');
     registerImg.setAttribute('src', `asset/img/profile.svg`);
-  } else {
+  } 
+  else {
       var form = document.getElementById('registrationForm');
       if (form.classList.contains('hidden')) {
           form.classList.remove('hidden'); 
@@ -33,8 +47,6 @@ document.getElementById('register').addEventListener('click', function(event) {
           form.classList.add('hidden');    
       }
   };
-
-
 });
 
 document.getElementById('createAccount').addEventListener('click', function(event) {
