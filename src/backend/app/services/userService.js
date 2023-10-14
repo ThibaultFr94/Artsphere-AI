@@ -24,7 +24,10 @@ const userService = {
 
     const tokenContent = { authenticated, username: email, id: connectionInfo.id };
     // D'autres informations peuvent être ajoutées au token
-    return jwt.sign(tokenContent, tokenSecret, { expiresIn: '5000h' });
+    return {
+      ...tokenContent,
+      token: jwt.sign(tokenContent, tokenSecret, { expiresIn: '5000h' })
+    }
   },
 
   getCurrentUser: (req) => {

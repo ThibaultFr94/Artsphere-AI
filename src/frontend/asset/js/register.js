@@ -1,21 +1,16 @@
+import { artSphereApi } from "./artSphereApi";
+
 const formRegister = document.querySelector('.form-register');
 const signinMessage = document.querySelector('.signin-message');
 
 formRegister.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const values = JSON.stringify(Object.fromEntries(new FormData(e.target)));
-    const requestInfos = new Request('http://localhost:3000/register', {
-        method: 'post',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: values,
-    });
-
-    const request = await fetch(requestInfos);
-    const response = await request.json();
-    signinMessage.innerText = response.message;
-    // formRegister.reset();
-    // var form = document.getElementById('registrationForm');
-    // form.classList.add('hidden');
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    await artSphereApi.users.register(email, password);
+    formRegister.reset();
+    const registerImg = document.querySelector('#register img');
+    registerImg.setAttribute('src', `asset/img/logout.svg`);
+    var form = document.querySelector('#registrationForm');
+    form.classList.add('hidden');  
 });

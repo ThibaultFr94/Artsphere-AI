@@ -32,7 +32,12 @@ export const artSphereApi = {
     login: (email, password) =>
       fetchApi('POST', `users/login`, { email, password })
         .then(response => response.json())
-        .then(json => localStorage.setItem("artsphere-token", json.token)),
+        .then(json => {
+          localStorage.setItem("artsphere-token", json.token);
+          localStorage.setItem("artsphere-username", json.username);
+        }),
+
+
 
     currentUser: () =>
       fetchApi('GET', `users/current`)
