@@ -36,7 +36,8 @@ artSphereApi.ai.generateText(prompt)
         return graff;
       })
       .then((graff) => {
-        artSphereApi.ai.generateImage(generatePromptGraff(graff))
+
+        artSphereApi.ai.generateImage(1, graff,generatePromptGraff(graff))
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

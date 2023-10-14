@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return int;
       })
       .then((int) => {
-        artSphereApi.ai.generateImage(generatePromptInt(int))
+        artSphereApi.ai.generateImage(3, int, generatePromptInt(int))
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

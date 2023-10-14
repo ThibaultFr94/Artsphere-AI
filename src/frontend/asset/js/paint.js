@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return paint;
       })
         .then((paint) => {
-          artSphereApi.ai.generateImage(generatePromptPaint(paint))
+          artSphereApi.ai.generateImage(2, paint, generatePromptPaint(paint))
             .then((response) => {
               if (!response.ok) {
                 throw new Error("Network response was not ok");
