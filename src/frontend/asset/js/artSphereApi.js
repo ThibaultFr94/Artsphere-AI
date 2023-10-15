@@ -7,7 +7,7 @@ const types = {
 
 
 function fetchApi(method, urlPath, body) {
-  return fetch(`http://localhost:3000/${urlPath}`, {
+  return fetch(`${ArtsphereApiUrl}/${urlPath}`, {
     method: method,
     body: body ? JSON.stringify(body) : undefined,
     headers: {
