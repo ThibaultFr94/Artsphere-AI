@@ -33,7 +33,7 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
-  margin-top: 0.5vh;
+
   font-family: "Modeco Trial", Helvetica, sans-serif;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
   -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
@@ -42,7 +42,7 @@ h2 {
 
 .header>:last-child{
   font-size: 1rem;
-margin-top: 2vh;
+margin-top: 1vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ margin-top: 2vh;
   align-items: center;
   gap:17vw;
   flex-wrap: wrap;
-  margin-top: 1vh;
+ margin-top: -1vh;
 }
 
 .circle-link1,
@@ -200,7 +200,7 @@ margin-top: 2vh;
   margin: auto;
   width: 150px;
   height: 50px;
-  top: 10vh;
+  top: 8vh;
   line-height: 50px;
   font-size: 15px;
   background: transparent;
