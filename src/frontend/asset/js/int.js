@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "invent an original name for a pixel art inspired by multiple videos games around the world,you can be inspire by all this words :   Radiance, Glitch,  Brawl, Peak, Playbook, Classics, Realm, Sprites,  Prestige,  Rendition, Glyphs, Brilliance, Craft, Paragon, Glimmer, Beacon, Reflection,  Pioneers, Legacy,, Grid,  Resurgence, Cubes,  Prism,  Blossom, Gem,  Pulse, Code Chronicles ,2 words max.";
+    "Craft a unique pixel art name drawing inspiration from global video games. Blend elements from words like Radiance, Glitch, Brawl, Peak, Playbook, Classics, Realm, Sprites, Prestige, Rendition, Glyphs, Brilliance, Craft, Glimmer, Beacon, Reflection, Pioneers, Legacy, Grid, Resurgence, Cubes, Prism, Blossom, Gem, Pulse, Code, and Chronicles. Limit: 2 words.";
+
     artSphereApi.ai.generateText(prompt)
     .then((response) => {
       if (!response.ok) {

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "invent an original SHORT name for a graffiti inspired by multiple street art around the world,choose randomly and mix 2 words in this list :  Alleys, Pulse, Atlas, Mural,  Spectrum,  Unity, Global Graff, Wall Wanderlust, Symphony, Tagged Tapestry, Vivid Voyage, Cosmic Canvas, Alley Anthology, Spray Saga, World Walls, Glimpses, Painted Planet,  Odyssey,Stories.";
+    "Inspired by diverse street art globally, craft a unique, concise graffiti name. Combine and morph elements from two randomly selected words: Alleys, Pulse, Atlas, Mural, Spectrum, Unity, Global, Graff, Wall, Wanderlust, Symphony, Tagged, Tapestry, Vivid, Voyage, Cosmic, Canvas, Alley, Anthology, Spray, Saga, World, Walls, Glimpses, Painted, Planet, Odyssey, Stories. Be creative!"
     
 artSphereApi.ai.generateText(prompt)
       .then((response) => {
