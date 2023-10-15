@@ -45,12 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(
               "paint-img"
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(
-              document.getElementById("paint-result").textContent,
-              `data:image/png;base64,${data.data[0].b64_json}`,
-              types[2]
-            );
-          });
+               });
       })
       .catch((error) => {
         console.error("Error:", error);

@@ -44,11 +44,7 @@ artSphereApi.ai.generateText(prompt)
             document.getElementById(
               "graff-img"
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(
-              document.getElementById("graff-result").textContent,
-              `data:image/png;base64,${data.data[0].b64_json}`,
-              types[1]
-            );
+          
           });
       })
       .catch((error) => {
