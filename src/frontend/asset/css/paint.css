@@ -110,7 +110,7 @@ h1 {
 
 .main-div > p {
   margin-top: 4vh;
-  font-family: "GOLDEN", Arial, sans-serif;
+  font-family: "LettreClassique", Arial, sans-serif;
   font-size: 2vw;
   font-weight: bolder;
   color: #9c0303;
@@ -120,7 +120,7 @@ h1 {
 }
 p {
   margin-top: 8vh;
-  font-family: "LettreClassique", Arial,  sans-serif;
+  font-family: "GOLDEN", Arial, sans-serif;
   font-weight: bold;
   font-size: 4rem;
   color: #9c0303;
@@ -172,7 +172,7 @@ button::before {
 button:hover {
   transition: 0.5s;
   box-shadow: inset 0px 0px 15px #f1db5b;
-  font-size: 20px;
+  
 }
 
 #paint-result {

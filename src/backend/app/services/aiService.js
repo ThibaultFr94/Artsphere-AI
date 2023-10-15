@@ -3,13 +3,13 @@ import artRepository from '../sql/artRepository.js';
 
 async function getPendingTimeMinutes(currentUser) {   
   if(currentUser.authenticated) {
-    return true;
+    return 0;
   }
   else {
     const currentDate = new Date();
     const lastGenerated = await artRepository.getLastGeneratedDate(currentUser.ip);
     if(!lastGenerated) {
-      return true;
+      return 0;
     }
     const generatedDate = new Date(lastGenerated.generation_date);
     const minuteDelay = (currentDate - generatedDate) / 60_000;
