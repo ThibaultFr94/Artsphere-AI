@@ -354,8 +354,8 @@ margin-top: 1vh;
 #registrationForm {
   z-index: 10000000;
   position: relative;
-  width: 30vw;
-  height: 14vw;
+  width: 33vw;
+  height: 18vw;
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
@@ -422,8 +422,8 @@ h3 {
 #detailedRegistrationForm {
   z-index: 10000001;
   position: relative;
-  width: 30vw;
-  height: 14vw;
+  width: 33vw;
+  height: 18vw;
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
