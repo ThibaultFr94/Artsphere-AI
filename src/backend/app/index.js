@@ -49,7 +49,7 @@ router.post("/ai/generateImage", (req, res) => {
       .json({ error: error.message || error }))
 });
 
-
+// récupérer la liste des types d'oeuvres
 router.get("/ai/list", (req, res) => {
   artRepository.list()
     .then(text => res.json(text))
@@ -85,13 +85,14 @@ app.get('/users/current', (req, res) =>
   res.json(userService.getCurrentUser(req))
 );
 
+// Créer un utilisateur
 router.post('/users/register', async (req, res) =>
   userService.register(req.body.email, req.body.password)
     .then(_ => res.json({ message: "User created" }))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );
-
+// Se connecter
 router.post('/users/login', (req, res) => {
   userService.login(req.body.email, req.body.password)
     .then(token => res.json(token))
