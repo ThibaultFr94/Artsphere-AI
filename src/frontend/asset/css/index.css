@@ -65,7 +65,7 @@ margin-top: 2vh;
   align-items: center;
   gap:17vw;
   flex-wrap: wrap;
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 .circle-link1,
@@ -200,7 +200,7 @@ margin-top: 2vh;
   margin: auto;
   width: 150px;
   height: 50px;
-  top: 12vh;
+  top: 10vh;
   line-height: 50px;
   font-size: 15px;
   background: transparent;
