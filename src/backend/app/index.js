@@ -60,7 +60,7 @@ router.get("/ai/list", (req, res) => {
 
 /////////////////////////// ART ROUTES ///////////////////////////
 
-// récupérer un étudiant par son identifiant : /students/:id
+// get all arts
 router.get("/art/:id", (req, res) =>
   studentRepository.get(req.params.id)
     .then(students => res.json(students.shift()))
@@ -69,7 +69,7 @@ router.get("/art/:id", (req, res) =>
 );
 
 
-// supprimer un étudiant
+// delete an art
 router.delete("/art/delete", (req, res) =>
   artService.delete(req.body.id)
     .then(_ => res.json())
@@ -80,19 +80,19 @@ router.delete("/art/delete", (req, res) =>
 
 /////////////////////////// USER ROUTES ///////////////////////////
 
-// Récupérer l'utilisateur courant
+// get the current user connected
 app.get('/users/current', (req, res) =>
   res.json(userService.getCurrentUser(req))
 );
 
-// Créer un utilisateur
+// Create a new user
 router.post('/users/register', async (req, res) =>
   userService.register(req.body.email, req.body.password)
     .then(_ => res.json({ message: "User created" }))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))
 );
-// Se connecter
+// connect a user
 router.post('/users/login', (req, res) => {
   userService.login(req.body.email, req.body.password)
     .then(token => res.json(token))
@@ -101,7 +101,7 @@ router.post('/users/login', (req, res) => {
 });
 
 
-/////////////////////////// STARTUP ///////////////////////////
+/////////////////////////// STARTUP SERVER ///////////////////////////
 
 // lancer le serveur
 app.listen(process.env.SERVER_PORT, () =>

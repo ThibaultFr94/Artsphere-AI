@@ -11,6 +11,7 @@ body {
   cursor: none;
 }
 
+
 #container {
   position: fixed;
   z-index: -1;
@@ -322,12 +323,13 @@ margin-top: 1vh;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 20px;
-  right: 44vw;
+  bottom: 1vh;  
+  right: 50%;  
+  transform: translateX(50%);  
   list-style-type: none;
-
+  z-index: 1000; 
 }
-#social li {
+  #social li {
   margin: 0 1vw;
 }
 

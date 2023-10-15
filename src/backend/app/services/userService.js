@@ -4,7 +4,7 @@ import userRepository from "../sql/userRepository.js";
 (await import('dotenv')).config();
 
 const tokenSecret = process.env.SERVER_TOKEN_SECRET;
-
+//hashing the password
 const userService = {
   register: async (email, password) => {
     const hash = await argon2.hash(password);
@@ -17,6 +17,7 @@ const userService = {
     if (!connectionInfo) {
       throw "Invalid username or password";
     }
+    // Verify the password
     const authenticated = await argon2.verify(connectionInfo.password, password);
     if (!authenticated){
       throw "Invalid username or password";
@@ -29,7 +30,7 @@ const userService = {
       token: jwt.sign(tokenContent, tokenSecret, { expiresIn: '5000h' })
     }
   },
-
+     // Get the username from a token
   getCurrentUser: (req) => {
     const token = req.headers.authorization?.split(' ')[1];
     try{

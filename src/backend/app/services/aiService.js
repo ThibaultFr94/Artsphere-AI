@@ -1,6 +1,7 @@
 import artRepository from '../sql/artRepository.js';
 (await import('dotenv')).config();
 
+//configuring the timer function
 async function getPendingTimeMinutes(currentUser) {   
   if(currentUser.authenticated) {
     return 0;
@@ -16,7 +17,7 @@ async function getPendingTimeMinutes(currentUser) {
     return minuteDelay > 5 ? 0 : 5 - minuteDelay;
   }
 }
-
+//configuring the AI service - calling the API
 const aiService = {
   generateText: async (prompt, currentUser) => {
     const pendingTime = await getPendingTimeMinutes(currentUser);
@@ -59,6 +60,7 @@ const aiService = {
           response_format: "b64_json",
         })
       })
+      
       const image = await response.json();
       const b64 = image.data[0].b64_json;
       if(image.data[0].b64_json) {

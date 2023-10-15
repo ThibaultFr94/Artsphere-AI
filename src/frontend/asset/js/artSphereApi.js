@@ -16,7 +16,6 @@ function fetchApi(method, urlPath, body) {
     }
   })
 }
-
 const artSphereApi = {
   ai: {
     generateText: (prompt) =>
