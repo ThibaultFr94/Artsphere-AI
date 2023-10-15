@@ -19,6 +19,14 @@ async function getPendingTimeMinutes(currentUser) {
 }
 //configuring the AI service - calling the API
 const aiService = {
+  listOfEachType: async () => {
+    return [
+      ...await artRepository.list(1),
+      ...await artRepository.list(2),
+      ...await artRepository.list(3)
+    ]
+  },
+
   generateText: async (prompt, currentUser) => {
     const pendingTime = await getPendingTimeMinutes(currentUser);
     if(pendingTime > 0) {

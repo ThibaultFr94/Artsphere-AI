@@ -2,7 +2,6 @@
 import express from "express";
 import cors from "cors";
 
-import artRepository from "./sql/artRepository.js";
 import aiService from "./services/aiService.js";
 import userService from "./services/userService.js";
 
@@ -51,7 +50,7 @@ router.post("/ai/generateImage", (req, res) => {
 
 // récupérer la liste des types d'oeuvres
 router.get("/ai/list", (req, res) => {
-  artRepository.list()
+  aiService.listOfEachType()
     .then(text => res.json(text))
     .catch(error => res.status(400)
       .json({ error: error.message || error }))

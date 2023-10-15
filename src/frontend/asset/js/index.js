@@ -19,7 +19,7 @@ loader.load(
 //  se logger sur le site
 const formLogin = document.querySelector('.form-login');
 
-formLogin.addEventListener('submit', async (e) => {
+formLogin?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
@@ -33,7 +33,7 @@ formLogin.addEventListener('submit', async (e) => {
    })   
 });
 //s enregistrer sur le site
-document.getElementById('register').addEventListener('click', function(event) {
+document.getElementById('register')?.addEventListener('click', function(event) {
   event.preventDefault(); 
   if(window.sessionStorage.getItem('user')){
     window.sessionStorage.removeItem('user')
@@ -50,23 +50,23 @@ document.getElementById('register').addEventListener('click', function(event) {
   };
 });
 
-document.getElementById('createAccount').addEventListener('click', function(event) {
+document.getElementById('createAccount')?.addEventListener('click', function(event) {
   event.preventDefault();
   var form = document.getElementById('detailedRegistrationForm');
   form.classList.remove('hidden');
 });
 
-document.querySelector('.close').addEventListener('click', function() {
+document.querySelector('.close')?.addEventListener('click', function() {
   var form = document.getElementById('registrationForm');
   form.classList.add('hidden');
 });
 
-document.querySelector('.closeDetailed').addEventListener('click', function() {
+document.querySelector('.closeDetailed')?.addEventListener('click', function() {
   var form = document.getElementById('detailedRegistrationForm');
   form.classList.add('hidden');
 });
 
-document.querySelector('#detailedRegistrationForm form').addEventListener('submit', function(event) {
+document.querySelector('#detailedRegistrationForm form')?.addEventListener('submit', function(event) {
   const email = document.querySelector('#register-email').value;
   const password = document.querySelector('#register-password').value;
   const confirmPassword = document.querySelector('#register-confirmPassword').value;
