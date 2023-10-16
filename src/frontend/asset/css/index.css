@@ -217,7 +217,7 @@ margin-top: 1vh;
   text-decoration: none;
   justify-content: center;
   transition: opacity 0.5s, background-color 0.5s ease-in-out,
-    border 0.5sease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out,
+    border 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out,
     color 0.5s ease-in, box-shadow 1s ease-in-out;
 }
 
@@ -361,7 +361,6 @@ margin-top: 1vh;
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
-  position: fixed;
   top: 65%;
   left: 50%;
   border-radius: 1vw;
@@ -429,8 +428,6 @@ h3 {
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-  position: fixed;
   top: 65%;
   left: 50%;
   border-radius: 1vw;
@@ -493,12 +490,7 @@ form select[multiple] {
     font-family: "Modeco Trial", Helvetica, sans-serif; 
 }
 
-.styles-container {
-    margin-top: 2vw; 
-}
-.styles-container {
-  margin-bottom: 2vw;
-}
+
 
 #detailedRegistrationForm div > input[type="checkbox"] + label {
   margin-top: 3vw;

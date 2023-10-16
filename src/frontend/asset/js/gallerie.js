@@ -7,16 +7,6 @@ function init() {
       let art = existingImages.filter((img) => img.type_id === 2);
       let design = existingImages.filter((img) => img.type_id === 3);
 
-      // if (graff.length > 4) {
-      //   graff = shuffle(graff);
-      // }
-      // if (art.length > 4) {
-      //   art = shuffle(art);
-      // }
-      // if (design.length > 4) {
-      //   design = shuffle(design);
-      // }
-
       graff.slice(-4).forEach((element, id) => {
         document.getElementById(`g${id}`).src = `data:image/png;base64,${element.image}`;
       });

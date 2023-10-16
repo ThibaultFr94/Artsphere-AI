@@ -16,6 +16,7 @@ loader.load(
     animate();
   }
 );
+
 //  se logger sur le site
 const formLogin = document.querySelector('.form-login');
 
@@ -32,6 +33,7 @@ formLogin?.addEventListener('submit', async (e) => {
     formLogin.reset();
    })   
 });
+
 //s enregistrer sur le site
 document.getElementById('register')?.addEventListener('click', function(event) {
   event.preventDefault(); 
@@ -52,17 +54,17 @@ document.getElementById('register')?.addEventListener('click', function(event) {
 
 document.getElementById('createAccount')?.addEventListener('click', function(event) {
   event.preventDefault();
-  var form = document.getElementById('detailedRegistrationForm');
+  let form = document.getElementById('detailedRegistrationForm');
   form.classList.remove('hidden');
 });
 
 document.querySelector('.close')?.addEventListener('click', function() {
-  var form = document.getElementById('registrationForm');
+  let form = document.getElementById('registrationForm');
   form.classList.add('hidden');
 });
 
 document.querySelector('.closeDetailed')?.addEventListener('click', function() {
-  var form = document.getElementById('detailedRegistrationForm');
+  let form = document.getElementById('detailedRegistrationForm');
   form.classList.add('hidden');
 });
 
@@ -162,14 +164,6 @@ function animate(delta) {
   render(delta);
 }
 
-// let capturer = new Capturer({
-//   verbose: true,
-//   framerate: 60,
-//   quality: 90,
-//   format: "webm",
-//   workersPath: "js/",
-// });
-
 let capturing = false;
 
 function isCapturing(val) {
@@ -210,10 +204,6 @@ function render(delta) {
   uniforms.u_time.value = delta * 0.0005;
   renderer.render(scene, camera);
   renderTexture();
-
-  // if (capturing) {
-  //   capturer.capture(renderer.domElement);
-  // }
 }
 let cursor = document.getElementById('cursor');
 
