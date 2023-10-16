@@ -177,7 +177,7 @@ button{
   }
 }
 
-
+/* tablette */
 @media (max-width: 768px) {
   .image-container {
       flex-wrap: wrap;
@@ -213,8 +213,7 @@ button{
       font-size: 3vw; 
   }
 }
-
-/* Pour les smartphones */
+/* Smartphones */
 @media (max-width: 480px) {
   .image-container {
       flex-direction: column;
@@ -226,13 +225,7 @@ button{
       width: 80%; 
       margin: 10px 0; 
   }
-  .section-design > h3 > button  > img
-  .section-art > h3 > button  > img
-  .section-design > h3 > button  > img{
-    width: 6vw;
-    height: 5vw;
-    margin-top: 10vh;
-  }
+
   h1 {
       font-size: 12vw; 
   }
