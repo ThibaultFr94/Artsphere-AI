@@ -43,7 +43,7 @@ document.getElementById('register')?.addEventListener('click', function(event) {
     registerImg.setAttribute('src', `asset/img/profile.svg`);
   } 
   else {
-      var form = document.getElementById('registrationForm');
+      let form = document.getElementById('registrationForm');
       if (form.classList.contains('hidden')) {
           form.classList.remove('hidden'); 
       } else {
@@ -81,7 +81,7 @@ document.querySelector('#detailedRegistrationForm form')?.addEventListener('subm
     artSphereApi.users.register(email, password).then(function(){
       const registerImg = document.querySelector('#register img');
         registerImg.setAttribute('src', `asset/img/logout.svg`);
-        var form = document.querySelector('#registrationForm');
+        let form = document.querySelector('#registrationForm');
         form.classList.add('hidden'); 
      });
   } 

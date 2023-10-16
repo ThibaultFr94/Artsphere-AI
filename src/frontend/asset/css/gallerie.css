@@ -62,7 +62,7 @@ h1 {
   text-align: center;
   top: -10%;
   font-size: 10vw; 
-  animation: glow 5s ease-in-out infinite;
+  animation: textshadow 5s ease-in-out infinite;
   -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.842);
 }
 
@@ -79,7 +79,7 @@ h2 {
   text-shadow: 1px 1px 4px rgb(255, 255, 255);
   -webkit-text-stroke: 0.01px rgba(92, 92, 92, 0.374);
   -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
-;
+  animation: textshadow 5s ease-in-out infinite;
 }
 
 .section-graff > h3 {
@@ -120,43 +120,6 @@ h2 {
   justify-content: center;
   gap: 1vw;
 }
-
-.section-graff > h3 > button > img {
-  width: 4vw;
-  height: 3.5vw;
-  transition: 0.5s ease;
-  margin-top:  1.8vw;
-  animation: glow 5s ease-in-out infinite;
-}
-.section-art > h3 > button  > img {
-  margin-top: 2vw;
-  width: 4vw;
-  height: 3.5vw;
-  transition: 0.5s ease;
-  align-items: center;
-  animation: glow 5s ease-in-out infinite;
-}
-.section-design > h3 > button  > img {
-  width: 4vw;
-  height: 3.5vw;
-  transition: 0.5s ease;
-  margin-top: 30px;
-  animation: glow 5s ease-in-out infinite;
-}
-
-.section-graff > h3 > button  > img:hover {
-  transition: 0.5s ease;
-  transform: scale(1.2);
-}
-.section-art > h3 >  button > img:hover {
-  transition: 0.5s ease;
-  transform: scale(1.2);
-}
-.section-design > h3 > button > img:hover {
-  transition: 0.5s ease;
-  transform: scale(1.2);
-}
-
 
 .image-container {
   display: flex;

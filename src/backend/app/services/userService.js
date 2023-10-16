@@ -15,12 +15,12 @@ const userService = {
   login: async (email, password) => {
     const connectionInfo = await userRepository.getConnectionInfo(email);
     if (!connectionInfo) {
-      throw "Invalid username or password";
+      throw new Error("Invalid username or password");
     }
     // Verify the password
     const authenticated = await argon2.verify(connectionInfo.password, password);
     if (!authenticated){
-      throw "Invalid username or password";
+      throw new RangeError( "Invalid username or password");
     }
 
     const tokenContent = { authenticated, username: email, id: connectionInfo.id };
