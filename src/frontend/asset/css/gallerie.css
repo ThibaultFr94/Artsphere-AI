@@ -83,7 +83,7 @@ h2 {
 }
 
 .section-graff > h3 {
-  margin-top: 10vh ;
+  margin-top: 6vh ;
   text-align: center;
   color: #ffffff;
   font-size:4vw;
@@ -95,6 +95,7 @@ h2 {
   gap: 1vw;
   letter-spacing: 4px ;
   border-top: 0.4vw dotted #ffffff; 
+  padding-top: 20px;
 }
 .section-art > h3 {
   margin-top: 3vh ;
@@ -187,10 +188,7 @@ button{
       width: 35%; 
   }
 
-  #shuffle-design{
-    width: 3vw;
-    height: 2.5vw;
-  }
+
 
   h1 {
       font-size: 10vw; 
@@ -227,7 +225,7 @@ button{
   }
 
   h1 {
-      font-size: 12vw; 
+      font-size: 11vw; 
   }
 
   h2 {
@@ -238,7 +236,7 @@ button{
   }
 
   #home-btn {
-      font-size: 4vw; 
+      font-size: 3vw; 
   }
 }
 
