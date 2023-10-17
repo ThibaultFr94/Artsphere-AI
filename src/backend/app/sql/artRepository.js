@@ -1,3 +1,5 @@
+// permet d'executer la requete sql pour la table art
+
 import executeQuery from './executeQuery.js';
 
 const artRepository = {

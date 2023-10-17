@@ -1,4 +1,6 @@
 
+// Interactions avec l'API Artsphere et Définitions des Types par section
+
 const types = {
   1: "section graff",
   2: "section art",

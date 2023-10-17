@@ -1,3 +1,5 @@
+// set up timer and generation of text and image
+
 import artRepository from '../sql/artRepository.js';
 (await import('dotenv')).config();
 
