@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>ArtSphere-AI</title>
-<link rel="stylesheet" href="asset/css/index.css">
-<link rel="shortcut icon" href="asset/img/Art.ico" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>ArtSphere-AI</title>
+  <link rel="stylesheet" href="asset/css/index.css">
+  <link rel="shortcut icon" href="asset/img/Art.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
-<script id="vertexShader" type="x-shader/x-vertex">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+  <script id="vertexShader" type="x-shader/x-vertex">
     void main() {
         gl_Position = vec4( position, 1.0 );
     }
 </script>
-<script id="fragmentShader" type="x-shader/x-fragment">
+  <script id="fragmentShader" type="x-shader/x-fragment">
   uniform vec2 u_resolution;
   uniform vec2 u_mouse;
   uniform float u_time;
@@ -110,56 +112,65 @@ vec3 blur(sampler2D sp, vec2 uv, vec2 scale) {
     
   }
 </script>
-<div id="container" touch-action="none"></div>
-<div class="header">
-  <a href="" id="register" >
-    <img src="asset/img/profile.svg" alt="">
-  </a>
-  <h1>Artsphere-AI</h1>
-  <h2>Inspiration generator</h2>
-  <br>
-  <p class="desc">Choose one of the spaces in one of the spheres below and use your creations to improve your art.<br> 
-  Limit to one generation every 1 minute, register if you want to generate ad infinitum.  </p>
-</div>
-<div id="registrationForm" class="hidden">
-  <h3>Sign in</h3>
-  <p class="close">X</p>
-  <form class="form-login">
-      <input id ="email" type="text" placeholder="E-Mail" name="email" required>
-      <input id ="password" type="text" placeholder="Password" name="password" required>
-      <button type="submit">Connexion</button>
-  </form>
-  <a href="" id="createAccount" class="create">Create an account</a>
-</div>
-<div id="detailedRegistrationForm" class="hidden">
-  <h3>Create an account</h3>
-  <p class="signin-message"></p>
-  <p class="closeDetailed">X</p>
-  <form class="form-register">
-    <input id="register-email" type="text" placeholder="E-Mail" required name="email">
-    <input id="register-password" type="password" placeholder="Password" required name="password">
-    <input id="register-confirmPassword" type="password" placeholder="Confirm password" required  name="confirmPassword">
-    <button id  type="submit">Register</button>
-    </div>
-  </form>
-</div>
-<div class="scene">
-<div class="center-container">
-  <div class="circles-container">
-    <a href="graff.html" class="circle-link1"><span class="circle-text1">Graff</span><img src="asset/img/Graff.svg" alt=""></a>
-    <a href="paint.html" class="circle-link2"><span class="circle-text2">Art</span><img src="asset/img/Art.svg" alt=""></a>
-    <a href="int.html" class="circle-link3"><span class="circle-text3">Pixel</span><img src="asset/img/pixel.svg" alt=""></a>
+  <div id="container" touch-action="none"></div>
+  <div class="header">
+    <a href="" id="register">
+      <img src="asset/img/profile.svg" alt="">
+    </a>
+    <h1>Artsphere-AI</h1>
+    <h2>Inspiration generator</h2>
+    <br>
+    <p class="desc">Choose one of the spaces in one of the spheres below and use your creations to improve your art.<br>
+      <br>
+      Limit to one generation every 5 minutes, register for generate ad infinitum ! </p>
   </div>
-  <a href="gallerie.html" class="styled-button">Galer-IA</a>
-</div>
-<ul id="social">
-  <li><a href="https://www.instagram.com/"><img src="asset/img/instagram.svg" alt=""></a></li>
-  <li><a href="https://fr-fr.facebook.com/"><img src="asset/img/face.svg" alt=""></a></li>
-  <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"><img src="asset/img/link.svg" alt=""></a></li>
-  <li class="x"><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="asset/img/X.svg" alt=""></a></li>
-</ul>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/ccapture.js'></script>
-<script src="asset/js/artSphereApi.js"></script>
-<script src="asset/js/index.js"></script>
- </body>
+  <div id="registrationForm" class="hidden">
+    <h3>Sign in</h3>
+    <p class="close">X</p>
+    <form class="form-login" onsubmit="return false;">
+      <input id="email" type="text" placeholder="E-Mail" name="email" required>
+      <input id="password" type="password" placeholder="Password" name="password" required>
+      <button type="submit">Connexion</button>
+    </form>
+    <a href="" id="createAccount" class="create">Create an account</a>
+  </div>
+  <div id="detailedRegistrationForm" class="hidden">
+    <h3>Create an account</h3>
+    <p class="signin-message"></p>
+    <p class="closeDetailed">X</p>
+    <form class="form-register" onsubmit="return false;">
+      <input id="register-email" type="text" placeholder="E-Mail" required name="email">
+      <input id="register-password" type="password" placeholder="Password" required name="password">
+      <input id="register-confirmPassword" type="password" placeholder="Confirm password" required
+        name="confirmPassword">
+      <button id type="submit">Register</button>
+  </div>
+  </form>
+  </div>
+  <div class="scene">
+    <div class="center-container">
+      <div class="circles-container">
+        <a href="graff.html" class="circle-link1"><span class="circle-text1">Graff</span><img src="asset/img/Graff.svg"
+            alt=""></a>
+        <a href="paint.html" class="circle-link2"><span class="circle-text2">Art</span><img src="asset/img/Art.svg"
+            alt=""></a>
+        <a href="int.html" class="circle-link3"><span class="circle-text3">Pixel</span><img src="asset/img/pixel.svg"
+            alt=""></a>
+      </div>
+      <a href="gallerie.html" class="styled-button">Galer-IA</a>
+    </div>
+    <ul id="social">
+      <li><a href="https://www.instagram.com/"><img src="asset/img/instagram.svg" alt=""></a></li>
+      <li><a href="https://fr-fr.facebook.com/"><img src="asset/img/face.svg" alt=""></a></li>
+      <li><a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"><img
+            src="asset/img/link.svg" alt=""></a></li>
+      <li class="x"><a href="https://twitter.com/X?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+            src="asset/img/X.svg" alt=""></a></li>
+    </ul>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/ccapture.js'></script>
+    <script src="asset/js/module_env.js"></script>
+    <script src="asset/js/artSphereApi.js"></script>
+    <script src="asset/js/index.js"></script>
+</body>
+
 </html>

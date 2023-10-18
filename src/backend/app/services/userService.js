@@ -1,10 +1,13 @@
+
+// User Authentication and Token Management Service
+
 import argon2 from 'argon2';
 import jwt from 'jsonwebtoken';
 import userRepository from "../sql/userRepository.js";
 (await import('dotenv')).config();
 
 const tokenSecret = process.env.SERVER_TOKEN_SECRET;
-
+//hashing the password
 const userService = {
   register: async (email, password) => {
     const hash = await argon2.hash(password);
@@ -15,11 +18,12 @@ const userService = {
   login: async (email, password) => {
     const connectionInfo = await userRepository.getConnectionInfo(email);
     if (!connectionInfo) {
-      throw "Invalid username or password";
+      throw new Error("Invalid username or password");
     }
+    // Verify the password
     const authenticated = await argon2.verify(connectionInfo.password, password);
     if (!authenticated){
-      throw "Invalid username or password";
+      throw new RangeError( "Invalid username or password");
     }
 
     const tokenContent = { authenticated, username: email, id: connectionInfo.id };
@@ -29,7 +33,7 @@ const userService = {
       token: jwt.sign(tokenContent, tokenSecret, { expiresIn: '5000h' })
     }
   },
-
+     // Get the username from a token
   getCurrentUser: (req) => {
     const token = req.headers.authorization?.split(' ')[1];
     try{

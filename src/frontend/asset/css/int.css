@@ -129,7 +129,7 @@ button:hover {
   left:1.56vw;
   font-family: "Bemock", Arial, sans-serif;
   font-weight: bolder;
-  color: #42a32f;;
+  color: #42a32f;
   transition:0.5s ease;  
 }
 
@@ -152,7 +152,7 @@ font-weight: bolder;
   top: 1.56vw;
   right: 1.56vw;
   font-family:"Minecraft", Arial, sans-serif;
-  color: #42a32f;;
+  color: #42a32f;
   transition: 0.5s ease;
   
 }

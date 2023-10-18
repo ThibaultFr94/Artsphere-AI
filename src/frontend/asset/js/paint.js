@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-      "Invent a name for a painting inspired by great paintings of great painters, 2 words max.";
+    "Generate a distinct two-word title for a canvas, channeling the essence of legendary masterpieces. Blend adjectives like ethereal, timeless, evocative, vibrant, haunting, serene, luminous, melancholic, surreal, passionate, muted, radiant, transcendent, bold, dreamy, stark, and introspective with artistic elements or concepts. two words maximum.";
+
       artSphereApi.ai.generateText(prompt)
       .then((response) => {
         if (!response.ok) {
@@ -44,12 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(
               "paint-img"
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
-            saveImageToLocalStorage(
-              document.getElementById("paint-result").textContent,
-              `data:image/png;base64,${data.data[0].b64_json}`,
-              types[2]
-            );
-          });
+               });
       })
       .catch((error) => {
         console.error("Error:", error);

@@ -171,7 +171,7 @@ button::before {
 
 button:hover {
   transition: 0.5s;
-  box-shadow: inset 0px 0px 15px #f1db5b;
+  box-shadow: inset 0px 0px 15px #7a1c1c;
   
 }
 

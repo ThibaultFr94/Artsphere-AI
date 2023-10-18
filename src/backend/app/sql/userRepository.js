@@ -1,3 +1,5 @@
+// /permet d'executer la requete sql pour la table user
+
 import executeQuery from './executeQuery.js';
 
 const userRepository = {

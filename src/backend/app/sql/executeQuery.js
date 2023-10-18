@@ -1,4 +1,4 @@
-
+// permet de se connecter à la base de données
 import mysql from "mysql2/promise";
 (await import('dotenv')).config();
 

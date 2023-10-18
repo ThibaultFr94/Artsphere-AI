@@ -304,3 +304,30 @@ button img {
       0 0 40px #0032ca;
   }
 }
+/* tablettes */
+@media (max-width: 768px) {
+  h1{
+    font-size: 10vw;
+  }
+  h2{
+    font-size: 4vw;
+  }
+
+ 
+  html {
+    margin:  5px 5px 5px 5px;
+  }
+} 
+/* Smartphones */
+@media (max-width: 480px) {
+  html {
+  margin:  5px 5px 5px 5px;
+  }
+
+}
+
+h2{
+  font-size: 4vw;
+}
+
+

@@ -1,4 +1,6 @@
 
+// Interactions avec l'API Artsphere et Définitions des Types par section
+
 const types = {
   1: "section graff",
   2: "section art",
@@ -7,7 +9,7 @@ const types = {
 
 
 function fetchApi(method, urlPath, body) {
-  return fetch(`http://localhost:3000/${urlPath}`, {
+  return fetch(`${ArtsphereApiUrl}/${urlPath}`, {
     method: method,
     body: body ? JSON.stringify(body) : undefined,
     headers: {
@@ -16,7 +18,6 @@ function fetchApi(method, urlPath, body) {
     }
   })
 }
-
 const artSphereApi = {
   ai: {
     generateText: (prompt) =>
