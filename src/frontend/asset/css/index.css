@@ -5,13 +5,12 @@
   max-width: 100%;
 }
 html {
-  background-color :black;
+  background-color: black;
   padding-bottom: 5px;
 }
 body {
   cursor: none;
 }
-
 
 #container {
   position: fixed;
@@ -39,12 +38,11 @@ h2 {
   font-family: "Modeco Trial", Helvetica, sans-serif;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);
   -webkit-text-shadow: 15px 15px 20px rgba(255, 255, 255, 0.74);
-
 }
 
-.header>:last-child{
+.header > :last-child {
   font-size: 1rem;
-margin-top: 1vh;
+  margin-top: 1vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -65,9 +63,9 @@ margin-top: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:17vw;
+  gap: 17vw;
   flex-wrap: wrap;
- margin-top: -1vh;
+  margin-top: -1vh;
 }
 
 .circle-link1,
@@ -167,14 +165,12 @@ margin-top: 1vh;
   background-image: none;
 }
 
-
 .circle-link1:hover .circle-text1 {
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
   transition: background-color 1s ease-in-out, opacity 0.5s, color 1s ease-in,
     color 0s ease-out, font-size 1s ease-in-out;
   opacity: 100%;
-  
 }
 
 .circle-link2:hover .circle-text2 {
@@ -318,19 +314,18 @@ margin-top: 1vh;
   background: #000;
 }
 
-
 #social {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 1vh;  
-  right: 50%;  
-  transform: translateX(50%);  
+  bottom: 1vh;
+  right: 50%;
+  transform: translateX(50%);
   list-style-type: none;
-  z-index: 1000; 
+  z-index: 1000;
 }
-  #social li {
+#social li {
   margin: 0 1vw;
 }
 
@@ -365,7 +360,7 @@ margin-top: 1vh;
   top: 67%;
   left: 50%;
   border-radius: 1vw;
-  border:0.1vw solid white;
+  border: 0.1vw solid white;
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 1vw;
@@ -417,8 +412,8 @@ h3 {
 
 .create {
   text-decoration: none;
-  color : white;
- margin-top: 0px;
+  color: white;
+  margin-top: 0px;
 }
 
 #detailedRegistrationForm {
@@ -441,7 +436,6 @@ h3 {
     box-shadow 1s ease-in-out;
   cursor: pointer;
 }
-
 
 .closeDetailed {
   position: absolute;
@@ -478,20 +472,18 @@ form select[multiple] {
 #detailedRegistrationForm form > div,
 #detailedRegistrationForm form > input,
 #detailedRegistrationForm form > button {
-  margin-bottom: 1vw; 
+  margin-bottom: 1vw;
 }
 
 #detailedRegistrationForm form > button {
-  margin-top: 2vw; 
+  margin-top: 2vw;
 }
 
 #detailedRegistrationForm input[type="text"],
 #detailedRegistrationForm input[type="password"] {
-    margin-bottom: 2vw;
-    font-family: "Modeco Trial", Helvetica, sans-serif; 
+  margin-bottom: 2vw;
+  font-family: "Modeco Trial", Helvetica, sans-serif;
 }
-
-
 
 #detailedRegistrationForm div > input[type="checkbox"] + label {
   margin-top: 3vw;
@@ -564,10 +556,10 @@ form select[multiple] {
 
 /* tablette */
 @media (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 10vw;
   }
-  h2{
+  h2 {
     font-size: 4vw;
   }
 
@@ -575,33 +567,31 @@ form select[multiple] {
     position: absolute;
     top: 1.56vw;
     right: 1.56vw;
-    width: 5vw
+    width: 5vw;
   }
-  #desc{
+  #desc {
     font-size: 1.5rem;
   }
 
   html {
-    margin:  5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
   }
   #social {
-    display: none; 
-}
-/* Smartphones */
-@media (max-width: 480px) {
-  html {
-  margin:  5px 5px 5px 5px;
+    display: none;
   }
-  #social {
-    display: none; 
-  }
-  #register img {
-    position: absolute;
-    top: 1.56vw;
-    right: 1.56vw;
-    width: 7vw
+  /* Smartphones */
+  @media (max-width: 480px) {
+    html {
+      margin: 5px 5px 5px 5px;
+    }
+    #social {
+      display: none;
+    }
+    #register img {
+      position: absolute;
+      top: 1.56vw;
+      right: 1.56vw;
+      width: 7vw;
+    }
   }
 }
-
-}
-

@@ -12,12 +12,10 @@ body {
   background-size: cover;
 }
 
-
 .main-div {
   text-align: center;
   justify-content: center;
   align-items: center;
-
 }
 
 img {
@@ -25,7 +23,7 @@ img {
 }
 
 h1 {
-  font-family: "LLPixel", Arial,  sans-serif;
+  font-family: "LLPixel", Arial, sans-serif;
   font-weight: bolder;
   font-size: 6.5vw;
   color: #42a32f;
@@ -34,7 +32,7 @@ h1 {
 }
 
 .main-div > p {
-  margin-top:4vh; 
+  margin-top: 4vh;
   font-family: "Minecraft", Arial, sans-serif;
   font-size: 2vw;
   color: #42a32f;
@@ -44,14 +42,14 @@ h1 {
 p {
   font-family: "Minecraft", Arial, sans-serif;
   font-weight: bold;
-  color:#42a32f;
+  color: #42a32f;
   text-align: inherit;
   font-size: 1vw;
-  margin-top:4vh; 
+  margin-top: 4vh;
 }
 
 .loader {
-  background:#7ce467;
+  background: #7ce467;
   width: 2.5vw;
   height: 2.5vw;
   position: absolute;
@@ -77,7 +75,7 @@ p {
 }
 
 button {
-  margin-top:4vh; 
+  margin-top: 4vh;
   font-family: "LLPixel", Arial, sans-serif;
   font-weight: thin;
   width: 14vw;
@@ -124,37 +122,36 @@ button:hover {
   position: absolute;
   text-decoration: none;
   border: none;
-  font-size:2vw;
-  top:1.56vw;
-  left:1.56vw;
+  font-size: 2vw;
+  top: 1.56vw;
+  left: 1.56vw;
   font-family: "Bemock", Arial, sans-serif;
   font-weight: bolder;
   color: #42a32f;
-  transition:0.5s ease;  
+  transition: 0.5s ease;
 }
 
 #home-btn:hover {
   position: absolute;
   top: 2.08vw;
   left: 2.08vw;
-  font-size:  2.5vw;
+  font-size: 2.5vw;
   border: none;
   font-family: "Bemock", Arial, sans-serif;
   transition: 0.5s ease;
-font-weight: bolder;
+  font-weight: bolder;
   text-shadow: 13px 13px 13px #10121021;
 }
 
 #gallery-btn {
   position: absolute;
   text-decoration: none;
-  font-size:  2vw;
+  font-size: 2vw;
   top: 1.56vw;
   right: 1.56vw;
-  font-family:"Minecraft", Arial, sans-serif;
+  font-family: "Minecraft", Arial, sans-serif;
   color: #42a32f;
   transition: 0.5s ease;
-  
 }
 
 #gallery-btn:hover {
@@ -162,29 +159,28 @@ font-weight: bolder;
   border: none;
   top: 2.08vw;
   right: 2.08vw;
-  font-size:  2.5vw;
+  font-size: 2.5vw;
   font-family: "Minecraft", Arial, sans-serif;
   transition: 0.5s ease;
 
   text-shadow: 13px 13px 13px #1012101d;
-}  
-  
+}
 
 #int-result {
-  font-size:3rem;
- color: #54ee35;
+  font-size: 3rem;
+  color: #54ee35;
   font-family: "Karmatic Arcade", Arial, sans-serif;
 }
 
 .int-img-hidden {
   width: 20.83vw;
-  height: 20.83vw; 
- 
+  height: 20.83vw;
+
   visibility: hidden;
 }
 
 #int-img {
-  margin-top:4vh; 
+  margin-top: 4vh;
   position: relative;
   border-radius: 15px;
   border: 6px solid #7ce467;
@@ -222,7 +218,6 @@ font-weight: bolder;
 }
 
 .button-link:hover {
-  
   box-shadow: 13px 13px 13px rgba(0, 0, 0, 0.92);
 }
 

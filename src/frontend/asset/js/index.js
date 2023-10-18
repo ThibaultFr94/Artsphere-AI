@@ -113,8 +113,8 @@ document
         const registerImg = document.querySelector("#register img");
         registerImg.setAttribute("src", `asset/img/logout.svg`);
         // Cache le PopUp
-        let registrationForm = document.getElementById('registrationForm');
-        registrationForm.classList.add('hidden');  
+        let registrationForm = document.getElementById("registrationForm");
+        registrationForm.classList.add("hidden");
         let detailedRegistrationForm = document.getElementById(
           "detailedRegistrationForm"
         );

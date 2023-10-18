@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("paint-btn").addEventListener("click", generatePaint);
 
@@ -12,9 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-    "Generate a distinct two-word title for a canvas, channeling the essence of legendary masterpieces. Blend adjectives like ethereal, timeless, evocative, vibrant, haunting, serene, luminous, melancholic, surreal, passionate, muted, radiant, transcendent, bold, dreamy, stark, and introspective with artistic elements or concepts. two words maximum.";
+      "Generate a distinct two-word title for a canvas, channeling the essence of legendary masterpieces. Blend adjectives like ethereal, timeless, evocative, vibrant, haunting, serene, luminous, melancholic, surreal, passionate, muted, radiant, transcendent, bold, dreamy, stark, and introspective with artistic elements or concepts. two words maximum.";
 
-      artSphereApi.ai.generateText(prompt)
+    artSphereApi.ai
+      .generateText(prompt)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((data) => {
-        if(data.error){
+        if (data.error) {
           throw new Error(data.error);
         }
         const paint = data.choices[0].message.content;
@@ -36,15 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error(error);
         alert(error);
       })
-        .then((paint) => {
-          artSphereApi.ai.generateImage(2, paint, generatePromptPaint(paint))
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error("Network response was not ok");
-              }
-              return response.json();
-            })
-      
+      .then((paint) => {
+        artSphereApi.ai
+          .generateImage(2, paint, generatePromptPaint(paint))
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+
           .then((data) => {
             divImg.classList.remove("loader");
             img.classList.remove("paint-img-hidden");
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(
               "paint-img"
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
-               });
+          });
       })
       .catch((error) => {
         console.error("Error:", error);

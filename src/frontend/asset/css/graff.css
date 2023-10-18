@@ -5,11 +5,9 @@
   max-width: 100%;
 }
 
-
 body {
   background: #4e58e0;
 }
-
 
 .main-div {
   text-align: center;
@@ -20,10 +18,10 @@ body {
 h1 {
   font-weight: lighter;
   font-family: "Computer Regular", Arial, sans-serif;
-  font-size: 6.5vw; 
+  font-size: 6.5vw;
   color: #ffffff;
   animation: textshadow 5s ease-in-out infinite;
- letter-spacing: 6px ;
+  letter-spacing: 6px;
 }
 
 .main-div > p {
@@ -31,9 +29,9 @@ h1 {
   font-size: 2vw;
   color: #fff;
   width: 100vw;
-  margin-top:6vh ;
+  margin-top: 6vh;
   animation: textshadow 5s ease-in-out infinite;
-  letter-spacing: 6px ;
+  letter-spacing: 6px;
 }
 p {
   font-family: "Graffiti City", Arial, sans-serif;
@@ -41,7 +39,7 @@ p {
   font-size: 5rem;
   color: #ffffff;
   width: 100vw;
-  margin-top:4vh ;
+  margin-top: 4vh;
 }
 button {
   font-family: "Futurama", Arial, sans-serif;
@@ -57,7 +55,7 @@ button {
   font-size: 2vw;
   cursor: pointer;
   z-index: 2000;
-   margin-top:4vh ;
+  margin-top: 4vh;
 }
 button::after {
   content: "";
@@ -102,13 +100,13 @@ button:hover {
 
 .graff-img-hidden {
   width: 20.83vw;
-  height: 20.83vw; 
+  height: 20.83vw;
   visibility: hidden;
 }
 
 .loader {
   position: absolute;
-  top: 35vw; 
+  top: 35vw;
   left: 50vw;
   transform: translate(-50%, -50%) rotateZ(45deg);
   perspective: 1000px;
@@ -121,7 +119,6 @@ button:hover {
   align-items: center;
   animation: textshadow 5s ease-in-out infinite;
 }
-
 
 .loader:before,
 .loader:after {
@@ -144,13 +141,12 @@ button:hover {
 }
 
 #graff-img {
-  margin-top:2vh ;
+  margin-top: 2vh;
   border-radius: 15px;
   border: 3px solid #5bbdfe;
   border-style: solid;
   animation: glow 5s ease-in-out infinite;
 }
-
 
 button img {
   width: 100%;
@@ -161,12 +157,12 @@ button img {
 
 #home-btn {
   display: flex;
-  font-family: "Bemock", Arial,  sans-serif;
+  font-family: "Bemock", Arial, sans-serif;
   position: absolute;
   outline: none;
   color: white;
   transition: 1s;
-  font-size:  2vw;
+  font-size: 2vw;
   top: 1.56vw;
   left: 1.56vw;
   text-decoration: none;
@@ -177,9 +173,9 @@ button img {
 #home-btn:hover {
   top: 2.08vw;
   left: 2.08vw;
-  font-size:  2.5vw;
+  font-size: 2.5vw;
   transition: 0.5s ease;
-  font-family: "Bemock",  Arial, sans-serif;
+  font-family: "Bemock", Arial, sans-serif;
   position: absolute;
 }
 
@@ -193,7 +189,7 @@ button img {
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  font-size:  2vw;
+  font-size: 2vw;
   top: 1.56vw;
   right: 1.56vw;
 }
@@ -218,8 +214,6 @@ button img {
   cursor: pointer;
   transition: 0.5s;
 }
-
-
 
 @keyframes rotate {
   0% {
@@ -306,28 +300,24 @@ button img {
 }
 /* tablettes */
 @media (max-width: 768px) {
-  h1{
+  h1 {
     font-size: 10vw;
   }
-  h2{
+  h2 {
     font-size: 4vw;
   }
 
- 
   html {
-    margin:  5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
   }
-} 
+}
 /* Smartphones */
 @media (max-width: 480px) {
   html {
-  margin:  5px 5px 5px 5px;
+    margin: 5px 5px 5px 5px;
   }
-
 }
 
-h2{
+h2 {
   font-size: 4vw;
 }
-
-

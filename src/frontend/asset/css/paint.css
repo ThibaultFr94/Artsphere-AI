@@ -5,9 +5,8 @@
   max-width: 100%;
 }
 
-
 body {
-background-color: #f1db5b;
+  background-color: #f1db5b;
   background-position: fill;
   background-repeat: repeat;
   background-size: cover;
@@ -21,9 +20,9 @@ background-color: #f1db5b;
 
 #home-btn {
   display: flex;
-  font-family: "Bemock",  Arial, sans-serif;
+  font-family: "Bemock", Arial, sans-serif;
   position: absolute;
-  font-size:  2vw;
+  font-size: 2vw;
   top: 1.56vw;
   left: 1.56vw;
   outline: none;
@@ -32,15 +31,13 @@ background-color: #f1db5b;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-  
 }
 #home-btn:hover {
   top: 2.08vw;
   left: 2.08vw;
-  font-size:  2.5vw;
-  font-family: "Bemock",Arial, sans-serif;
+  font-size: 2.5vw;
+  font-family: "Bemock", Arial, sans-serif;
   transition: 0.5s ease;
-  
 }
 
 #home-btn::after {
@@ -61,7 +58,7 @@ background-color: #f1db5b;
   display: flex;
   font-family: "LettreClassique", Arial, sans-serif;
   position: absolute;
-  font-size:  2vw;
+  font-size: 2vw;
   top: 1.56vw;
   right: 1.56vw;
   outline: none;
@@ -70,7 +67,6 @@ background-color: #f1db5b;
   text-decoration: none;
   cursor: pointer;
   z-index: 2000;
-
 }
 
 #gallery-btn:hover {
@@ -80,7 +76,6 @@ background-color: #f1db5b;
   cursor: pointer;
   font-family: "LettreClassique", Arial, sans-serif;
   transition: 0.5s ease;
- 
 }
 
 #gallery-btn::after {
@@ -115,8 +110,6 @@ h1 {
   font-weight: bolder;
   color: #9c0303;
   width: 100vw;
- 
- 
 }
 p {
   margin-top: 8vh;
@@ -126,8 +119,6 @@ p {
   color: #9c0303;
   width: 100vw;
   text-align: inherit;
-  
-
 }
 button {
   font-family: "LettreClassique", Arial, sans-serif;
@@ -172,7 +163,6 @@ button::before {
 button:hover {
   transition: 0.5s;
   box-shadow: inset 0px 0px 15px #7a1c1c;
-  
 }
 
 #paint-result {
@@ -181,7 +171,7 @@ button:hover {
 
 .paint-img-hidden {
   width: 20.83vw;
-  height: 20.83vw; 
+  height: 20.83vw;
   visibility: hidden;
 }
 
@@ -294,7 +284,8 @@ button:hover {
 }
 @keyframes textshadow {
   0% {
-    text-shadow: 0 0 0.5px #0000008b,0 0 1px #0000008b, 0 0 2px #0000008b, 0 0 3px #0000008b;
+    text-shadow: 0 0 0.5px #0000008b, 0 0 1px #0000008b, 0 0 2px #0000008b,
+      0 0 3px #0000008b;
   }
   20% {
     text-shadow: 0 0 0.1px #0000008b, 0 0 0.5px #0000008b, 0 0 1px #0000008b,
@@ -317,7 +308,3 @@ button:hover {
       0 0 2px #0000008b, 0 0 3px #0000008b;
   }
 }
-
-
-
-

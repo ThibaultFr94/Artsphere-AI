@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
     divImg.classList.add("loader");
 
     const prompt =
-    "Inspired by diverse street art globally, craft a unique, concise graffiti name. Combine and morph elements from two randomly selected words: Alleys, Pulse, Atlas, Mural, Spectrum, Unity, Global, Graff, Wall, Wanderlust, Symphony, Tagged, Tapestry, Vivid, Voyage, Cosmic, Canvas, Alley, Anthology, Spray, Saga, World, Walls, Glimpses, Painted, Planet, Odyssey, Stories. Be creative!"
-    
-artSphereApi.ai.generateText(prompt)
+      "Inspired by diverse street art globally, craft a unique, concise graffiti name. Combine and morph elements from two randomly selected words: Alleys, Pulse, Atlas, Mural, Spectrum, Unity, Global, Graff, Wall, Wanderlust, Symphony, Tagged, Tapestry, Vivid, Voyage, Cosmic, Canvas, Alley, Anthology, Spray, Saga, World, Walls, Glimpses, Painted, Planet, Odyssey, Stories. Be creative!";
+
+    artSphereApi.ai
+      .generateText(prompt)
       .then((response) => {
         return response.json();
-    
       })
       .then((data) => {
-        if(data.error){
+        if (data.error) {
           throw new Error(data.error);
         }
         const graff = data.choices[0].message.content;
@@ -34,8 +34,8 @@ artSphereApi.ai.generateText(prompt)
         alert(error);
       })
       .then((graff) => {
-
-        artSphereApi.ai.generateImage(1, graff,generatePromptGraff(graff))
+        artSphereApi.ai
+          .generateImage(1, graff, generatePromptGraff(graff))
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
@@ -49,9 +49,7 @@ artSphereApi.ai.generateText(prompt)
             document.getElementById(
               "graff-img"
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
-          
           });
       });
-      
   }
 });
