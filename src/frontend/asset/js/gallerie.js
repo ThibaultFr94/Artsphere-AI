@@ -32,15 +32,3 @@ function onClickShuffle(type, letter) {
 
 init();
 
-document.getElementById("shuffle-graff").addEventListener("click", function () {
-  onClickShuffle(1, "g")
-});
-
-document.getElementById("shuffle-art").addEventListener("click", function () {
-  onClickShuffle(2, "a")
-});
-
-document.getElementById("shuffle-design").addEventListener("click", function () {
-  onClickShuffle(3, "d")
-});
-

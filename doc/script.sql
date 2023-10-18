@@ -1,3 +1,4 @@
+-- Active: 1697370913959@@artphere-ai-db-serv.mysql.database.azure.com@3306
 DROP DATABASE IF EXISTS artsphereai;
 CREATE DATABASE artsphereai;
 
