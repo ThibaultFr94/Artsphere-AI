@@ -17,90 +17,111 @@ loader.load(
   }
 );
 const username = localStorage.getItem("artsphere-username");
-const token = localStorage.getItem("artsphere-token"); 
+const token = localStorage.getItem("artsphere-token");
 
 // Se logger sur le site
-const formLogin = document.querySelector('.form-login');
-if (username !== null && username !== undefined && token !== null && token !== undefined) {
-  const loginImg = document.querySelector('#register img');
-  loginImg.setAttribute('src', `asset/img/logout.svg`);
-  formLogin.classList.add('hidden'); 
- 
+const formLogin = document.querySelector(".form-login");
+if (
+  username !== null &&
+  username !== undefined &&
+  token !== null &&
+  token !== undefined
+) {
+  const loginImg = document.querySelector("#register img");
+  loginImg.setAttribute("src", `asset/img/logout.svg`);
+  formLogin.classList.add("hidden");
 }
-formLogin?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-   artSphereApi.users.login(email, password).then(function(){
-    const loginImg = document.querySelector('#register img');
-    loginImg.setAttribute('src', `asset/img/logout.svg`);
-    formLogin.classList.add('hidden');
+formLogin?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.querySelector("#email").value;
+  const password = document.querySelector("#password").value;
+  artSphereApi.users.login(email, password).then(function () {
+    const loginImg = document.querySelector("#register img");
+    loginImg.setAttribute("src", `asset/img/logout.svg`);
+    formLogin.classList.add("hidden");
     formLogin.reset();
 
     // Cache le PopUp
-    let registrationForm = document.getElementById('registrationForm');
-    registrationForm.classList.add('hidden'); 
-   })   
+    let registrationForm = document.getElementById("registrationForm");
+    registrationForm.classList.add("hidden");
+  });
 });
-
 
 // S'enregistrer sur le site
-document.getElementById('register')?.addEventListener('click', function(event) {
-  event.preventDefault(); 
-  const username = localStorage.getItem("artsphere-username");
-  const token = localStorage.getItem("artsphere-token"); 
-  if(username !== null && username !== undefined && token !== null && token !== undefined){
-    localStorage.removeItem("artsphere-username");
-    localStorage.removeItem("artsphere-token");
-    
-    const registerImg = document.querySelector('#register img');
-    registerImg.setAttribute('src', `asset/img/profile.svg`);
-    formLogin.classList.remove('hidden'); 
-  } 
-  else {
-      let form = document.getElementById('registrationForm');
-      if (form.classList.contains('hidden')) {
-          form.classList.remove('hidden'); 
+document
+  .getElementById("register")
+  ?.addEventListener("click", function (event) {
+    event.preventDefault();
+    const username = localStorage.getItem("artsphere-username");
+    const token = localStorage.getItem("artsphere-token");
+    if (
+      username !== null &&
+      username !== undefined &&
+      token !== null &&
+      token !== undefined
+    ) {
+      localStorage.removeItem("artsphere-username");
+      localStorage.removeItem("artsphere-token");
+
+      const registerImg = document.querySelector("#register img");
+      registerImg.setAttribute("src", `asset/img/profile.svg`);
+      formLogin.classList.remove("hidden");
+    } else {
+      let form = document.getElementById("registrationForm");
+      if (form.classList.contains("hidden")) {
+        form.classList.remove("hidden");
       } else {
-          form.classList.add('hidden');    
+        form.classList.add("hidden");
       }
-  };
+    }
+  });
+
+document
+  .getElementById("createAccount")
+  ?.addEventListener("click", function (event) {
+    event.preventDefault();
+    let form = document.getElementById("detailedRegistrationForm");
+    form.classList.remove("hidden");
+  });
+
+document.querySelector(".close")?.addEventListener("click", function () {
+  let form = document.getElementById("registrationForm");
+  form.classList.add("hidden");
 });
 
-document.getElementById('createAccount')?.addEventListener('click', function(event) {
-  event.preventDefault();
-  let form = document.getElementById('detailedRegistrationForm');
-  form.classList.remove('hidden');
-});
+document
+  .querySelector(".closeDetailed")
+  ?.addEventListener("click", function () {
+    let form = document.getElementById("detailedRegistrationForm");
+    form.classList.add("hidden");
+  });
 
-document.querySelector('.close')?.addEventListener('click', function() {
-  let form = document.getElementById('registrationForm');
-  form.classList.add('hidden');
-});
+document
+  .querySelector("#detailedRegistrationForm form")
+  ?.addEventListener("submit", function (event) {
+    const email = document.querySelector("#register-email").value;
+    const password = document.querySelector("#register-password").value;
+    const confirmPassword = document.querySelector(
+      "#register-confirmPassword"
+    ).value;
 
-document.querySelector('.closeDetailed')?.addEventListener('click', function() {
-  let form = document.getElementById('detailedRegistrationForm');
-  form.classList.add('hidden');
-});
-
-document.querySelector('#detailedRegistrationForm form')?.addEventListener('submit', function(event) {
-  const email = document.querySelector('#register-email').value;
-  const password = document.querySelector('#register-password').value;
-  const confirmPassword = document.querySelector('#register-confirmPassword').value;
-  
-  if (password !== confirmPassword) {
+    if (password !== confirmPassword) {
       alert("Password doesn't match!");
       event.preventDefault();
-  }
-  else{
-    artSphereApi.users.register(email, password).then(function(){
-      const registerImg = document.querySelector('#register img');
-        registerImg.setAttribute('src', `asset/img/logout.svg`);
-        let form = document.querySelector('#registrationForm');
-        form.classList.add('hidden'); 
-     });
-  } 
-});
+    } else {
+      artSphereApi.users.register(email, password).then(function () {
+        const registerImg = document.querySelector("#register img");
+        registerImg.setAttribute("src", `asset/img/logout.svg`);
+        // Cache le PopUp
+        let registrationForm = document.getElementById('registrationForm');
+        registrationForm.classList.add('hidden');  
+        let detailedRegistrationForm = document.getElementById(
+          "detailedRegistrationForm"
+        );
+        detailedRegistrationForm.classList.add("hidden");
+      });
+    }
+  });
 
 function init() {
   container = document.getElementById("container");
@@ -157,7 +178,7 @@ function init() {
       ((e.clientY - window.innerHeight / 2) / window.innerHeight) * -1;
 
     e.preventDefault();
-});
+  });
 }
 function onWindowResize(event) {
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -220,6 +241,4 @@ function render(delta) {
   renderer.render(scene, camera);
   renderTexture();
 }
-let cursor = document.getElementById('cursor');
-
-
+let cursor = document.getElementById("cursor");

@@ -16,18 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     artSphereApi.ai.generateText(prompt)
     .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
         return response.json();
       })
       .then((data) => {
+        if(data.error){
+          throw new Error(data.error);
+        }
         const int = data.choices[0].message.content;
         document.getElementById("int-result").textContent = int.replace(
           /"/g,
           ""
         );
         return int;
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
       })
       .then((int) => {
         artSphereApi.ai.generateImage(3, int, generatePromptInt(int))

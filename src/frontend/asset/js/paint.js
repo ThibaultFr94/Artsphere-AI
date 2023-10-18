@@ -22,12 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
         return response.json();
       })
       .then((data) => {
+        if(data.error){
+          throw new Error(data.error);
+        }
         const paint = data.choices[0].message.content;
         document.getElementById("paint-result").textContent = paint.replace(
           /"/g,
           ""
         );
         return paint;
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
       })
         .then((paint) => {
           artSphereApi.ai.generateImage(2, paint, generatePromptPaint(paint))

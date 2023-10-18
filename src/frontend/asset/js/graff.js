@@ -15,20 +15,23 @@ document.addEventListener("DOMContentLoaded", function () {
     
 artSphereApi.ai.generateText(prompt)
       .then((response) => {
-        console.log(response);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
         return response.json();
-        
+    
       })
       .then((data) => {
+        if(data.error){
+          throw new Error(data.error);
+        }
         const graff = data.choices[0].message.content;
         document.getElementById("graff-result").textContent = graff.replace(
           /"/g,
           ""
         );
         return graff;
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
       })
       .then((graff) => {
 
@@ -48,9 +51,7 @@ artSphereApi.ai.generateText(prompt)
             ).src = `data:image/png;base64,${data.data[0].b64_json}`;
           
           });
-      })
-      .catch((error) => {
-        console.error("Error:", error);
       });
+      
   }
 });
