@@ -1,11 +1,11 @@
-//prompts section
+//Prompts section
 
 function generatePromptGraff(graff) {
   return `The subject is a graffiti. It's bold, intricate, colorfull. The medium is spray paint, with techniques like stenciling and dripping adding texture and depth. Some artists who inspire this style are Banksy and Shepard Fairey, switch each time, based on this name : ${graff}`;
 }
 
 function generatePromptPaint(paint) {
-  return `The subject will be includes a variety of painting art, beautiful landscape, amazing color ,using the painting style of Edouard Manet, Rembrandt H. van Rijn,  Based on this name: ${paint} `;
+  return `The subject will be includes a variety of painting art, beautiful landscape, amazing color ,using the painting style of Edouard Manet, Rembrandt H. van Rijn,  Based on this name: ${paint}`;
 }
 
 function generatePromptInt(int) {

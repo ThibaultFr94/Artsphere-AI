@@ -16,6 +16,8 @@ loader.load(
     animate();
   }
 );
+
+// Information d'utilisateur connecté (null/undefined si pas connecté)
 const username = localStorage.getItem("artsphere-username");
 const token = localStorage.getItem("artsphere-token");
 

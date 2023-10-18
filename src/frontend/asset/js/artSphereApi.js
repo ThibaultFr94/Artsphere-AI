@@ -6,6 +6,7 @@ const types = {
   3: "section design",
 };
 
+// Parametrage de la fonction fetch
 function fetchApi(method, urlPath, body) {
   return fetch(`${ArtsphereApiUrl}/${urlPath}`, {
     method: method,
@@ -16,6 +17,8 @@ function fetchApi(method, urlPath, body) {
     },
   });
 }
+
+// 
 const artSphereApi = {
   ai: {
     generateText: (prompt) => fetchApi("GET", `ai/generateText/${prompt}`),

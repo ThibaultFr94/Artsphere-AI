@@ -16,15 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     artSphereApi.ai
       .generateText(prompt)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
         return response.json();
       })
       .then((data) => {
         if (data.error) {
           throw new Error(data.error);
         }
+        //parametrage de l'API = un ou plusieurs messages
         const paint = data.choices[0].message.content;
         document.getElementById("paint-result").textContent = paint.replace(
           /"/g,
@@ -32,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         return paint;
       })
+      // Récupère  l'erreur du pending
       .catch((error) => {
         console.error(error);
         alert(error);
