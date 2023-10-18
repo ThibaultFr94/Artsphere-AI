@@ -73,8 +73,8 @@ margin-top: 1vh;
 .circle-link1,
 .circle-link2,
 .circle-link3 {
-  width: 170px;
-  height: 170px;
+  width: 155px;
+  height: 155px;
   border-radius: 50%;
   box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.505);
   transition: all 2s;
@@ -362,7 +362,7 @@ margin-top: 1vh;
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
-  top: 65%;
+  top: 67%;
   left: 50%;
   border-radius: 1vw;
   border:0.1vw solid white;
@@ -429,7 +429,7 @@ h3 {
   color: white;
   font-family: "Modeco Trial", Helvetica, sans-serif;
   background-color: #000000;
-  top: 65%;
+  top: 67%;
   left: 50%;
   border-radius: 1vw;
   border: 0.1vw solid white;
