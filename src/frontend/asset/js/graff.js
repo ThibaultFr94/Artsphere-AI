@@ -15,10 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     
 artSphereApi.ai.generateText(prompt)
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         return response.json();
+        
       })
       .then((data) => {
         const graff = data.choices[0].message.content;

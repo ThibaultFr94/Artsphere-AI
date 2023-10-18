@@ -4,7 +4,9 @@ import artRepository from '../sql/artRepository.js';
 (await import('dotenv')).config();
 
 //configuring the timer function
-async function getPendingTimeMinutes(currentUser) {   
+async function getPendingTimeMinutes(currentUser) { 
+  console .log(currentUser);
+
   if(currentUser.authenticated) {
     return 0;
   }
@@ -52,6 +54,7 @@ const aiService = {
   },
 
   generateImage: async (typeId, title, prompt, currentUser) => {
+    console.log(typeId, title, prompt, currentUser);
     const pendingTime = await getPendingTimeMinutes(currentUser);
     if(pendingTime) {
       throw new Error(`Too many requests, pending ${pendingTime} min`);

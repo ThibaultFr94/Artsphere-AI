@@ -16,31 +16,46 @@ loader.load(
     animate();
   }
 );
+const username = localStorage.getItem("artsphere-username");
+const token = localStorage.getItem("artsphere-token"); 
 
-//  se logger sur le site
+// Se logger sur le site
 const formLogin = document.querySelector('.form-login');
-
+if (username !== null && username !== undefined && token !== null && token !== undefined) {
+  const loginImg = document.querySelector('#register img');
+  loginImg.setAttribute('src', `asset/img/logout.svg`);
+  formLogin.classList.add('hidden'); 
+ 
+}
 formLogin?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
-
    artSphereApi.users.login(email, password).then(function(){
-    
-      const loginImg = document.querySelector('#register img');
-        loginImg.setAttribute('src', `asset/img/logout.svg`);
-        formLogin.classList.add('hidden'); ;
+    const loginImg = document.querySelector('#register img');
+    loginImg.setAttribute('src', `asset/img/logout.svg`);
+    formLogin.classList.add('hidden');
     formLogin.reset();
+
+    // Cache le PopUp
+    let registrationForm = document.getElementById('registrationForm');
+    registrationForm.classList.add('hidden'); 
    })   
 });
 
-//s enregistrer sur le site
+
+// S'enregistrer sur le site
 document.getElementById('register')?.addEventListener('click', function(event) {
   event.preventDefault(); 
-  if(window.sessionStorage.getItem('user')){
-    window.sessionStorage.removeItem('user')
+  const username = localStorage.getItem("artsphere-username");
+  const token = localStorage.getItem("artsphere-token"); 
+  if(username !== null && username !== undefined && token !== null && token !== undefined){
+    localStorage.removeItem("artsphere-username");
+    localStorage.removeItem("artsphere-token");
+    
     const registerImg = document.querySelector('#register img');
     registerImg.setAttribute('src', `asset/img/profile.svg`);
+    formLogin.classList.remove('hidden'); 
   } 
   else {
       let form = document.getElementById('registrationForm');
